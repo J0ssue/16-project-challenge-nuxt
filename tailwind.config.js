@@ -11,6 +11,7 @@ module.exports = {
         'spg-primary': '#2bb3b1',
         'spg-secondary': '#4abebd',
         'spg-green': '#bfdf32',
+        'huddle-primary': 'hsl(257, 40%, 49%)'
       },
 
       width: {
