@@ -11,7 +11,13 @@ module.exports = {
         'spg-primary': '#2bb3b1',
         'spg-secondary': '#4abebd',
         'spg-green': '#bfdf32',
-        'huddle-primary': 'hsl(257, 40%, 49%)'
+        'huddle-primary': 'hsl(257, 40%, 49%)',
+        'sat-red': 'hsl(0, 36%, 70%)',
+        'soft-red': 'hsl(0, 93%, 24%)',
+        'grayish-red': 'hsl(0, 6%, 24%)'
+      },
+      letterSpacing: {
+        'xl-wide': '10px'
       },
       transitionProperty: {
         'height': 'height',

@@ -19,19 +19,19 @@
             <nuxt-link
                 class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
                 to="/single-price-grid"
-            >Single Price Grid</nuxt-link>|
+            >Single Price Grid</nuxt-link><span class="hidden lg:inline-block">|</span>
             <nuxt-link
                 class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
                 to="/four-card-feature"
-            >four card feature</nuxt-link> |
+            >four card feature</nuxt-link> <span class="hidden lg:inline-block">|</span>
             <nuxt-link
                 class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
                 to="/huddle"
-            >huddle</nuxt-link> |
+            >huddle</nuxt-link><span class="hidden lg:inline-block">|</span>
             <nuxt-link
                 class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
                 to="/base-apparel"
-            >base apparel</nuxt-link> |
+            >base apparel</nuxt-link><span class="hidden lg:inline-block">|</span>
         </nav>
         <div class="container mx-auto">
             <nuxt />
