@@ -36,31 +36,35 @@
                     @submit.prevent="submit"
                     class="sign-up-form__form p-6 block bg-white rounded-md"
                 >
-                    <input
-                        class="block w-full px-4 py-3 text-sm text-gray-700 font-semibold placeholder-gray-700 focus:outline-none border border-gray-300 focus:border-form-blue rounded-md transition-all duration-300 ease-form-input"
-                        type="text"
-                        placeholder="First Name"
-                        v-model="form.name"
+                    <div
+                        class="sign-up-form__form-field relative"
+                        v-for="(field, i) in Object.keys(this.form)"
+                        :key="i"
                     >
-                    <input
-                        class="block w-full px-4 py-3 text-sm text-gray-700 font-semibold placeholder-gray-700 focus:outline-none border border-gray-300 focus:border-form-blue rounded-md transition-all duration-300 ease-form-input"
-                        type="text"
-                        placeholder="Last Name"
-                        v-model="form.last"
-                    >
-                    <input
-                        class="block w-full px-4 py-3 text-sm text-gray-700 font-semibold placeholder-gray-700 focus:outline-none border border-gray-300 focus:border-form-blue rounded-md transition-all duration-300 ease-form-input"
-                        type="text"
-                        placeholder="Email Address"
-                        v-model="form.email"
-                    >
-                    <input
-                        class="block w-full px-4 py-3 text-sm text-gray-700 font-semibold placeholder-gray-700 focus:outline-none border border-gray-300 focus:border-form-blue rounded-md transition-all duration-300 ease-form-input"
-                        type="text"
-                        placeholder="Password (numbers & letters needed)"
-                        v-model="
-                        form.password"
-                    >
+                        <input
+                            @keyup="clearError(field)"
+                            class="block w-full px-4 py-3 text-sm text-gray-700 font-semibold placeholder-gray-700 focus:outline-none border-gray-300 rounded-md transition-all duration-300 ease-form-input"
+                            :class="{
+                                'focus:border-form-blue': !hasError(field),
+                                'border-form-red': hasError(field),
+                                'border': !hasError(field),
+                                'border-2': hasError(field)
+                            }"
+                            type="text"
+                            :placeholder="setPlaceholder(field)"
+                            v-model="form[field]"
+                        >
+                        <img
+                            class="sign-up-form__error-icon absolute"
+                            src="~/assets/images/base-apparel/icon-error.svg"
+                            alt="error icon"
+                            v-show="hasError(field)"
+                        >
+                        <div
+                            class="text-form-red text-xs text-right"
+                            v-show="hasError(field)"
+                        >{{ errorMessage[field] }}</div>
+                    </div>
                     <button
                         type="submit"
                         class="sign-up-form__btn block w-full uppercase text-sm bg-form-green py-4 mb-4 rounded-md focus:outline-none"
@@ -85,6 +89,12 @@
                 title: 'Learn to code by watching others',
                 description: 'See how experienced developers solve problems in real time. Watching scripted tutorials is great, but understanding how developers think is invaluable.',
                 linkPurple: '<b>Try it free 7 days</b> <br class="remove-br"> then $20/mo. thereafter',
+                errorMessage: {
+                    name: 'First Name cannot be empty',
+                    last: 'Last Name cannot be empty',
+                    email: 'Looks like this is not an email',
+                    password: 'Password cannot be empty & must be 4 characters or greater'
+                }
             };
         },
     }

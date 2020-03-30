@@ -19,20 +19,62 @@ export default {
   methods: {
     submit() {
       if (!this.valid) {
-
+        if (!this.passwordFilled) {
+          this.setError('password');
+        } else {
+          this.clearError('password')
+        }
+        if (!this.nameFilled) {
+          this.setError('name');
+        } else {
+          this.clearError('name')
+        }
+        if (!this.lastFilled) {
+          this.setError('last');
+        } else {
+          this.clearError('last')
+        }
+        if (!this.emailValid) {
+          this.setError('email');
+        } else {
+          this.clearError('email')
+        }
+      } else {
+        alert('form is valid')
+        this.clearForm();
+      }
+    },
+    clearForm() {
+      for (const field in this.form) {
+        this.form[field] = '';
       }
     },
     hasError(name) {
       return this.errors[name];
     },
-    clearError(name) {
-      if (this[`${name}Filled`] || this[`${name}Valid`]) {
-        this.errors[name] = false;
+    clearError(field) {
+      if (this[`${field}Filled`] || this[`${field}Valid`]) {
+        this.errors[field] = false;
+      }
+    },
+    setError(field) {
+      this.errors[field] = true;
+    },
+    removeError(field) {
+      this.errors[field] = false;
+    },
+    setPlaceholder(field) {
+      if (field === 'name') {
+        return 'First Name'
+      } else if (field === 'last') {
+        return 'Last Name'
+      } else {
+        return field
       }
     }
   },
   computed: {
-    emailFilled() {
+    emailValid() {
       return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.form.email);
     },
     nameFilled() {
@@ -44,16 +86,12 @@ export default {
     passwordFilled() {
       return this.form.password.length > 4
     },
-    passwordValid() {
-      return /^[A-Za-z]\w{7,14}$/.test(this.form.password);
-    },
     valid() {
       if (
         !this.emailValid ||
         !this.nameFilled ||
         !this.lastFilled ||
-        !this.passwordFilled ||
-        !this.passwordValid
+        !this.passwordFilled
       ) {
         return false
       } else {

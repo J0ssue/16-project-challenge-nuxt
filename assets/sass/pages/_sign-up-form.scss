@@ -12,11 +12,12 @@
     box-shadow: inset 0px -5px 1px rgba(0, 0, 0, 0.1);
   }
 
-  input:not(:last-child) {
+  &__form-field:not(:last-child) {
     margin-bottom: 10px;
   }
 
   input::placeholder {
+    text-transform: capitalize;
     font-weight: 600;
   }
 
@@ -24,5 +25,13 @@
     @media (min-width: 1024px) {
       display: none;
     }
+  }
+
+  &__error-icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+    right: 20px;
+    top: 14px;
   }
 }
