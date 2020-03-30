@@ -13,7 +13,10 @@ module.exports = {
         'spg-green': '#bfdf32',
         'huddle-primary': 'hsl(257, 40%, 49%)'
       },
-
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
+      },
       width: {
         'spg-card-width': '545px'
       },

@@ -1,6 +1,14 @@
 .huddle {
+  position: relative;
+
   &__main {
     background-image: url('../images/huddle/bg-mobile.svg');
     background-repeat: no-repeat;
+
+    @media (min-width: 1024px) {
+      background-image: url('../images/huddle/bg-desktop.svg');
+      background-position: center;
+      background-size: cover;
+    }
   }
 }
