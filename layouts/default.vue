@@ -32,6 +32,10 @@
                 class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
                 to="/base-apparel"
             >base apparel</nuxt-link><span class="hidden lg:inline-block">|</span>
+            <nuxt-link
+                class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
+                to="/sign-up-form"
+            >Sign up form</nuxt-link><span class="hidden lg:inline-block">|</span>
         </nav>
         <div class="container mx-auto">
             <nuxt />

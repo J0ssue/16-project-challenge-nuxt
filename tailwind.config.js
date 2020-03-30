@@ -14,7 +14,15 @@ module.exports = {
         'huddle-primary': 'hsl(257, 40%, 49%)',
         'sat-red': 'hsl(0, 36%, 70%)',
         'soft-red': 'hsl(0, 93%, 24%)',
-        'grayish-red': 'hsl(0, 6%, 24%)'
+        'grayish-red': 'hsl(0, 6%, 24%)',
+        'form-red': 'hsl(0, 100%, 74%)',
+        'form-green': 'hsl(154, 59%, 51%)',
+        'form-blue': 'hsl(248, 32%, 49%)',
+        'form-dark-blue': 'hsl(249, 10%, 26%)',
+        'form-grayish-blue': 'hsl(246, 25%, 77%)',
+      },
+      transitionTimingFunction: {
+        'ease-form-input': 'cubic-bezier(0, 1.25, 0, 1.17)'
       },
       letterSpacing: {
         'xl-wide': '10px'
