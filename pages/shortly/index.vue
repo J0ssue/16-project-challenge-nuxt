@@ -29,21 +29,30 @@
                 </div>
             </header>
             <url-shortener />
-            <section class="shortly"></section>
+            <statistics-display />
+            <section class="shortly__cta">
+                <p>Boost your links today</p>
+                <button>get started</button>
+            </section>
+            <shortly-footer />
         </main>
     </div>
 </template>
 
 <script>
     import UrlShortener from "~/components/UrlShortener";
+    import StatisticsDisplay from "~/components/StatisticsDisplay";
+    import ShortlyFooter from "~/components/ShortlyFooter";
     export default {
         components: {
-            UrlShortener
+            UrlShortener,
+            StatisticsDisplay,
+            ShortlyFooter
         },
         data() {
             return {
                 title: 'More than just <br> shorter links',
-                description: 'Build your brand\'s recognition and get detail insights on how your links are performing.'
+                description: 'Build your brand\'s recognition and get detail insights on how your links are performing.',
             };
         },
     }
