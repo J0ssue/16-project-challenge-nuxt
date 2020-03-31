@@ -20,6 +20,11 @@ module.exports = {
         'form-blue': 'hsl(248, 32%, 49%)',
         'form-dark-blue': 'hsl(249, 10%, 26%)',
         'form-grayish-blue': 'hsl(246, 25%, 77%)',
+        'monthly-blue': 'hsl(240, 78%, 98%)',
+        'monthly-light-blue': 'hsl(234, 14%, 74%)',
+        'monthly-grayish-blue': 'hsl(233, 13%, 49%)',
+        'monthly-dark-grayish-blue': 'hsl(232, 13%, 33%)',
+        'monthly-purple': 'hsl(237, 63%, 64%)'
       },
       transitionTimingFunction: {
         'ease-form-input': 'cubic-bezier(0, 1.25, 0, 1.17)'
@@ -35,7 +40,8 @@ module.exports = {
         'spg-card-width': '545px'
       },
       boxShadow: {
-        'spg-card': '0px 0px 20px rgba(0, 0, 0, 0.2)'
+        'spg-card': '0px 0px 20px rgba(0, 0, 0, 0.2)',
+        'price-card': '0px 0px 10px hsl(234, 14%, 74%)'
       }
     },
   },
