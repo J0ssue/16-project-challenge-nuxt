@@ -24,7 +24,14 @@ module.exports = {
         'monthly-light-blue': 'hsl(234, 14%, 74%)',
         'monthly-grayish-blue': 'hsl(233, 13%, 49%)',
         'monthly-dark-grayish-blue': 'hsl(232, 13%, 33%)',
-        'monthly-purple': 'hsl(237, 63%, 64%)'
+        'monthly-purple': 'hsl(237, 63%, 64%)',
+        'shortly-primary-cyan': 'hsl(180, 66%, 49%)',
+        'shortly-primary-violet': 'hsl(257, 27%, 26%)',
+        'shortly-secondary-red': 'hsl(0, 87%, 67%)',
+        'shortly-neutral-gray': 'hsl(0, 0%, 75%)',
+        'shortly-neutral-gray-violet': 'hsl(257, 7%, 63%)',
+        'shortly-neutral-blue': 'hsl(255, 11%, 22%)',
+        'shortly-neutral-dark-violet': 'hsl(260, 8%, 14%)'
       },
       transitionTimingFunction: {
         'ease-form-input': 'cubic-bezier(0, 1.25, 0, 1.17)'

@@ -1,5 +1,8 @@
 export default {
   mode: 'universal',
+  env: {
+    baseUrl: process.env.BASE_URL,
+  },
   /*
    ** Headers of the page
    */
@@ -34,13 +37,19 @@ export default {
    ** Global CSS
    */
   css: [{
-    src: '~/assets/sass/main.scss',
-    lang: 'sass'
-  }],
+      src: '~/plugins/axios.js'
+    },
+    {
+      src: '~/assets/sass/main.scss',
+      lang: 'sass'
+    }
+  ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [{
+    src: '~/plugins/axios.js'
+  }],
   /*
    ** Nuxt.js dev-modules
    */
@@ -59,7 +68,9 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseURL: process.env.BASE_URL || 'http://'
+  },
   /*
    ** Build configuration
    */
