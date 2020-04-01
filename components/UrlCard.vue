@@ -3,7 +3,12 @@
         <div class="url-card__header p-4 border-b border-1 border-gray-400 italic lg:border-none lg:flex-1">
             {{ getUrl }}
         </div>
-        <div class="url-card__body px-4 pt-4  pb-1 text-shortly-primary-cyan">{{ url.short }}</div>
+        <input
+            ref="shortInput"
+            class="url-card__body px-4 pt-4  pb-1 text-shortly-primary-cyan bg-transparent focus:outline-none"
+            v-model="url.short"
+            readonly
+        />
         <div class="px-4 pb-4 lg:pb-0">
             <button
                 @click="copy(url.hashid)"
@@ -21,13 +26,15 @@
             url: {
                 type: Object
             },
-            // copiedUrls: {
-            //     type: Array
-            // }
         },
         methods: {
             copy(id) {
                 this.$store.dispatch('urlStore/copy', id);
+                let shortUrl = this.$refs.shortInput;
+                shortUrl.select();
+                shortUrl.setSelectionRange(0, 99999); /*For mobile devices*/
+                document.execCommand("copy");
+
             }
         },
         computed: {
