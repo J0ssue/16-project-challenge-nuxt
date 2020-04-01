@@ -32,7 +32,12 @@ module.exports = {
         'shortly-neutral-gray': 'hsl(0, 0%, 75%)',
         'shortly-neutral-gray-violet': 'hsl(257, 7%, 63%)',
         'shortly-neutral-blue': 'hsl(255, 11%, 22%)',
-        'shortly-neutral-dark-violet': 'hsl(260, 8%, 14%)'
+        'shortly-neutral-dark-violet': 'hsl(260, 8%, 14%)',
+        'jobs-cyan': 'hsl(180, 29%, 50%)',
+        'jobs-gray-cyan-one': 'hsl(180, 52%, 96%)',
+        'jobs-gray-cyan-two': 'hsl(180, 31%, 95%)',
+        'jobs-dark-cyan-one': 'hsl(180, 8%, 52%)',
+        'jobs-dark-yan-two': 'hsl(180, 14%, 20%)'
       },
       transitionTimingFunction: {
         'ease-form-input': 'cubic-bezier(0, 1.25, 0, 1.17)'

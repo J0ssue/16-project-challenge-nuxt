@@ -33,4 +33,8 @@
   @apply bg-shortly-primary-cyan-hover;
 }
 
+.shortly-dropdown-link {
+  @apply text-white block font-bold text-center text-sm capitalize;
+}
+
 @tailwind utilities;

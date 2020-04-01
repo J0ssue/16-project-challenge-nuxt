@@ -9,3 +9,17 @@
     transform: none;
   }
 }
+
+@keyframes fadeDownDrop {
+  0% {
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -70px);
+  }
+
+  100% {
+    pointer-events: all;
+    opacity: 1;
+    transform: translate(-50%, 70px);
+  }
+}

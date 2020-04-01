@@ -1,8 +1,5 @@
 <template>
     <div class="px-6 md:px-0">
-        <header>
-            <h1 class="spg-card__title font-bold uppercase text-2xl mb-10 md:mb-32 text-blue-500 text-center">Single Price Grid</h1>
-        </header>
         <main class="spg-card shadow-spg-card flex flex-col md:flex-row md:flex-wrap md:w-spg-card-width mx-auto rounded">
             <section class="w-full">
                 <div class="spg-card__main py-8 px-6">

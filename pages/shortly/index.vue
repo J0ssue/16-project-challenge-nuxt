@@ -1,10 +1,11 @@
 <template>
     <div class="shortly">
-        <header>
-            <h1 class="spg-card__title main-title">Shortly</h1>
-        </header>
         <!-- actual site -->
-        <main class="shortly__main">
+        <main class="shortly__main relative">
+            <shortly-dropdown
+                :isDropdownOpen="isDropdownOpen"
+                @toggleDropdown="toggleDropdown"
+            />
             <!-- navbar -->
             <nav class="shortly__navbar px-4 py-6 flex justify-between items-center lg:mb-16">
                 <div class="shortly__navbar-left lg:flex lg:items-center capitalize">
@@ -39,7 +40,10 @@
                     >login</nuxt-link>
                     <button class="shortly-primary-btn">sign up</button>
                 </div>
-                <button class="block lg:hidden">
+                <button
+                    class="block lg:hidden focus:outline-none"
+                    @click="toggleDropdown"
+                >
                     <div class="shortly__bar burger-bar"></div>
                     <div class="shortly__bar burger-bar"></div>
                     <div class="shortly__bar burger-bar"></div>
@@ -81,17 +85,25 @@
     import UrlShortener from "~/components/UrlShortener";
     import StatisticsDisplay from "~/components/StatisticsDisplay";
     import ShortlyFooter from "~/components/ShortlyFooter";
+    import ShortlyDropdown from "~/components/ShortlyDropdown";
     export default {
         components: {
             UrlShortener,
             StatisticsDisplay,
-            ShortlyFooter
+            ShortlyFooter,
+            ShortlyDropdown
         },
         data() {
             return {
+                isDropdownOpen: false,
                 title: 'More than just <br> shorter links',
                 description: 'Build your brand\'s recognition and get detail insights on how your links are performing.',
             };
+        },
+        methods: {
+            toggleDropdown() {
+                this.isDropdownOpen = !this.isDropdownOpen;
+            }
         },
     }
 </script>
