@@ -1,0 +1,36 @@
+.shortly {
+  overflow-x: hidden;
+
+  &__main {
+    font-size: 18px;
+  }
+
+  &__header-hero {
+    margin-bottom: 175px;
+  }
+
+  &__bar:not(:last-child) {
+    margin-bottom: 4px;
+  }
+
+  &__illustration-img {
+    display: block;
+    transform: translateX(30vw);
+
+    @media (min-width: 1024px) {
+      transform: translateX(5vw);
+    }
+  }
+
+  &__cta {
+    background-image: url('~assets/images/shortly/bg-boost-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: right -15px;
+
+    @media (min-width: 1024px) {
+      background-image: url('~assets/images/shortly/bg-boost-desktop.svg');
+      background-position: right top;
+      background-size: cover;
+    }
+  }
+}

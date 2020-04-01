@@ -1,7 +1,7 @@
 <template>
     <div class="sign-up-form">
         <header>
-            <h1 class="spg-card__title text-5xl mb-10 md:mb-32 text-blue-500 text-center">Sign Up Form</h1>
+            <h1 class="spg-card__title font-bold uppercase text-2xl mb-10 md:mb-32 text-blue-500 text-center">Sign Up Form</h1>
         </header>
         <main class="sign-up-form__main flex flex-col relative px-6 py-24 text-white text-xl lg:flex-row lg:items-center lg:px-32">
             <!-- background image -->

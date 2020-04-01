@@ -1,7 +1,7 @@
 <template>
     <div class="four-card-ft">
         <header>
-            <h1 class="spg-card__title text-5xl mb-4 text-blue-500 text-center">Four Card Feature</h1>
+            <h1 class="spg-card__title font-bold uppercase text-2xl mb-4 text-blue-500 text-center">Four Card Feature</h1>
         </header>
         <main class="four-card-ft__main py-12 px-6">
             <header class="text-center px-8">

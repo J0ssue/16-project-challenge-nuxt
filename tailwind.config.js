@@ -26,6 +26,7 @@ module.exports = {
         'monthly-dark-grayish-blue': 'hsl(232, 13%, 33%)',
         'monthly-purple': 'hsl(237, 63%, 64%)',
         'shortly-primary-cyan': 'hsl(180, 66%, 49%)',
+        'shortly-primary-cyan-hover': 'hsl(180, 66%, 73%)',
         'shortly-primary-violet': 'hsl(257, 27%, 26%)',
         'shortly-secondary-red': 'hsl(0, 87%, 67%)',
         'shortly-neutral-gray': 'hsl(0, 0%, 75%)',
@@ -45,6 +46,9 @@ module.exports = {
       },
       width: {
         'spg-card-width': '545px'
+      },
+      height: {
+        'bar': '4px'
       },
       boxShadow: {
         'spg-card': '0px 0px 20px rgba(0, 0, 0, 0.2)',

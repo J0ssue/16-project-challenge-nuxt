@@ -12,8 +12,15 @@
 // components
 @import './components/card';
 @import './components/price-card';
+// // shortly components
+@import './components/shortly/url-shortener';
+@import './components/shortly/url-card';
+@import './components/shortly/statistics-display';
+@import './components/shortly/statistics-card';
+@import './components/shortly/shortly-footer';
 // pages 
 @import './pages/huddle';
 @import './pages/base-apparel';
 @import './pages/sign-up-form';
 @import './pages/monthly';
+@import './pages/shortly';

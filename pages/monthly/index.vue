@@ -1,7 +1,7 @@
 <template>
     <div class="monthly">
         <header>
-            <h1 class="spg-card__title text-5xl mb-10 md:mb-32 text-blue-500 text-center">Monthly</h1>
+            <h1 class="spg-card__title mb-10 md:mb-32 text-blue-500 text-center font-bold uppercase text-2xl">Monthly</h1>
         </header>
         <main class="monthly__main bg-monthly-blue py-16 px-4">
             <header class="monthly__header mb-16">

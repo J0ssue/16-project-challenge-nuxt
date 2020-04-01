@@ -1,0 +1,20 @@
+.url-shortener {
+  transform: translateY(-85px);
+
+  &__form {
+    background-image: url('~assets/images/shortly/bg-shorten-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+    @media (min-width: 1024px) {
+      background-image: url('~assets/images/shortly/bg-shorten-desktop.svg');
+    }
+  }
+
+  &__error-msg {
+    position: absolute;
+    left: 50px;
+    bottom: 15px;
+  }
+}

@@ -1,6 +1,36 @@
 /* purgecss start ignore */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
+@tailwind base;
 
-/* purgecss end ignore */
-@import 'tailwindcss/utilities';
+@tailwind components;
+
+/* title */
+.main-title {
+  @apply mb-10 text-blue-500 text-center font-bold uppercase text-2xl;
+}
+
+.main-title:md {
+  @apply mb-24
+}
+
+/* burger */
+.burger-bar {
+  @apply w-8 h-bar bg-gray-500;
+}
+
+.shortly-primary-btn {
+  @apply text-white font-semibold capitalize bg-shortly-primary-cyan rounded-full px-8 py-2 block transition duration-300;
+}
+
+.shortly-primary-btn:hover {
+  @apply bg-shortly-primary-cyan-hover;
+}
+
+.shortly-primary-btn-sqr {
+  @apply block bg-shortly-primary-cyan p-4 rounded-lg text-white font-semibold transition duration-300;
+}
+
+.shortly-primary-btn-sqr:hover {
+  @apply bg-shortly-primary-cyan-hover;
+}
+
+@tailwind utilities;

@@ -1,7 +1,7 @@
 <template>
     <div class="huddle">
         <header>
-            <h1 class="spg-card__title text-5xl mb-10 md:mb-32 text-blue-500 text-center">Huddle</h1>
+            <h1 class="spg-card__title mb-10 md:mb-32 text-blue-500 text-center font-bold uppercase text-2xl">Huddle</h1>
         </header>
         <main class="huddle__main bg-huddle-primary px-8 py-10 flex-wrap items-center lg:px-16 lg:flex">
             <header class="w-full">
