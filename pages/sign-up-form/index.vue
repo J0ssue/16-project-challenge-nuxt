@@ -17,13 +17,13 @@
             </div>
 
             <!-- text section -->
-            <header class="sign-up-form__header text-center leading-tight relative w-2/4 lg:text-left lg:pr-10 lg:pt-32">
+            <header class="sign-up-form__header text-center leading-tight relative lg:w-2/4 lg:text-left lg:pr-10 lg:pt-32">
                 <h2 class="font-bold text-3xl mb-4 lg:text-5xl">{{ title }}</h2>
                 <p class="text-md mb-16 lg:text-sm">{{ description }}</p>
             </header>
 
             <!-- form section -->
-            <section class="sign-up-form__form-container relative w-2/4">
+            <section class="sign-up-form__form-container relative lg:w-2/4">
                 <nuxt-link
                     class="sign-up-form__btn-purp bg-form-blue block text-center text-sm rounded-md py-4 mb-6"
                     to="#"
