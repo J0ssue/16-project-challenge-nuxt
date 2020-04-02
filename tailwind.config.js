@@ -37,7 +37,7 @@ module.exports = {
         'jobs-gray-cyan-one': 'hsl(180, 52%, 96%)',
         'jobs-gray-cyan-two': 'hsl(180, 31%, 95%)',
         'jobs-dark-cyan-one': 'hsl(180, 8%, 52%)',
-        'jobs-dark-yan-two': 'hsl(180, 14%, 20%)'
+        'jobs-dark-cyan-two': 'hsl(180, 14%, 20%)'
       },
       transitionTimingFunction: {
         'ease-form-input': 'cubic-bezier(0, 1.25, 0, 1.17)'

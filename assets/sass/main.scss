@@ -13,6 +13,7 @@
 // components
 @import './components/card';
 @import './components/price-card';
+@import './components/job-card';
 // // shortly components
 @import './components/shortly/url-shortener';
 @import './components/shortly/url-card';
@@ -26,3 +27,4 @@
 @import './pages/sign-up-form';
 @import './pages/monthly';
 @import './pages/shortly';
+@import './pages/jobs-listing';

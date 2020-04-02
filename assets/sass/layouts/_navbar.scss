@@ -6,6 +6,7 @@
   z-index: 4;
   transform: translate(-50%, -70px);
   pointer-events: none;
+  width: 90%;
 
   &--open {
     animation: fadeNavDown 0.8s cubic-bezier(0, .84, .18, 1.23) forwards;
