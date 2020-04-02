@@ -1,10 +1,19 @@
 <template>
     <div class="default">
+        <button
+            class="navbar__toggle focus:outline-none"
+            @click="toggleNavigation"
+        >toggle <br> nav</button>
         <nav
-            class="navbar flex flex-col md:flex-row items-center px-12"
+            class="navbar flex flex-col md:flex-row items-center px-12 uppercase p-10 bg-shortly-primary-violet rounded-lg text-shortly-neutral-gray"
+            :class="{'navbar--open': isMainNavbarOpen}"
             role="navigation"
             aria-label="main navigation"
         >
+            <button
+                class="navbar__close-btn absolute bg-shortly-neutral-dark-violet hover:bg-shortly-neutral-gray-violet transition duration-300 ease-in-out px-3 text-sm rounded-lg py-1 focus:outline-none text-white"
+                @click="toggleNavigation"
+            >close</button>
             <nuxt-link
                 class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
                 to="/single-price-grid"
@@ -43,3 +52,24 @@
         </div>
     </div>
 </template>
+
+<script>
+    export default {
+        data() {
+            return {
+                isMainNavbarOpen: false
+            };
+        },
+        methods: {
+            toggleNavigation() {
+                this.isMainNavbarOpen = !this.isMainNavbarOpen;
+            }
+        },
+        watch: {
+            $route() {
+                console.log('route changed', this.$route);
+                this.toggleNavigation();
+            }
+        },
+    }
+</script>
