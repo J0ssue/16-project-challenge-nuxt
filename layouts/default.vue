@@ -46,7 +46,12 @@
                 class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
                 to="/jobs-listing"
             >Jobs listing</nuxt-link><span class="hidden lg:inline-block">|</span>
+            <nuxt-link
+                class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
+                to="/countries"
+            >countries</nuxt-link><span class="hidden lg:inline-block">|</span>
         </nav>
+        <!-- <div> -->
         <div class="container mx-auto">
             <nuxt />
         </div>
@@ -67,7 +72,6 @@
         },
         watch: {
             $route() {
-                console.log('route changed', this.$route);
                 this.toggleNavigation();
             }
         },
