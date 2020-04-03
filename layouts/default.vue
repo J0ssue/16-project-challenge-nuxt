@@ -3,7 +3,7 @@
         <button
             class="navbar__toggle focus:outline-none"
             @click="toggleNavigation"
-        >toggle <br> nav</button>
+        >other<br>projects</button>
         <nav
             class="navbar flex flex-col md:flex-row items-center px-12 uppercase p-10 bg-shortly-primary-violet rounded-lg text-shortly-neutral-gray"
             :class="{'navbar--open': isMainNavbarOpen}"
