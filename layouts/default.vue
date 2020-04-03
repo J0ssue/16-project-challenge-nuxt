@@ -72,7 +72,9 @@
         },
         watch: {
             $route() {
-                this.toggleNavigation();
+                if (this.isMainNavbarOpen) {
+                    this.toggleNavigation();
+                }
             }
         },
     }

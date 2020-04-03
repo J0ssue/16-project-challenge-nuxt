@@ -37,7 +37,13 @@ module.exports = {
         'jobs-gray-cyan-one': 'hsl(180, 52%, 96%)',
         'jobs-gray-cyan-two': 'hsl(180, 31%, 95%)',
         'jobs-dark-cyan-one': 'hsl(180, 8%, 52%)',
-        'jobs-dark-cyan-two': 'hsl(180, 14%, 20%)'
+        'jobs-dark-cyan-two': 'hsl(180, 14%, 20%)',
+        'countries-Blue-dark-mode-elements': 'hsl(209, 23%, 22%)',
+        'countries-dark-mode-blue-bg': 'hsl(207, 26%, 17%)',
+        'countries-dark-blue-light-mode-text': 'hsl(200, 15%, 8%)',
+        'dark-gray-light-mode-input': 'hsl(0, 0%, 52%)',
+        'very-light-gray-light-mode-background': 'hsl(0, 0%, 98%)',
+        'white-dark-mode-text-light-mode-elements': 'hsl(0, 0%, 100%)'
       },
       transitionTimingFunction: {
         'ease-form-input': 'cubic-bezier(0, 1.25, 0, 1.17)'
@@ -50,14 +56,19 @@ module.exports = {
         'spacing': 'margin, padding',
       },
       width: {
-        'spg-card-width': '545px'
+        'spg-card-width': '545px',
+        'dropdown-width': '200px'
+      },
+      padding: {
+        'aspect-ratio': '56.25%'
       },
       height: {
         'bar': '4px'
       },
       boxShadow: {
         'spg-card': '0px 0px 20px rgba(0, 0, 0, 0.2)',
-        'price-card': '0px 0px 10px hsl(234, 14%, 74%)'
+        'price-card': '0px 0px 10px hsl(234, 14%, 74%)',
+        'dropdown': '0px 0px 10px rgba(0, 0, 0, 0.2)'
       }
     },
   },

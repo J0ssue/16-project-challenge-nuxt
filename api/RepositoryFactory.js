@@ -1,7 +1,9 @@
 import UrlShortener from "./UrlShortener";
+import Countries from "./Countries";
 
 const repositories = {
-  urlShortener: UrlShortener
+  urlShortener: UrlShortener,
+  countries: Countries
 };
 
 export default {
