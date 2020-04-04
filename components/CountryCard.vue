@@ -9,7 +9,13 @@
             :style="{'background-image': `url(${country.flag})`}"
         >
         </header>
-        <main class="pt-6 pb-10 px-6">
+        <main
+            class="pt-6 pb-10 px-6 rounded-b-lg theme-transition"
+            :class="{
+                'text-white-dark-mode-text-light-mode-elements': theme === 'dark',   
+                'bg-countries-Blue-dark-mode-elements': theme === 'dark'
+            }"
+        >
             <h4
                 class="mb-4 font-bold capitalize tracking-wide"
                 v-text="country.name"
@@ -24,11 +30,17 @@
 </template>
 
 <script>
+    import { mapState } from "vuex";
     export default {
         props: {
             country: {
                 type: Object
             }
-        }
+        },
+        computed: {
+            ...mapState({
+                theme: state => state.countries.theme
+            })
+        },
     }
 </script>

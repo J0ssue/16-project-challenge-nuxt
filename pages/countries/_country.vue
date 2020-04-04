@@ -1,19 +1,26 @@
 <template>
     <div class="px-4">
         <div v-if="Object.keys(country).length === 0 || country === null || country === undefined">No country found</div>
-        <div v-else>
+        <div
+            v-else
+            class="md:flex md:items-center"
+        >
             <header>
                 <img
                     :src="country.flag"
                     alt=""
                 >
             </header>
-            <main class="pt-8">
+            <main class="pt-8 md:pt-4 md:pl-20">
                 <h2
-                    class="mb-4 font-semibold capitalize"
+                    class="mb-4 font-semibold capitalize theme-transition"
+                    :class="{
+                        'text-black': theme === 'light',
+                        'text-white-dark-mode-text-light-mode-elements': theme === 'dark'
+                    }"
                     v-text="country.name"
                 />
-                <div class="leading-8 tracking-wide text-sm font-thin">
+                <div class="leading-8 tracking-wide text-sm font-thin md:flex md:flex-wrap md:justify-between md:leading-7">
                     <div
                         v-for="(Arr, i) in fields"
                         :key="i"
@@ -23,7 +30,13 @@
                                 class="capitalize text-dark-gray-light-mode-input"
                                 v-for="(field, i) in Arr"
                                 :key="i"
-                            ><b class="text-black inline-block mr-2">{{ field.name }}</b>{{ country[field.slug] }}</p>
+                            ><b
+                                    class="inline-block mr-2 theme-transition"
+                                    :class="{
+                                        'text-black': theme === 'light',
+                                        'text-white-dark-mode-text-light-mode-elements': theme === 'dark'
+                                    }"
+                                >{{ field.name }}</b>{{ country[field.slug] }}</p>
                         </div>
                         <div
                             v-else
@@ -34,7 +47,13 @@
                                 :key="i"
                                 class="text-dark-gray-light-mode-input"
                             >
-                                <b class="capitalize text-black">{{ field.name }}</b>
+                                <b
+                                    class="capitalize theme-transition"
+                                    :class="{
+                                        'text-black': theme === 'light',
+                                        'text-white-dark-mode-text-light-mode-elements': theme === 'dark'
+                                    }"
+                                >{{ field.name }}</b>
                                 <span v-if="i === 0">
                                     <span
                                         v-for="(innerField,i) in country[field.slug]"
@@ -54,8 +73,14 @@
                             </p>
                         </div>
                     </div>
-                    <div class="pt-8">
-                        <p class="capitalize"><b>border countries:</b></p>
+                    <div class="pt-8 md:w-full md:flex md:items-center md:flex-wrap">
+                        <p
+                            class="capitalize md:mr-3 theme-transition"
+                            :class="{
+                                'text-black': theme === 'light',
+                                'text-white-dark-mode-text-light-mode-elements': theme === 'dark'
+                            }"
+                        ><b>border countries:</b></p>
                         <div class="-mx-2 flex items-center flex-wrap">
                             <div
                                 class="p-2"
@@ -77,6 +102,7 @@
 </template>
 
 <script>
+    import { mapState } from "vuex";
     export default {
         mounted() {
             this.fetchCountry();
@@ -121,11 +147,11 @@
                     console.log(error);
                 }
             },
-            watch: {
-                '$route'(to, from) {
-                    console.log(to);
-                }
-            }
+        },
+        computed: {
+            ...mapState({
+                theme: state => state.countries.theme
+            })
         },
     }
 </script>

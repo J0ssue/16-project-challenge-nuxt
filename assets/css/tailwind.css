@@ -49,4 +49,8 @@
   @apply bg-jobs-cyan text-white;
 }
 
+.theme-transition {
+  @apply transition duration-300 ease-in-out;
+}
+
 @tailwind utilities;

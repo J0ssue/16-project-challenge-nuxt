@@ -1,7 +1,11 @@
 <template>
     <div class="base-dropdown relative w-dropdown-width">
         <button
-            class="px-6 py-4 w-full bg-white shadow-dropdown rounded-lg flex items-center justify-between focus:outline-none text-sm font-thin"
+            :class="{
+            'bg-countries-Blue-dark-mode-elements': theme === 'dark',
+            'text-white-dark-mode-text-light-mode-elements': theme === 'dark'   
+            }"
+            class="px-6 py-4 w-full bg-white shadow-dropdown rounded-lg flex items-center justify-between focus:outline-none text-sm font-thin theme-transition"
             @click="toggleDropdown"
         >
             <span
@@ -14,7 +18,8 @@
             class="base-dropdown__tooltip bg-white px-6 py-4 w-full rounded-lg shadow-dropdown"
             :class="{
                 'base-dropdown--tooltip-open': isDropdownOpen,
-                'base-dropdown--tooltip-close': !isDropdownOpen
+                'base-dropdown--tooltip-close': !isDropdownOpen,
+                'bg-countries-Blue-dark-mode-elements': theme === 'dark'
                 }"
         >
             <li
@@ -23,7 +28,10 @@
             >
                 <button
                     v-text="option"
-                    class="py-1 inline-block w-full text-left capitalize text-sm font-thin focus:outline-none"
+                    class="py-1 inline-block w-full text-left capitalize text-sm font-thin focus:outline-none theme-transition"
+                    :class="{
+                        'text-white-dark-mode-text-light-mode-elements': theme === 'dark'   
+                    }"
                     @click="toggleActiveOption(option)"
                 />
             </li>
@@ -32,6 +40,7 @@
 </template>
 
 <script>
+    import { mapState } from "vuex";
     /*
         *@settings (Object),
         *@settings.options (Array),
@@ -58,6 +67,11 @@
                 this.toggleDropdown();
                 this.$emit('activeOption', { searchBy: 'region', keyword: option });
             }
+        },
+        computed: {
+            ...mapState({
+                theme: state => state.countries.theme
+            })
         },
     }
 </script>

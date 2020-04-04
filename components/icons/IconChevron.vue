@@ -1,8 +1,10 @@
 <template>
     <svg
+        class="theme-transition"
         :class="{
             'stroke-current text-dark-gray-light-mode-input': options.gray,
             'stroke-current text-black': options.black,
+            'stroke-current text-white': options.white,
             'w-4 h-4': options.sm
         }"
         xmlns='http://www.w3.org/2000/svg'
