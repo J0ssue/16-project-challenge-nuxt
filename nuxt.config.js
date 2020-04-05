@@ -1,7 +1,7 @@
 export default {
   mode: 'universal',
   env: {
-    baseUrl: process.env.BASE_URL,
+    baseURL: 'https://',
   },
   /*
    ** Headers of the page
@@ -69,7 +69,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: process.env.BASE_URL || 'http://'
+    // baseURL: 'http://'
   },
   /*
    ** Build configuration

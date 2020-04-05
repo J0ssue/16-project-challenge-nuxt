@@ -1,11 +1,12 @@
-import Repository from './Repository'
+// import Repository from './Repository'
+import axios from 'axios'
 const resource = 'restcountries.eu/rest/v2';
 
 export default {
   index() {
-    return Repository.get(`${resource}/all`);
+    return axios.get(`https://${resource}/all`);
   },
   filter(settings) {
-    return Repository.get(`${resource}/${settings.searchBy}/${settings.keyword}`)
+    return axios.get(`https://${resource}/${settings.searchBy}/${settings.keyword}`)
   }
 }

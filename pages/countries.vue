@@ -140,7 +140,7 @@
         data() {
             return {
                 search: '',
-                options: ['africa', 'america', 'asia', 'europe', 'oceania']
+                options: ['africa', 'asia', 'europe', 'oceania']
             };
         },
         computed: {

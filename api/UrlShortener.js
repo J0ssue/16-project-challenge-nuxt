@@ -1,17 +1,18 @@
-import Repository from './Repository'
+// import Repository from './Repository'
+import axios from 'axios'
 const resource = 'rel.ink/api/links/';
 
 
 export default {
   create(url) {
-    return Repository.post(
-      resource, {
+    return axios.post(
+      'https://' + resource, {
         url
       }
     )
   },
 
   show(id) {
-    return Repository.get(`/${resource}${id}/`)
+    return axios.get(`https://${resource}${id}/`)
   }
 };
