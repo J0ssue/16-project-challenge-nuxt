@@ -43,7 +43,14 @@ module.exports = {
         'countries-dark-blue-light-mode-text': 'hsl(200, 15%, 8%)',
         'dark-gray-light-mode-input': 'hsl(0, 0%, 52%)',
         'very-light-gray-light-mode-background': 'hsl(0, 0%, 98%)',
-        'white-dark-mode-text-light-mode-elements': 'hsl(0, 0%, 100%)'
+        'white-dark-mode-text-light-mode-elements': 'hsl(0, 0%, 100%)',
+        'bank-dark-blue': 'hsl(233, 26%, 24%)',
+        'bank-lime-green': 'hsl(136, 65%, 51%)',
+        'bank-bright-cyan': 'hsl(192, 70%, 51%)',
+        'bank-grayish-blue': 'hsl(233, 8%, 62%)',
+        'bank-light-grayish-blue': 'hsl(220, 16%, 96%)',
+        'bank-very-light-gray': 'hsl(0, 0%, 98%)',
+        'bank-white': 'hsl(0, 0%, 100%)'
       },
       transitionTimingFunction: {
         'ease-form-input': 'cubic-bezier(0, 1.25, 0, 1.17)'

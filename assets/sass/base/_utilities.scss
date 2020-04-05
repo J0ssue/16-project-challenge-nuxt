@@ -15,3 +15,20 @@
 .moon-dark {
   stroke: #000;
 }
+
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out 0.2s forwards;
+  // animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+.fade-out {
+  animation: fadeOut 0.4s ease-in-out forwards;
+}
+
+.drop-down {
+  animation: dropDown 0.4s ease-in-out 0.2s forwards;
+}
+
+.drop-up {
+  animation: dropUp 0.4s ease-in-out forwards;
+}

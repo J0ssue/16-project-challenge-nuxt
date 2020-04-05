@@ -1,0 +1,46 @@
+.easybank {
+  &__burger {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &__close {
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  &__hero {
+    background-image: url('/easybank/bg-intro-mobile.svg');
+    background-position: right -80px;
+    background-repeat: no-repeat;
+
+    @media (min-width: 1024px) {
+      background-image: url('/easybank/bg-intro-desktop.svg');
+      background-position: 479px -39vh;
+
+    }
+  }
+
+  &__hero-img {
+    margin-top: -118px;
+
+    @media (min-width: 1024px) {
+      top: -22vw;
+      margin-top: 0px;
+      transform: translateX(163px);
+    }
+  }
+
+  &__overlay {
+    pointer-events: none;
+    opacity: 0;
+    background-color: rgba(45, 49, 77, 0.6);
+  }
+
+  &__dropdown {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    top: -88px;
+  }
+}
