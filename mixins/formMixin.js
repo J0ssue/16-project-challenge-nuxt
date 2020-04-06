@@ -87,16 +87,10 @@ export default {
       return this.form.password.length > 4
     },
     valid() {
-      if (
-        !this.emailValid ||
+      return !(!this.emailValid ||
         !this.nameFilled ||
         !this.lastFilled ||
-        !this.passwordFilled
-      ) {
-        return false
-      } else {
-        return true
-      }
+        !this.passwordFilled);
     }
   },
 };

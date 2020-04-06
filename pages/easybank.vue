@@ -2,12 +2,12 @@
     <div class="easybank">
         <!-- visual separator -->
         <nav class="easybank__nav px-6 py-4 relative z-10 shadow-xl flex items-center justify-between bg-white">
-            <div>
+            <nuxt-link to="/">
                 <img
                     src="/easybank/logo.svg"
                     alt="brand image"
                 >
-            </div>
+            </nuxt-link>
             <!-- desktop menu -->
             <ul class="hidden text-bank-grayish-blue capitalize lg:block">
                 <li>
