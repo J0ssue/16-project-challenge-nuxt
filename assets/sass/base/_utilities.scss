@@ -16,6 +16,14 @@
   stroke: #000;
 }
 
+.slide-in {
+  animation: slideIn 0.4s ease-in-out 0.2s forwards;
+}
+
+.slide-out {
+  animation: slideOut 0.4s ease-in-out forwards;
+}
+
 .fade-in {
   animation: fadeIn 0.4s ease-in-out 0.2s forwards;
   // animation: name duration timing-function delay iteration-count direction fill-mode;
@@ -31,4 +39,20 @@
 
 .drop-up {
   animation: dropUp 0.4s ease-in-out forwards;
+}
+
+.paragraph {
+  font-size: 15px;
+}
+
+.home-heading-title {
+  font-size: 40px;
+}
+
+.subheading {
+  font-size: 32px;
+}
+
+.card-title {
+  font-size: 18px;
 }

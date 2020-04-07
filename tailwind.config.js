@@ -50,7 +50,14 @@ module.exports = {
         'bank-grayish-blue': 'hsl(233, 8%, 62%)',
         'bank-light-grayish-blue': 'hsl(220, 16%, 96%)',
         'bank-very-light-gray': 'hsl(0, 0%, 98%)',
-        'bank-white': 'hsl(0, 0%, 100%)'
+        'bank-white': 'hsl(0, 0%, 100%)',
+        'myteam-midnight-green': '#014e56',
+        'myteam-light-coral': '#f67e7e',
+        'myteam-rapture-blue': '#79c8c7',
+        'myteam-police-blue': '#2c6269',
+        'myteam-deep-jungle-green': '#004047',
+        'myteam-sacramento-state-green': '#012f34',
+        'myteam-dark-green': '#002529'
       },
       transitionTimingFunction: {
         'ease-form-input': 'cubic-bezier(0, 1.25, 0, 1.17)'
@@ -76,6 +83,9 @@ module.exports = {
         'spg-card': '0px 0px 20px rgba(0, 0, 0, 0.2)',
         'price-card': '0px 0px 10px hsl(234, 14%, 74%)',
         'dropdown': '0px 0px 10px rgba(0, 0, 0, 0.2)'
+      },
+      fontFamily: {
+        'livvic': ['livvic', 'livvic-semibold', 'livvic-semibold-italic', 'livvic-thin', 'livvic-thin-italic', 'livvic-medium', 'livvic-medium-italic', 'livvic-light', 'livvic-light-italic', 'livvic-italic', 'livvic-extra-light', 'livvic-extra-light-italic', 'livvic-bold', 'livvic-bold-italic', 'livvic-black', 'livvic-black-italic']
       }
     },
   },

@@ -1,0 +1,61 @@
+.my-team {
+  &__overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__header-description {
+    @media (min-width: 350px) {
+      width: 312px;
+    }
+  }
+
+  &__container {
+    max-width: 1400px;
+  }
+
+  &__logo-nav {
+    height: 32px;
+    width: 127px;
+  }
+
+  &__logo-footer {
+    height: 24px;
+    width: 95px;
+  }
+
+  &__hamburger {
+    width: 20px;
+    height: 17px;
+  }
+
+  &__cta {
+    background-image: url('/my-team/bg-pattern-home-6-about-5.svg');
+    background-repeat: no-repeat;
+    background-position: left bottom;
+  }
+
+  &__benefits {
+    background-image: url('/my-team/bg-pattern-home-3-cropped.png');
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: 100px 244px;
+  }
+
+  &__testimonials {
+    background-image: url('/my-team/bg-pattern-home-4-about-3.svg');
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    h2 {
+      width: 100%;
+      padding: 0px 1rem;
+
+      @media (min-width: 350px) {
+        padding: 0px;
+        width: 333px;
+      }
+    }
+  }
+}

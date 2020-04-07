@@ -1,0 +1,8 @@
+.benefits-card {
+
+  &__description {
+    @media (min-width: 350px) {
+      width: 305px;
+    }
+  }
+}
