@@ -208,6 +208,14 @@
             addScroll() {
                 document.body.style.overflowY = 'scroll';
             },
-        }
+        },
+        watch: {
+            $route() {
+                if (this.isDrawerOpen) {
+                    this.isDrawerOpen = false;
+                    this.addScroll();
+                }
+            }
+        },
     }
 </script>

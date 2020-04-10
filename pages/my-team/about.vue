@@ -41,7 +41,7 @@
                     class="mb-10 livvic-semibold text-white text-center subheading"
                     v-text="about.directors.title"
                 />
-                <div class="flex flex-wrap md:-mx-2">
+                <div class="flex flex-col flex-wrap md:flex-row md:-mx-2">
                     <div
                         class="md:w-2/4 md:px-2 lg:w-1/3"
                         :class="{
