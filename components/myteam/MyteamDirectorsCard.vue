@@ -35,29 +35,31 @@
                         :href="settings.fb"
                         target="_blank"
                     >
-                        <img
+                        <div v-html="db.icons.twitter"></div>
+                        <!-- <img
                             :src="settings.twIcon"
                             alt="social icon"
-                        >
+                        > -->
                     </a>
                     <a
                         class="ml-2"
                         :href="settings.in"
                         target="_blank"
                     >
-                        <img
+                        <div v-html="db.icons.instagram"></div>
+                        <!-- <img
                             :src="settings.inIcon"
                             alt="social icon"
-                        >
+                        > -->
                     </a>
                 </div>
             </div>
         </div>
         <button
-            class="myteam-directors-card__plus-icon bg-myteam-light-coral w-plus-icon h-plus-icon flex items-center justify-center rounded-full absolute focus:outline-none"
+            class="myteam-directors-card__plus-icon bg-myteam-light-coral w-plus-icon h-plus-icon flex items-center justify-center rounded-full absolute transition duration-300 ease-in-out focus:outline-none"
             :class="{
-                'fade-in-btn': activeScreen !== settings.slug,
-                'fade-out-btn': activeScreen === settings.slug,
+                'fade-in-btn hover:bg-myteam-rapture-blue': activeScreen !== settings.slug,
+                'fade-out-btn hover:bg-transparent': activeScreen === settings.slug,
             }"
             @click="togglePopup"
         >
@@ -67,10 +69,10 @@
             >
         </button>
         <button
-            class="myteam-directors-card__close-icon bg-myteam-rapture-blue w-plus-icon h-plus-icon flex items-center justify-center rounded-full absolute focus:outline-none"
+            class="myteam-directors-card__close-icon bg-myteam-rapture-blue w-plus-icon h-plus-icon flex items-center justify-center rounded-full absolute transition duration-300 ease-in-out focus:outline-none"
             :class="{
-                'fade-in-btn': activeScreen === settings.slug,
-                'fade-out-btn': activeScreen !== settings.slug,
+                'fade-in-btn hover:bg-myteam-light-coral': activeScreen === settings.slug,
+                'fade-out-btn hover:bg-transparent': activeScreen !== settings.slug,
             }"
             @click="closePopup"
         >
@@ -83,7 +85,12 @@
 </template>
 
 <script>
+    import db from "~/helpers/my-team-db";
+    import IconDynamic from "~/components/IconDynamic";
     export default {
+        components: {
+            IconDynamic
+        },
         props: {
             settings: {
                 type: Object
@@ -91,6 +98,11 @@
             activeScreen: {
                 type: String
             }
+        },
+        data() {
+            return {
+                db
+            };
         },
         methods: {
             togglePopup() {

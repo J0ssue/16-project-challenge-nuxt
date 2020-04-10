@@ -32,4 +32,17 @@
     bottom: 15px;
     transition: all 0.3s ease-in-out;
   }
+
+  &__error-message {
+    position: absolute;
+  }
+
+  &--is-filled {
+    transform: translateY(-18px) scale(0.8);
+    left: 20px;
+  }
+
+  &--error-text-color {
+    color: rgba(#f67e7e, 0.5) !important;
+  }
 }

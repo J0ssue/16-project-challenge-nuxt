@@ -33,67 +33,64 @@
         </header>
         <section class="px-4 md:px-32 lg:w-2/4 lg:pl-0">
             <form @submit.prevent="submit">
-                <div class="myteam-contact__fieldset relative bg-transparent relative border-b border-white white-transparent">
+                <div
+                    class="myteam-contact__fieldset relative bg-transparent relative border-b border-white white-transparent"
+                    :class="{
+                        'border-myteam-light-coral': hasError(field)
+                    }"
+                    v-for="(field, i) in availableKeys"
+                    :key="i"
+                >
                     <input
+                        @keyup="clearError(field)"
                         id="input-name"
                         class="myteam-contact__input bg-transparent block w-full h-full border-none focus:outline-none"
                         type="text"
+                        v-model="form[field]"
                     >
                     <label
-                        class="myteam-contact__label absolute"
+                        class="myteam-contact__label absolute capitalize"
+                        :class="{
+                            'myteam-contact--error-text-color': hasError(field),
+                            'myteam-contact--is-filled': !isEmpty(field)
+                        }"
                         for="input-name"
-                    >Name</label>
+                    >{{ field }}</label>
+                    <div
+                        class="myteam-contact__error-message livvic-semibold text-xs text-myteam-light-coral"
+                        v-show="hasError(field)"
+                        v-text="errorMessage[field]"
+                    />
                 </div>
-                <!--  -->
-                <div class="myteam-contact__fieldset relative bg-transparent relative border-b border-white white-transparent">
-                    <input
-                        id="input-email"
-                        class="myteam-contact__input bg-transparent block w-full h-full border-none focus:outline-none"
-                        type="text"
-                    >
-                    <label
-                        class="myteam-contact__label absolute"
-                        for="input-email"
-                    >Email Address</label>
-                </div>
-                <!--  -->
-                <div class="myteam-contact__fieldset relative bg-transparent relative border-b border-white white-transparent">
-                    <input
-                        id="input-company"
-                        class="myteam-contact__input bg-transparent block w-full h-full border-none focus:outline-none"
-                        type="text"
-                    >
-                    <label
-                        class="myteam-contact__label absolute"
-                        for="input-company"
-                    >Company Name</label>
-                </div>
-                <!--  -->
-                <div class="myteam-contact__fieldset relative bg-transparent relative border-b border-white white-transparent">
-                    <input
-                        id="input-title"
-                        class="myteam-contact__input bg-transparent block w-full h-full border-none focus:outline-none"
-                        type="text"
-                    >
-                    <label
-                        class="myteam-contact__label absolute"
-                        for="input-title"
-                    >Title</label>
-                </div>
-                <!--  -->
-                <div class="myteam-contact__fieldset-area relative bg-transparent relative border-b border-white white-transparent">
+                <div
+                    class="myteam-contact__fieldset-area relative bg-transparent relative border-b border-white white-transparent"
+                    :class="{
+                        'border-myteam-light-coral': hasError('message')
+                    }"
+                >
                     <textarea
                         id="input-message"
                         class="myteam-contact__textarea bg-transparent block w-full h-full border-none focus:outline-none"
+                        @keyup="clearError('message')"
                         @input="resizeTextArea"
+                        v-model="form.message"
                     ></textarea>
                     <label
                         class="myteam-contact__label absolute"
+                        :class="{
+                            'myteam-contact--error-text-color': hasError('message'),
+                            'myteam-contact--is-filled': !isEmpty('message')
+                        }"
                         for="input-message"
                     >Message</label>
+                    <div
+                        class="myteam-contact__error-message livvic-semibold text-xs text-myteam-light-coral"
+                        v-show="hasError('message')"
+                        v-text="errorMessage['message']"
+                    />
                 </div>
                 <button
-                    class="text-myteam-sacramento-state-green px-6 py-2 bg-white rounded-full livvic-semibold focus:outline-none"
+                    class="text-myteam-sacramento-state-green px-6 py-2 bg-white rounded-full livvic-semibold transition duration-300 ease-in-out focus:outline-none hover:bg-myteam-sacramento-state-green hover:text-white"
                     type="submit"
                     v-text="'submit'"
                 />
@@ -114,13 +111,22 @@
 </template>
 
 <script>
+    import contactForm from "~/mixins/contactFormMixin";
     import db from "~/helpers/my-team-db";
     import MyteamBenefitsCard from "~/components/myteam/MyteamBenefitsCard";
     export default {
+        mixins: [contactForm],
         layout: 'my-team',
         data() {
             return {
-                contact: db.contact
+                contact: db.contact,
+                errorMessage: {
+                    name: 'First Name cannot be empty',
+                    title: 'Title cannot be empty',
+                    email: 'Looks like this is not an email',
+                    message: 'Message cannot be empty',
+                    company: 'Company cannot be empty'
+                }
             };
         },
         methods: {
@@ -128,9 +134,6 @@
                 event.target.style.height = "";
                 event.target.style.height = event.target.scrollHeight + 3 + "px";
             },
-            submit() {
-                console.log('hello world');
-            }
         },
     }
 </script>

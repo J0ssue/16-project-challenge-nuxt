@@ -13,18 +13,19 @@
                 <!-- desktop/tablet menu -->
                 <div class="hidden pl-12 livvic-semibold text-white md:block md:flex-1">
                     <nuxt-link
-                        class="mr-12"
+                        class="mr-12 hover:text-myteam-light-coral"
                         to="/my-team"
                         v-text="'home'"
                     />
                     <nuxt-link
+                        class="hover:text-myteam-light-coral"
                         to="/my-team/about"
                         v-text="'about'"
                     />
                 </div>
                 <div class="hidden md:block">
                     <nuxt-link
-                        class="px-6 py-2 border-2 border-white rounded-full livvic-semibold-italic text-white focus:outline-none"
+                        class="px-6 py-2 border-2 border-white rounded-full livvic-semibold-italic text-white focus:outline-none hover:bg-white hover:text-myteam-sacramento-state-green transition duration-300 ease-in-out"
                         to="/my-team/contact"
                         v-text="'contact us'"
                     />
@@ -61,7 +62,7 @@
                         class="mb-8 livvic-bold text-3xl text-myteam-dark-green leading-none md:mb-0 lg:text-5xl"
                     />
                     <nuxt-link
-                        class="px-4 py-2 border-2 border-myteam-dark-green rounded-full livvic-semibold paragraph md:px-8"
+                        class="px-4 py-2 border-2 border-myteam-dark-green rounded-full livvic-semibold paragraph transition duration-300 ease-in-out hover:bg-myteam-dark-green hover:text-white md:px-8"
                         to="/my-team/contact"
                         v-text="'contact us'"
                     />
@@ -71,13 +72,19 @@
             <!-- footer -->
             <footer class="bg-myteam-dark-green py-20 md:flex md:items-center md:justify-between md:py-12 md:px-10 lg:px-32">
                 <div class="md:flex md:flex-col md:self-stretch">
-                    <img
-                        class="my-team__logo-footer mx-auto mb-8 md:mb-0"
-                        :src="db.footer.logo"
-                        alt="logo"
+                    <nuxt-link
+                        class="inline-block mx-auto mb-8 md:mb-0"
+                        to="/my-team"
                     >
+                        <img
+                            class="my-team__logo-footer"
+                            :src="db.footer.logo"
+                            alt="logo"
+                        >
+                    </nuxt-link>
                     <div class="flex items-center justify-center text-white livvic-semibold mb-8 md:mt-auto lg:mb-0">
                         <nuxt-link
+                            class="hover:text-myteam-light-coral"
                             :class="{
                                 'mr-4': i === 0
                             }"
@@ -100,10 +107,13 @@
                             v-for="(icon, i) in db.footer.social"
                             :key="i"
                         >
-                            <img
+                            <icon-dynamic>
+                                <div v-html="db.icons[icon.slug]" />
+                            </icon-dynamic>
+                            <!-- <img
                                 :src="icon.icon"
                                 alt="social icon"
-                            >
+                            > -->
                         </a>
                     </div>
                 </div>
@@ -126,10 +136,13 @@
                             v-for="(icon, i) in db.footer.social"
                             :key="i"
                         >
-                            <img
+                            <icon-dynamic>
+                                <div v-html="db.icons[icon.slug]" />
+                            </icon-dynamic>
+                            <!-- <img
                                 :src="icon.icon"
                                 alt="social icon"
-                            >
+                            > -->
                         </a>
                     </div>
 
@@ -167,9 +180,11 @@
 <script>
     import db from "~/helpers/my-team-db";
     import MyteamDrawer from "~/components/myteam/MyteamDrawer";
+    import IconDynamic from "~/components/IconDynamic";
     export default {
         components: {
-            MyteamDrawer
+            MyteamDrawer,
+            IconDynamic
         },
         data() {
             return {

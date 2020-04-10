@@ -4,45 +4,55 @@ export default {
       invalid: false,
       form: {
         name: '',
-        last: '',
         email: '',
-        password: '',
+        title: '',
+        company: '',
+        message: '',
       },
       errors: {
         name: false,
-        last: false,
         email: false,
-        password: false,
+        title: false,
+        message: false,
+        company: false,
       }
     }
   },
   methods: {
     submit() {
       if (!this.valid) {
-        if (!this.passwordFilled) {
-          this.setError('password');
+        if (!this.messageFilled) {
+          this.setError('message');
         } else {
-          this.clearError('password')
+          this.clearError('message')
         }
         if (!this.nameFilled) {
           this.setError('name');
         } else {
           this.clearError('name')
         }
-        if (!this.lastFilled) {
-          this.setError('last');
+        if (!this.titleFilled) {
+          this.setError('title');
         } else {
-          this.clearError('last')
+          this.clearError('title')
         }
         if (!this.emailValid) {
           this.setError('email');
         } else {
           this.clearError('email')
         }
+        if (!this.companyValid) {
+          this.setError('company');
+        } else {
+          this.clearError('company')
+        }
       } else {
         alert('form is valid')
         this.clearForm();
       }
+    },
+    isEmpty(field) {
+      return this.form[field].length === 0
     },
     clearForm() {
       for (const field in this.form) {
@@ -74,23 +84,26 @@ export default {
     }
   },
   computed: {
+    availableKeys() {
+      return Object.keys(this.form).filter(key => key !== 'message');
+    },
     emailValid() {
       return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.form.email);
     },
     nameFilled() {
       return this.form.name.length > 2
     },
-    lastFilled() {
-      return this.form.last.length > 2
+    titleFilled() {
+      return this.form.title.length > 0
     },
-    passwordFilled() {
-      return this.form.password.length > 4
+    messageFilled() {
+      return this.form.message.length > 0
+    },
+    companyFilled() {
+      return this.form.company.length > 0
     },
     valid() {
-      return !(!this.emailValid ||
-        !this.nameFilled ||
-        !this.lastFilled ||
-        !this.passwordFilled);
+      return !(!this.emailValid || !this.nameFilled || !this.titleFilled || !this.companyFilled || !this.messageFilled);
     }
   },
 };
