@@ -21,7 +21,7 @@
         <main>
             <section class="md:flex md:items-center">
                 <div><img
-                        src="/josue.jpg"
+                        src="/josue-image.jpg"
                         alt="josue's image"
                     ></div>
                 <div class="px-4 py-10 md:text-lg livvic-semibold md:p-20">
