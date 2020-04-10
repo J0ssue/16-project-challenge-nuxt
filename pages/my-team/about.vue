@@ -105,7 +105,13 @@
                         :key="i"
                     >
                         <img
-                            :class="{ [`${about.clients.classNames[i]}`]: about.clients.classNames[i].length > 0 }"
+                            :class="{ 
+                                'verge': about.clients.classNames[i] === 'verge', 
+                                'jakarta': about.clients.classNames[i] === 'jakarta', 
+                                'guradian': about.clients.classNames[i] === 'guradian', 
+                                'techradar': about.clients.classNames[i] === 'techradar', 
+                                'gadgets': about.clients.classNames[i] === 'gadgets', 
+                            }"
                             :src="client"
                             alt="client image"
                         >

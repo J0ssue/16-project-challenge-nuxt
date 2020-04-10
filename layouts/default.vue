@@ -46,6 +46,15 @@
                 portfolio
             };
         },
+        mounted() {
+            let nuxt = document.querySelector('#__nuxt');
+            let layout = document.querySelector('#__layout');
+            if (this.$route.name === 'index') {
+                document.body.style.height = 'initial';
+                nuxt.style.height = 'initial';
+                layout.style.height = 'initial';
+            }
+        },
         methods: {
             toggleNavigation() {
                 this.$store.dispatch('controls/togglePortfolioDrawer');
@@ -69,13 +78,20 @@
         },
         watch: {
             $route(to) {
-                if (to.name === 'index') {
-                    document.body.style.height = 'initial';
-                } else {
-                    document.body.style.height = '100%';
-                }
+                let nuxt = document.querySelector('#__nuxt');
+                let layout = document.querySelector('#__layout');
                 if (this.isMainNavbarOpen) {
                     this.toggleNavigation();
+                }
+                if (to.name === 'index') {
+                    document.body.style.height = 'initial';
+                    nuxt.style.height = 'initial';
+                    layout.style.height = 'initial';
+                }
+                if (to.name !== 'index') {
+                    document.body.style.height = '100%';
+                    nuxt.style.height = '100%';
+                    layout.style.height = '100%';
                 }
             }
         },
