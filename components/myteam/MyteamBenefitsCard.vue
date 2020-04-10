@@ -1,7 +1,7 @@
 <template>
-    <div class="benefits-card text-center text-white">
+    <div class="benefits-card text-center text-white md:flex md:items-center md:text-left">
         <img
-            class="mx-auto mb-6"
+            class="mx-auto mb-6 md:m-0 md:mr-6"
             :src="options.img"
             alt="image"
         >

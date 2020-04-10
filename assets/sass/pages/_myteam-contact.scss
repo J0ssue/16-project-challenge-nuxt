@@ -1,0 +1,35 @@
+.myteam-contact {
+  &__fieldset:not(:last-child) {
+    margin-bottom: 40px
+  }
+
+  &__fieldset-area {
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    padding-left: 20px;
+    padding-bottom: 15px;
+  }
+
+  &__textarea {
+    resize: none;
+    padding-left: 20px;
+  }
+
+  &__input:focus+&__label {
+    transform: translateY(-20px) scale(0.8);
+    left: 20px;
+  }
+
+  &__textarea:focus+&__label {
+    transform: translateY(-28px) scale(0.8);
+    left: 20px;
+  }
+
+  &__label {
+    left: 20px;
+    bottom: 15px;
+    transition: all 0.3s ease-in-out;
+  }
+}

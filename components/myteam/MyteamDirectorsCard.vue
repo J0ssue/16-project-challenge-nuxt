@@ -1,41 +1,84 @@
 <template>
-    <div>
+    <div class="myteam-directors-card relative text-center text-white bg-myteam-sacramento-state-green py-8">
         <!-- visible card -->
         <div>
-            <div>
+            <div class="mx-auto relative w-24 h-24 rounded-full border-2 border-myteam-rapture-blue mb-4">
                 <img
+                    class="w-full h-full rounded-full absolute top-0 left-0"
                     :src="settings.avatar"
                     alt="avatar"
                 >
             </div>
-            <p v-text="settings.name" />
-            <p><small>{{ settings.job }}</small></p>
+            <p
+                class="directors-name capitalize livvic-semibold text-myteam-rapture-blue"
+                v-text="settings.name"
+            />
+            <p class="paragraph capitalize"><small>{{ settings.job }}</small></p>
         </div>
         <!-- popup card -->
-        <div>
-            <p v-text="settings.name" />
-            <p><small>{{ settings.back }}</small></p>
-            <div>
-                <a
-                    :href="settings.fb"
-                    target="_blank"
-                >
-                    <img
-                        :src="settings.twIcon"
-                        alt="social icon"
+        <div class="myteam-directors-card__popup absolute w-full h-full top-0 left-0 overflow-hidden">
+            <div
+                class="myteam-directors-card__popup-inner bg-myteam-dark-green w-full h-full py-8 px-16"
+                :class="{
+                    'slide-up': activeScreen === settings.slug,
+                    'slide-down-card': activeScreen !== settings.slug,
+                }"
+            >
+                <p
+                    class="directors-name mb-3 capitalize livvic-semibold text-myteam-rapture-blue"
+                    v-text="settings.name"
+                />
+                <p class="mb-6 paragraph livvic-semibold"><small>{{ settings.back }}</small></p>
+                <div class="flex items-center justify-center">
+                    <a
+                        class="mr-2"
+                        :href="settings.fb"
+                        target="_blank"
                     >
-                </a>
-                <a
-                    :href="settings.in"
-                    target="_blank"
-                >
-                    <img
-                        :src="settings.inIcon"
-                        alt="social icon"
+                        <img
+                            :src="settings.twIcon"
+                            alt="social icon"
+                        >
+                    </a>
+                    <a
+                        class="ml-2"
+                        :href="settings.in"
+                        target="_blank"
                     >
-                </a>
+                        <img
+                            :src="settings.inIcon"
+                            alt="social icon"
+                        >
+                    </a>
+                </div>
             </div>
         </div>
+        <button
+            class="myteam-directors-card__plus-icon bg-myteam-light-coral w-plus-icon h-plus-icon flex items-center justify-center rounded-full absolute focus:outline-none"
+            :class="{
+                'fade-in-btn': activeScreen !== settings.slug,
+                'fade-out-btn': activeScreen === settings.slug,
+            }"
+            @click="togglePopup"
+        >
+            <img
+                src="/my-team/icon-cross.svg"
+                alt="cross icon"
+            >
+        </button>
+        <button
+            class="myteam-directors-card__close-icon bg-myteam-rapture-blue w-plus-icon h-plus-icon flex items-center justify-center rounded-full absolute focus:outline-none"
+            :class="{
+                'fade-in-btn': activeScreen === settings.slug,
+                'fade-out-btn': activeScreen !== settings.slug,
+            }"
+            @click="closePopup"
+        >
+            <img
+                src="/my-team/icon-close-dark.svg"
+                alt="cross icon"
+            >
+        </button>
     </div>
 </template>
 
@@ -44,7 +87,18 @@
         props: {
             settings: {
                 type: Object
+            },
+            activeScreen: {
+                type: String
             }
-        }
+        },
+        methods: {
+            togglePopup() {
+                this.$emit('togglePopup', this.settings.slug);
+            },
+            closePopup() {
+                this.$emit('closePopup');
+            }
+        },
     }
 </script>

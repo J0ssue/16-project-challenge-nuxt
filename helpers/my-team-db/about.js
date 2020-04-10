@@ -65,6 +65,7 @@
     },
     clients: {
       title: 'some of our clients',
-      clients: ['/my-team/logo-the-verge.png', '/my-team/logo-the-jakarta-post.png', '/my-team/logo-the-guardian', '/my-team/logo-tech-radar.png', '/my-team/logo-gadgets-now.png']
+      classNames: ['verge', 'jakarta', 'guardian', 'techradar', 'gadgets'],
+      clients: ['/my-team/logo-the-verge.png', '/my-team/logo-jakarta-post.png', '/my-team/logo-the-guardian.png', '/my-team/logo-tech-radar.png', '/my-team/logo-gadgets-now.png']
     }
   };

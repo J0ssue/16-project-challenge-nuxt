@@ -1,34 +1,39 @@
 <template>
     <div class="my-team__layout relative bg-myteam-midnight-green font-livvic">
-        <div class="my-team__container">
-            <nav class="px-4 py-12 flex items-center justify-between">
-                <div>
+        <div class="my-team__container mx-auto">
+            <nav class="px-4 py-12 flex items-center justify-between md:px-10 lg:px-32 lg:mb-20">
+                <nuxt-link to="/my-team">
                     <img
                         class="my-team__logo-nav"
                         :src="db.footer.logo"
                         alt="logo"
                     >
-                </div>
+                </nuxt-link>
 
-                <!-- desktop menu -->
-                <div class="hidden">
+                <!-- desktop/tablet menu -->
+                <div class="hidden pl-12 livvic-semibold text-white md:block md:flex-1">
                     <nuxt-link
-                        :to="'/my-team/' + page"
-                        v-text="page"
-                        v-for="(page, i) in db.pages"
-                        :key="i"
+                        class="mr-12"
+                        to="/my-team"
+                        v-text="'home'"
+                    />
+                    <nuxt-link
+                        to="/my-team/about"
+                        v-text="'about'"
                     />
                 </div>
-                <div class="hidden">
+                <div class="hidden md:block">
                     <nuxt-link
+                        class="px-6 py-2 border-2 border-white rounded-full livvic-semibold-italic text-white focus:outline-none"
                         to="/my-team/contact"
                         v-text="'contact us'"
                     />
                 </div>
+                <!-- desktop/tablet menu ends -->
 
                 <!-- mobile burger menu -->
                 <button
-                    class="block cursor-pointer focus:outline-none"
+                    class="block cursor-pointer focus:outline-none md:hidden"
                     @click="toggleMenu"
                 >
                     <img
@@ -44,27 +49,34 @@
             <!-- content end -->
 
             <!-- cta -->
-            <div class="my-team__cta py-32 px-10 bg-myteam-light-coral text-center">
-                <h2
-                    v-text="db.cta.title"
-                    class="mb-8 livvic-bold text-3xl text-myteam-dark-green leading-none"
-                />
-                <nuxt-link
-                    class="px-4 py-2 border-2 border-myteam-dark-green rounded-full livvic-semibold"
-                    to="/my-team/contact"
-                    v-text="'contact us'"
-                />
+            <div
+                class="my-team__cta py-32 px-10 bg-myteam-light-coral text-center md:px-24 md:py-24"
+                :class="{
+                    'hidden': $route.name === 'my-team-contact'
+                }"
+            >
+                <div class="my-team__cta-container md:flex md:items-center md:justify-between lg:mx-auto">
+                    <h2
+                        v-text="db.cta.title"
+                        class="mb-8 livvic-bold text-3xl text-myteam-dark-green leading-none md:mb-0 lg:text-5xl"
+                    />
+                    <nuxt-link
+                        class="px-4 py-2 border-2 border-myteam-dark-green rounded-full livvic-semibold paragraph md:px-8"
+                        to="/my-team/contact"
+                        v-text="'contact us'"
+                    />
+                </div>
             </div>
 
             <!-- footer -->
-            <footer class="bg-myteam-dark-green py-20">
-                <div>
+            <footer class="bg-myteam-dark-green py-20 md:flex md:items-center md:justify-between md:py-12 md:px-10 lg:px-32">
+                <div class="md:flex md:flex-col md:self-stretch">
                     <img
-                        class="my-team__logo-footer mx-auto mb-8"
+                        class="my-team__logo-footer mx-auto mb-8 md:mb-0"
                         :src="db.footer.logo"
                         alt="logo"
                     >
-                    <div class="flex items-center justify-center text-white livvic-semibold mb-8">
+                    <div class="flex items-center justify-center text-white livvic-semibold mb-8 md:mt-auto lg:mb-0">
                         <nuxt-link
                             :class="{
                                 'mr-4': i === 0
@@ -75,12 +87,9 @@
                             :key="i"
                         />
                     </div>
-                </div>
-                <div class="mb-8 text-center livvic-semibold text-myteam-police-blue">
-                    <address v-html="db.footer.address" />
-                </div>
-                <div>
-                    <div class="mb-8 flex items-center justify-center">
+
+                    <!---------------- social links tablet --------------------->
+                    <div class="hidden mb-8 items-center justify-center md:flex md:mb-0 lg:hidden">
                         <a
                             class="inline-block"
                             :class="{
@@ -97,6 +106,39 @@
                             >
                         </a>
                     </div>
+                </div>
+
+                <!---------------- adress mobile/desktop --------------------->
+                <div class="mb-8 text-center livvic-semibold text-myteam-police-blue md:hidden lg:block lg:flex-1 lg:text-left lg:pl-24 lg:mb-0">
+                    <address v-html="db.footer.address" />
+                </div>
+
+                <div class="lg:self-stretch lg:flex lg:flex-col lg:justify-between">
+                    <!---------------- social links mobile/desktop --------------------->
+                    <div class="mb-8 flex items-center justify-center md:hidden lg:flex lg:justify-end">
+                        <a
+                            class="inline-block"
+                            :class="{
+                                'mx-4': i === 1
+                            }"
+                            :href="icon.link"
+                            target="_blank"
+                            v-for="(icon, i) in db.footer.social"
+                            :key="i"
+                        >
+                            <img
+                                :src="icon.icon"
+                                alt="social icon"
+                            >
+                        </a>
+                    </div>
+
+                    <!---------------- adress tablet --------------------->
+                    <div class="hidden mb-8 text-center livvic-semibold text-myteam-police-blue md:block md:text-right lg:hidden">
+                        <address v-html="db.footer.address" />
+                    </div>
+
+                    <!---------------- copyright --------------------->
                     <p
                         class="text-center livvic-semibold text-myteam-police-blue"
                         v-text="db.footer.copyright"

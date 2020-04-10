@@ -4,5 +4,13 @@
     @media (min-width: 350px) {
       width: 305px;
     }
+
+    @media (min-width: 768px) {
+      width: 100%;
+    }
+
+    @media (min-width: 1280px) {
+      width: 512px;
+    }
   }
 }

@@ -86,6 +86,14 @@ module.exports = {
       },
       fontFamily: {
         'livvic': ['livvic', 'livvic-semibold', 'livvic-semibold-italic', 'livvic-thin', 'livvic-thin-italic', 'livvic-medium', 'livvic-medium-italic', 'livvic-light', 'livvic-light-italic', 'livvic-italic', 'livvic-extra-light', 'livvic-extra-light-italic', 'livvic-bold', 'livvic-bold-italic', 'livvic-black', 'livvic-black-italic']
+      },
+      spacing: {
+        'plus-icon': '56px',
+        '72': '18rem',
+        '84': '21rem',
+        '96': '24rem',
+        '98': '26rem',
+        '100': '28rem',
       }
     },
   },

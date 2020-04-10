@@ -23,7 +23,7 @@
       ]
     },
     testimonials: {
-      title: 'delivering real results for top companies. Some of our <span class="text-myteam-rapture-blue">success stories.</span>',
+      title: 'Delivering real results for top companies. Some of our <span class="text-myteam-rapture-blue">success stories.</span>',
       testimonials: [{
           img: '/my-team/avatar-kady.jpg',
           name: 'kady baker',

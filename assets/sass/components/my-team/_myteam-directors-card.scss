@@ -1,0 +1,84 @@
+.myteam-directors-card {
+
+  &__plus-icon,
+  &__close-icon {
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%, 28px);
+  }
+
+  &__plus-icon {
+    opacity: 1;
+  }
+
+  &__close-icon {
+    opacity: 0;
+  }
+
+  &__popup-inner {
+    transform: translateY(100%)
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes slideDownCard {
+  0% {
+    transform: none;
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes fadeInBtn {
+  0% {
+    opacity: 0;
+    pointer-events: none;
+
+  }
+
+  100% {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 10;
+  }
+}
+
+@keyframes fadeOutBtn {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  100% {
+    opacity: 0;
+    pointer-evnets: none;
+    z-index: 0;
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.4s ease-in-out forwards;
+}
+
+.slide-down-card {
+  animation: slideDownCard 0.4s ease-in-out forwards;
+}
+
+.fade-in-btn {
+  animation: fadeInBtn 0.4s ease-in-out forwards;
+}
+
+.fade-out-btn {
+  animation: fadeOutBtn 0.4s ease-in-out forwards;
+}

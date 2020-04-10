@@ -43,16 +43,90 @@
 
 .paragraph {
   font-size: 15px;
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
 }
 
 .home-heading-title {
   font-size: 40px;
+
+  @media (min-width: 768px) {
+    font-size: 64px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 100px;
+  }
 }
 
 .subheading {
   font-size: 32px;
+
+  @media (min-width: 768px) {
+    font-size: 64px;
+  }
 }
 
 .card-title {
   font-size: 18px;
+}
+
+.verge {
+  height: 24px;
+  width: 146px;
+
+  @media (min-width: 768px) {
+    height: 17px;
+    width: 103px;
+  }
+}
+
+.jakarta {
+  height: 19px;
+  width: 162px;
+
+  @media (min-width: 768px) {
+    height: 14px;
+    width: 114px;
+  }
+}
+
+.guardian {
+  height: 24px;
+  width: 159px;
+
+  @media (min-width: 768px) {
+    height: 17px;
+    width: 112px;
+  }
+}
+
+.techradar {
+  height: 24px;
+  width: 146px;
+
+  @media (min-width: 768px) {
+    height: 17px;
+    width: 103px;
+  }
+}
+
+.gadgets {
+  height: 39px;
+  width: 86px;
+
+  @media (min-width: 768px) {
+    height: 28px;
+    width: 61px;
+  }
+}
+
+.contact-sugestion {
+  font-size: 18px;
+}
+
+.white-transparent {
+  color: rgba(white, 0.5)
 }
