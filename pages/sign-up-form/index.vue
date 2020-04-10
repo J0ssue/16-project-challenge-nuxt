@@ -1,5 +1,5 @@
 <template>
-    <div class="sign-up-form">
+    <div class="sign-up-form md:pt-16">
         <main class="sign-up-form__main flex flex-col relative px-6 py-24 text-white text-xl lg:flex-row lg:items-center lg:px-32">
             <!-- background image -->
             <div class="sign-up-form__bg absolute top-0 left-0 w-full h-full">

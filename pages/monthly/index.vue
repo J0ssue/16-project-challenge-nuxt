@@ -1,5 +1,5 @@
 <template>
-    <div class="monthly">
+    <div class="monthly md:pt-16">
         <main class="monthly__main bg-monthly-blue py-16 px-4">
             <header class="monthly__header mb-16">
                 <h2 class="monthly__title text-center font-semibold text-2xl mb-6 text-monthly-dark-grayish-blue">{{ title }}</h2>

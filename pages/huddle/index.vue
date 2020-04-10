@@ -1,5 +1,5 @@
 <template>
-    <div class="huddle">
+    <div class="huddle md:pt-16">
         <main class="huddle__main bg-huddle-primary px-8 py-10 flex-wrap items-center lg:px-16 lg:flex">
             <header class="w-full">
                 <div class="huddle__logo">

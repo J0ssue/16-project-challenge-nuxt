@@ -1,6 +1,6 @@
 <template>
-    <div class="px-6 md:px-0">
-        <main class="spg-card shadow-spg-card flex flex-col md:flex-row md:flex-wrap md:w-spg-card-width mx-auto rounded mt-16">
+    <div class="px-6 md:px-0 pt-16">
+        <main class="spg-card shadow-spg-card flex flex-col md:flex-row md:flex-wrap md:w-spg-card-width mx-auto rounded">
             <section class="w-full">
                 <div class="spg-card__main py-8 px-6">
                     <h4 class="spg-card__main-title text-2xl tracking-wider text-spg-primary">{{ title }}</h4>

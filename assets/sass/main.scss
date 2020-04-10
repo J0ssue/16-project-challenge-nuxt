@@ -1,6 +1,3 @@
-// layouts
-@import './layouts/navbar';
-@import './layouts/default';
 // abstract
 @import './abstracts/variables';
 @import './abstracts/mixins';
@@ -9,6 +6,10 @@
 @import './base/animations';
 @import './base/typography';
 @import './base/utilities';
+
+// layouts
+@import './layouts/navbar';
+@import './layouts/default';
 
 // components
 @import './components/card';
@@ -39,3 +40,4 @@
 @import './pages/my-team';
 @import './pages/my-team-about';
 @import './pages/myteam-contact';
+@import './pages/portfolio';

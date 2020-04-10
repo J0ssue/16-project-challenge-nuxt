@@ -1,15 +1,21 @@
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 50%;
-  opacity: 0;
-  z-index: 4;
-  transform: translate(-50%, -70px);
+  right: 0;
+  z-index: 30;
   pointer-events: none;
-  width: 90%;
+  height: 100vh;
+  width: 300px;
+  transform: translateX(100%);
 
   &--open {
-    animation: fadeNavDown 0.8s cubic-bezier(0, .84, .18, 1.23) forwards;
+    pointer-events: all;
+    animation: slideIn 0.3s ease-in-out forwards;
+  }
+
+  &--close {
+    pointer-events: none;
+    animation: slideOut 0.3s ease-in-out forwards;
   }
 
   &__close-btn {
@@ -26,24 +32,8 @@
     text-transform: uppercase;
     font-size: 8px;
     position: absolute;
-    border-radius: 4px;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0px;
+    right: 0px;
     z-index: 20;
-  }
-}
-
-@keyframes fadeNavDown {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -70px);
-    pointer-events: none;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(-50%, 100px);
-    pointer-events: all;
   }
 }

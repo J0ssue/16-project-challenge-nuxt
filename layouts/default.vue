@@ -1,12 +1,12 @@
 <template>
-    <div class="default">
+    <div class="default relative h-full">
         <button
             class="navbar__toggle focus:outline-none"
             @click="toggleNavigation"
-        >other<br>projects</button>
+        >my<br>projects</button>
         <nav
-            class="navbar flex flex-col md:flex-row items-center px-12 uppercase p-10 bg-shortly-primary-violet rounded-lg text-shortly-neutral-gray"
-            :class="{'navbar--open': isMainNavbarOpen}"
+            class="navbar flex flex-col items-center px-12 uppercase bg-black text-white pt-20"
+            :class="{'navbar--open': isMainNavbarOpen, 'navbar--close': !isMainNavbarOpen}"
             role="navigation"
             aria-label="main navigation"
         >
@@ -16,70 +16,64 @@
             >close</button>
             <nuxt-link
                 class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
-                to="/single-price-grid"
-            >Single Price Grid</nuxt-link><span class="hidden lg:inline-block">|</span>
+                to="/"
+            >home</nuxt-link>
             <nuxt-link
                 class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
-                to="/four-card-feature"
-            >four card feature</nuxt-link> <span class="hidden lg:inline-block">|</span>
-            <nuxt-link
-                class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
-                to="/huddle"
-            >huddle</nuxt-link><span class="hidden lg:inline-block">|</span>
-            <nuxt-link
-                class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
-                to="/base-apparel"
-            >base apparel</nuxt-link><span class="hidden lg:inline-block">|</span>
-            <nuxt-link
-                class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
-                to="/sign-up-form"
-            >Sign up form</nuxt-link><span class="hidden lg:inline-block">|</span>
-            <nuxt-link
-                class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
-                to="/monthly"
-            >Monthly</nuxt-link><span class="hidden lg:inline-block">|</span>
-            <nuxt-link
-                class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
-                to="/shortly"
-            >Shortly</nuxt-link><span class="hidden lg:inline-block">|</span>
-            <nuxt-link
-                class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
-                to="/jobs-listing"
-            >Jobs listing</nuxt-link><span class="hidden lg:inline-block">|</span>
-            <nuxt-link
-                class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
-                to="/countries"
-            >countries</nuxt-link><span class="hidden lg:inline-block">|</span>
-            <nuxt-link
-                class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
-                to="/easybank"
-            >easybank</nuxt-link><span class="hidden lg:inline-block">|</span>
-            <nuxt-link
-                class="navbar-item capitalize p-2 hover:bg-gray-200 transition-all duration-150 ease"
-                to="/my-team"
-            >my team</nuxt-link><span class="hidden lg:inline-block">|</span>
+                :to="'/' + slug"
+                v-for="(slug, i) in portfolio.menu"
+                :key="i"
+            >{{ slug.replace('-', ' ') }}</nuxt-link>
         </nav>
         <!-- <div> -->
         <div class="container mx-auto">
             <nuxt />
         </div>
+        <button
+            class="default--overlay block absolute top-0 left-0 w-full h-full focus:outline-none"
+            :class="{'default--overlay-open': isMainNavbarOpen}"
+            @click="toggleNavigation"
+        ></button>
     </div>
 </template>
 
 <script>
+    import { mapState } from "vuex";
+    import portfolio from "~/helpers/portfolio";
     export default {
         data() {
             return {
-                isMainNavbarOpen: false
+                portfolio
             };
         },
         methods: {
             toggleNavigation() {
-                this.isMainNavbarOpen = !this.isMainNavbarOpen;
-            }
+                this.$store.dispatch('controls/togglePortfolioDrawer');
+                if (!this.isMainNavbarOpen) {
+                    this.addScroll();
+                } else {
+                    this.removeScroll();
+                }
+            },
+            addScroll() {
+                document.body.style.overflow = 'scroll';
+            },
+            removeScroll() {
+                document.body.style.overflow = 'hidden';
+            },
+        },
+        computed: {
+            ...mapState({
+                isMainNavbarOpen: state => state.controls.portfolioDrawer
+            })
         },
         watch: {
-            $route() {
+            $route(to) {
+                if (to.name === 'index') {
+                    document.body.style.height = 'initial';
+                } else {
+                    document.body.style.height = '100%';
+                }
                 if (this.isMainNavbarOpen) {
                     this.toggleNavigation();
                 }

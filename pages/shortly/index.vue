@@ -10,7 +10,7 @@
             <nav class="shortly__navbar px-4 py-6 flex justify-between items-center lg:mb-16">
                 <div class="shortly__navbar-left lg:flex lg:items-center capitalize">
                     <nuxt-link
-                        to="#"
+                        to="/"
                         class="block mr-10"
                     >
                         <img

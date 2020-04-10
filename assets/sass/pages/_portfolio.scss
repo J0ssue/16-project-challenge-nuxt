@@ -1,0 +1,46 @@
+.portfolio {
+  &__header {
+    width: 100%;
+    padding-top: 56.25%;
+  }
+
+  &__header-img {
+    background-image: url('/header-img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: translateY(-80px);
+    animation: slideDown 0.8s ease-in-out 0.8s forwards;
+  }
+
+  &__intro {
+    width: 300px;
+    opacity: 0;
+    transform: translateY(80px);
+    animation: slideUp 0.8s ease-in-out 0.8s forwards;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
