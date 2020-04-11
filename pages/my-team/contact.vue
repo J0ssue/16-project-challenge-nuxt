@@ -2,7 +2,7 @@
     <div class="myteam-contact pt-10 pb-32 relative lg:flex lg:items-end">
         <header class="text-white px-4 relative md:px-32 lg:pr-0 lg:w-2/4">
             <img
-                class="absolute top-0 left-0"
+                class="absolute hidden md:inline-block top-0 left-0"
                 src="/my-team/bg-pattern-about-2-contact-desktop.png"
                 alt="background top"
             >

@@ -73,11 +73,11 @@
             <footer class="bg-myteam-dark-green py-20 md:flex md:items-center md:justify-between md:py-12 md:px-10 lg:px-32">
                 <div class="md:flex md:flex-col md:self-stretch">
                     <nuxt-link
-                        class="inline-block mx-auto mb-8 md:mb-0"
+                        class="block mx-auto mb-8 md:mb-0"
                         to="/my-team"
                     >
                         <img
-                            class="my-team__logo-footer"
+                            class="my-team__logo-footer mx-auto md:ml-0"
                             :src="db.footer.logo"
                             alt="logo"
                         >
