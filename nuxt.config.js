@@ -48,8 +48,12 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [{
-    src: '~/plugins/axios.js'
-  }],
+      src: '~/plugins/vue-slick.js'
+    },
+    {
+      src: '~/plugins/axios.js'
+    }
+  ],
   /*
    ** Nuxt.js dev-modules
    */

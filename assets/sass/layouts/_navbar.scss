@@ -31,9 +31,9 @@
     font-weight: bold;
     text-transform: uppercase;
     font-size: 8px;
-    position: absolute;
-    top: 0px;
-    right: 0px;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
     z-index: 20;
   }
 }

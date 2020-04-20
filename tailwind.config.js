@@ -57,7 +57,13 @@ module.exports = {
         'myteam-police-blue': '#2c6269',
         'myteam-deep-jungle-green': '#004047',
         'myteam-sacramento-state-green': '#012f34',
-        'myteam-dark-green': '#002529'
+        'myteam-dark-green': '#002529',
+        'manage-bright-red': 'hsl(12, 88%, 59%)',
+        'manage-dark-blue': 'hsl(228, 39%, 23%)',
+        'manage-dark-grayish-blue': 'hsl(227, 12%, 61%)',
+        'manage-darker-blue': 'hsl(233, 12%, 13%)',
+        'manage-pale-red': 'hsl(13, 100%, 96%)',
+        'manage-gray': 'hsl(0, 0%, 98%)'
       },
       transitionTimingFunction: {
         'ease-form-input': 'cubic-bezier(0, 1.25, 0, 1.17)'

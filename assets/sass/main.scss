@@ -28,6 +28,11 @@
 @import './components/my-team/testimonials-card';
 @import './components/my-team/myteam-drawer';
 @import './components/my-team/myteam-directors-card';
+
+// // manage 
+@import './components/manage-landing/manage-about-us-card';
+@import './components/manage-landing/manage-testimonial-card';
+
 // pages 
 @import './pages/huddle';
 @import './pages/base-apparel';
@@ -41,3 +46,4 @@
 @import './pages/my-team-about';
 @import './pages/myteam-contact';
 @import './pages/portfolio';
+@import './pages/manage-landing';

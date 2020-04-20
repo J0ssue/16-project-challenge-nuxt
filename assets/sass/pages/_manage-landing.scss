@@ -1,0 +1,16 @@
+.manage-landing {
+  font-size: 16px;
+
+  &__logo {
+    width: 120px;
+    height: 20px;
+  }
+
+  &__header {
+    background-image: url('/manage-landing/bg-simplify-section-mobile.svg');
+  }
+
+  &__hero-description {
+    width: 291px;
+  }
+}

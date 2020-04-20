@@ -20,6 +20,6 @@ export default {
                         </span>
                         <span style="display:inline-block;padding:2px 3px">Fabian Grohs</span>
                 </a>`,
-  menu: ['single-price-grid', 'four-card-feature', 'huddle', 'base-apparel', 'sign-up-form', 'monthly', 'shortly', 'jobs-listing', 'countries', 'easybank', 'my-team'],
+  menu: ['single-price-grid', 'four-card-feature', 'huddle', 'base-apparel', 'sign-up-form', 'monthly', 'shortly', 'jobs-listing', 'countries', 'easybank', 'my-team', 'manage-landing'],
   stack: ['JavaScript', 'HTML', 'Nuxt', 'Axios', 'Vue', 'CSS', 'Sass', 'tailwindcss', 'Vuex', 'Vue-Router']
 };
