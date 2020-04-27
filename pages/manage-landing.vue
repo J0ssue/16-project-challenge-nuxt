@@ -3,7 +3,7 @@
         <div class="manage-overlay hidden"></div>
         <!-- navbar -->
         <header class="manage-landing__header related">
-            <nav class="manage-landing__navbar flex items-center justify-between px-4 py-10">
+            <nav class="manage-landing__navbar flex items-center justify-between px-4 py-10 md:mb-12">
                 <div>
                     <img
                         class="manage-landing__logo"
@@ -13,15 +13,17 @@
                 </div>
 
                 <!-- desktop only -->
-                <div class="hidden">
+                <div class="hidden md:flex md:flex-1 md:justify-around lg:justify-center">
                     <nuxt-link
+                        class="inline-block text-sm text-manage-dark-blue"
+                        :class="{'mr-10': i !== (manage.navbar.menu.length -1)}"
                         to="#"
                         v-for="(link, i) in manage.navbar.menu"
                         :key="i"
                     >{{ link }}</nuxt-link>
                 </div>
                 <manage-button-primary
-                    class="hidden"
+                    class="hidden md:block"
                     :settings="{
                     text: 'primary',
                     primary: true,
@@ -29,7 +31,7 @@
                 }"
                 />
                 <!-- desktop only end -->
-                <button>
+                <button class="md:hidden">
                     <img
                         src="/manage-landing/icon-hamburger.svg"
                         alt="hamburger image"
@@ -37,30 +39,30 @@
                 </button>
             </nav>
             <!-- header -->
-            <div class="manage-landing__hero px-4 pt-6 pb-40 flex flex-col-reverse">
-                <div>
+            <div class="manage-landing__hero px-4 pt-6 pb-40 flex flex-col-reverse md:pb-20 md:flex-row md:justify-between md:items-center">
+                <div class="md:w-2/4">
                     <div>
                         <h1
-                            class="text-manage-dark-blue mb-4 text-4xl be-nam-bold leading-tight text-center"
+                            class="manage-landing__hero-title text-manage-dark-blue mb-4 text-4xl be-nam-bold leading-tight text-center md:text-left md:text-5xl"
                             v-text="manage.header.title"
                         />
                         <p
-                            class="manage-landing__hero-description mx-auto mb-8 text-manage-dark-grayish-blue"
+                            class="manage-landing__hero-description mx-auto mb-8 text-manage-dark-grayish-blue md:ml-0"
                             v-text="manage.header.description"
                         />
                         <manage-button-primary
-                            class="mx-auto block"
+                            class="mx-auto block md:ml-0"
                             :settings="{
-                        text: 'primary',
-                        primary: true,
-                        shadow: true,
-                        secondary: false
-                    }"
+                                text: 'primary',
+                                primary: true,
+                                shadow: true,
+                                secondary: false
+                            }"
                         />
                     </div>
                 </div>
-                <div>
-                    <div>
+                <div class="md:w-2/4">
+                    <div class="md:flex md:justify-end">
                         <img
                             src="/manage-landing/illustration-intro.svg"
                             alt="hero image"
@@ -71,22 +73,22 @@
         </header>
         <main>
             <!-- about us -->
-            <section class="manage-landing__about-us">
-                <div class="text-center mb-16">
-                    <div>
+            <section class="manage-landing__about-us md:px-4 md:flex">
+                <div class="text-center mb-16 md:text-left md:w-2/4">
+                    <div class="manage-landing__about-header">
                         <h2
-                            class="mb-8 text-3xl be-nam-bold text-manage-dark-blue"
+                            class="mb-8 text-3xl be-nam-bold text-manage-dark-blue md:text-4xl"
                             v-html="manage['about-us'].title"
                         />
                         <p
-                            class="text-manage-dark-grayish-blue"
+                            class="manage-landing__about-header-description text-manage-dark-grayish-blue"
                             v-text="manage['about-us'].description"
                         />
                     </div>
                 </div>
-                <div class="pl-4 rounded-l-full">
+                <div class="pl-4 rounded-l-full md:w-2/4">
                     <div
-                        class="mb-16"
+                        class="manage-landing__about-cards mb-16"
                         v-for="(point, i) in manage['about-us'].points"
                         :key="i"
                     >
@@ -120,11 +122,15 @@
                 </div>
             </section>
             <!-- testimonials -->
-            <section class="manage-landing__testimonials">
-                <h2 v-text="manage.testimonials.title" />
-                <div>
+            <section class="manage-landing__testimonials px-4 overflow-hidden">
+                <h2
+                    class="mb-16 text-3xl be-nam-bold text-manage-dark-blue text-center"
+                    v-text="manage.testimonials.title"
+                />
+                <div class="mb-16">
                     <VueSlickCarousel v-bind="carouselSettings">
                         <div
+                            class="pt-20 mb-8"
                             v-for="(review,i) in manage.testimonials.reviews"
                             :key="i"
                         >
@@ -135,64 +141,96 @@
                                 review: review.review
                             }" />
                         </div>
+                        <template #customPaging="page">
+                            <div
+                                class="manage-landing__custom-dot"
+                                :class="{'manage-landing--active-dot': page === i}"
+                            >
+                            </div>
+                        </template>
                     </VueSlickCarousel>
                 </div>
-                <manage-button-primary :settings="{
+                <manage-button-primary
+                    class="mx-auto block mb-10"
+                    :settings="{
                     text: 'primary',
                     primary: true,
                     secondary: false
-                }" />
+                }"
+                />
             </section>
             <!-- cta -->
-            <section class="manage-landing__cta">
+            <section class="manage-landing__cta px-8 py-20 bg-manage-bright-red">
                 <div>
-                    <h2 v-text="manage.cta.title" />
+                    <h2
+                        class="text-white text-center manage-cta-title mb-8"
+                        v-text="manage.cta.title"
+                    />
                 </div>
                 <div>
-                    <manage-button-primary :settings="{
-                        text: 'secondary',
+                    <manage-button-primary
+                        class="mx-auto block"
+                        :settings="{
+                        text: 'Get Started',
                         primary: false,
-                        secondary: true
-                    }" />
+                        secondary: true,
+                        shadowSecondary: true
+                    }"
+                    />
                 </div>
             </section>
         </main>
         <!-- footer -->
-        <footer class="manage-landing__footer">
+        <footer class="manage-landing__footer bg-manage-darker-blue px-8 py-12">
             <div>
                 <div>
-                    <form @submit.prevent="submit">
-                        <input type="text">
-                        <manage-button-primary :settings="{
-                            text: 'go',
-                            primary: true,
-                            secondary:false 
-                        }" />
+                    <form
+                        class="flex items-center justify-between"
+                        @submit.prevent="submit"
+                    >
+                        <input
+                            class="border-none inline-block bg-white px-8 py-3 rounded-full text-xs focus:outline-none"
+                            type="text"
+                            placeholder="Updates in your inbox..."
+                        >
+                        <manage-button-primary
+                            class="inline-block"
+                            :settings="{
+                                text: 'go',
+                                primary: true,
+                                secondary:false,
+                                small:true
+                            }"
+                        />
                     </form>
                 </div>
-                <div>
+                <div class="my-10 flex justify-between text-white">
                     <ul>
                         <li
                             v-for="(link, i) in manage.footer.menu"
                             :key="i"
                         >
-                            <nuxt-link :to="'#' + link">{{ link }}</nuxt-link>
+                            <nuxt-link
+                                class="inline-block mb-2"
+                                :to="'#' + link"
+                            >{{ link }}</nuxt-link>
                         </li>
                     </ul>
-                </div>
-                <div>
                     <ul>
                         <li
                             v-for="(legal, i) in manage.footer.legal"
                             :key="i"
                         >
-                            <nuxt-link :to="'#' + legal">{{ legal }}</nuxt-link>
+                            <nuxt-link
+                                class="inline-block mb-2"
+                                :to="'#' + legal"
+                            >{{ legal }}</nuxt-link>
                         </li>
                     </ul>
                 </div>
                 <div>
                     <div>
-                        <div>
+                        <div class="flex items-center justify-between mb-10">
                             <div
                                 v-for="(social, i) in manage.footer.social"
                                 :key="i"
@@ -203,14 +241,18 @@
                                 />
                             </div>
                         </div>
-                        <div>
+                        <div class="mb-10">
                             <img
+                                class="block mx-auto"
                                 :src="manage.footer.logo"
                                 alt="footer logo"
                             >
                         </div>
                         <div>
-                            <p v-text="manage.footer.copyright" />
+                            <p
+                                class="text-sm text-center text-manage-dark-grayish-blue"
+                                v-text="manage.footer.copyright"
+                            />
                         </div>
                     </div>
                 </div>

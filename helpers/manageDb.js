@@ -8,7 +8,7 @@ export default {
     description: 'Manage makes it simple for software teams to plan day-to-day tasks while keeping the larger team goals in view.'
   },
   'about-us': {
-    title: 'What\'s different <br> about Manage',
+    title: 'What\'s different <br class="md:hidden"> about Manage',
     description: 'Manage provides all the functionality your team needs, without the complexity. Our software is tailor-made for modern digital product teams.',
     points: [{
         slug: 'track',
@@ -59,7 +59,7 @@ export default {
     title: 'Simplify how your team works today.'
   },
   footer: {
-    logo: '/manage-landing/logo.svg',
+    logo: '/manage-landing/logo-white.svg',
     menu: ['home', 'pricing', 'products', 'about-us'],
     legal: ['careers', 'community', 'privacy-policy'],
     copyright: 'Copyright 2020. All Rights Reserved',

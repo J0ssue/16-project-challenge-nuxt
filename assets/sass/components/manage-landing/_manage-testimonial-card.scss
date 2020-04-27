@@ -1,1 +1,7 @@
-.manage-testimonial-card {}
+.manage-testimonial-card {
+  &__avatar {
+    width: 55px;
+    height: 55px;
+    transform: translateY(-25px);
+  }
+}

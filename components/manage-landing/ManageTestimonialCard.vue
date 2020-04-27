@@ -1,11 +1,15 @@
 <template>
-    <div>
+    <div class="manage-testimonial-card px-6 pb-10 bg-manage-gray text-center">
         <img
+            class="manage-testimonial-card__avatar mx-auto inline-block"
             :src="settings.img"
             alt="avatar"
         >
         <h4 v-text="settings.name" />
-        <p v-text="settings.review" />
+        <p
+            class="text-manage-dark-grayish-blue"
+            v-text="settings.review"
+        />
     </div>
 </template>
 

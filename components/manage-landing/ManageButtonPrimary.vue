@@ -1,10 +1,12 @@
 <template>
     <button
-        class="px-8 py-2 bg-manage-bright-red text-white rounded-full text-center transition duration-300 ease-in-out"
+        class="py-2 px-8 rounded-full text-center transition duration-300 ease-in-out"
         :class="{
-            'button-primary hover:bg-manage-pale-red': settings.primary,
-            'button-secondary': settings.secondary,
-            'manage-button-primary-shadow': settings.shadow
+            'button-primary bg-manage-bright-red text-white hover:bg-manage-pale-red': settings.primary,
+            'button-secondary py-3 bg-manage-pale-red text-manage-bright-red font-semibold text-sm': settings.secondary,
+            'manage-button-primary-shadow': settings.shadow,
+            'shadow-manage-button-secondary': settings.shadowSecondary,
+            'manage-button-small px-4': settings.small
         }"
         v-text="settings.text"
     />

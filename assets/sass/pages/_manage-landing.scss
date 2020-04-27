@@ -10,7 +10,48 @@
     background-image: url('/manage-landing/bg-simplify-section-mobile.svg');
   }
 
+  &__hero-title {
+    @media (min-width: 768px) {
+      width: 400px;
+    }
+  }
+
   &__hero-description {
     width: 291px;
+
+    @media (min-width: 768px) {
+      width: 340px;
+    }
   }
+
+  &__about-header {
+    @media (min-width: 768px) {
+      width: 400px;
+    }
+  }
+
+  &__about-header-description {
+    @media (min-width: 768px) {
+      width: 323px;
+    }
+  }
+
+  &__custom-dot {
+    width: 8px;
+    height: 8px;
+    border: 1px solid hsl(12, 88%, 59%);
+    border-radius: 50%;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .slick-dots li {
+    width: 10px;
+  }
+
+  .slick-dots .slick-active &__custom-dot {
+    background-color: hsl(12, 88%, 59%);
+  }
+
 }
