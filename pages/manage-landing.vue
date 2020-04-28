@@ -3,7 +3,7 @@
         <div class="manage-overlay hidden"></div>
         <!-- navbar -->
         <header class="manage-landing__header related">
-            <nav class="manage-landing__navbar flex items-center justify-between px-4 py-10 md:mb-12">
+            <nav class="manage-landing__navbar flex items-center justify-between px-4 py-10 lg:mb-12">
                 <div>
                     <img
                         class="manage-landing__logo"
@@ -13,7 +13,7 @@
                 </div>
 
                 <!-- desktop only -->
-                <div class="hidden md:flex md:flex-1 md:justify-around lg:justify-center">
+                <div class="hidden lg:flex lg:flex-1 lg:justify-around lg:justify-center">
                     <nuxt-link
                         class="inline-block text-sm text-manage-dark-blue"
                         :class="{'mr-10': i !== (manage.navbar.menu.length -1)}"
@@ -23,7 +23,7 @@
                     >{{ link }}</nuxt-link>
                 </div>
                 <manage-button-primary
-                    class="hidden md:block"
+                    class="hidden lg:block"
                     :settings="{
                     text: 'primary',
                     primary: true,
@@ -31,7 +31,7 @@
                 }"
                 />
                 <!-- desktop only end -->
-                <button class="md:hidden">
+                <button class="lg:hidden">
                     <img
                         src="/manage-landing/icon-hamburger.svg"
                         alt="hamburger image"
@@ -39,7 +39,7 @@
                 </button>
             </nav>
             <!-- header -->
-            <div class="manage-landing__hero px-4 pt-6 pb-40 flex flex-col-reverse md:pb-20 md:flex-row md:justify-between md:items-center">
+            <div class="manage-landing__hero px-4 pt-6 pb-40 flex flex-col-reverse md:items-center lg:pb-20 lg:flex-row lg:justify-between">
                 <div class="md:w-2/4">
                     <div>
                         <h1
@@ -73,11 +73,11 @@
         </header>
         <main>
             <!-- about us -->
-            <section class="manage-landing__about-us md:px-4 md:flex">
-                <div class="text-center mb-16 md:text-left md:w-2/4">
+            <section class="manage-landing__about-us lg:px-4 md:flex md:flex-col md:items-center lg:flex-row lg:items-baseline">
+                <div class="text-center mb-16 lg:text-left lg:w-2/4">
                     <div class="manage-landing__about-header">
                         <h2
-                            class="mb-8 text-3xl be-nam-bold text-manage-dark-blue md:text-4xl"
+                            class="mb-8 text-3xl be-nam-bold text-manage-dark-blue lg:text-4xl"
                             v-html="manage['about-us'].title"
                         />
                         <p
@@ -86,7 +86,7 @@
                         />
                     </div>
                 </div>
-                <div class="pl-4 rounded-l-full md:w-2/4">
+                <div class="pl-4 rounded-l-full lg:w-2/4">
                     <div
                         class="manage-landing__about-cards mb-16"
                         v-for="(point, i) in manage['about-us'].points"
@@ -130,7 +130,7 @@
                 <div class="mb-16">
                     <VueSlickCarousel v-bind="carouselSettings">
                         <div
-                            class="pt-20 mb-8"
+                            class="manage-landing__slide pt-20 mb-8"
                             v-for="(review,i) in manage.testimonials.reviews"
                             :key="i"
                         >
@@ -160,10 +160,10 @@
                 />
             </section>
             <!-- cta -->
-            <section class="manage-landing__cta px-8 py-20 bg-manage-bright-red">
+            <section class="manage-landing__cta px-8 py-20 bg-manage-bright-red lg:flex lg:items-center lg:justify-between lg:px-20">
                 <div>
                     <h2
-                        class="text-white text-center manage-cta-title mb-8"
+                        class="text-white text-center manage-cta-title mb-8 lg:w-3/4 lg:text-left"
                         v-text="manage.cta.title"
                     />
                 </div>
@@ -181,15 +181,15 @@
             </section>
         </main>
         <!-- footer -->
-        <footer class="manage-landing__footer bg-manage-darker-blue px-8 py-12">
-            <div>
-                <div>
+        <footer class="manage-landing__footer bg-manage-darker-blue px-8 py-12 lg:px-20">
+            <div class="lg:flex lg:justify-between lg:flex-row-reverse">
+                <div class="lg:self-stretch lg:flex lg:flex-col lg:justify-between lg:pl-10 xl:pl-32">
                     <form
                         class="flex items-center justify-between"
                         @submit.prevent="submit"
                     >
                         <input
-                            class="border-none inline-block bg-white px-8 py-3 rounded-full text-xs focus:outline-none"
+                            class="border-none inline-block bg-white px-8 py-3 rounded-full text-xs focus:outline-none lg:mr-2"
                             type="text"
                             placeholder="Updates in your inbox..."
                         >
@@ -203,8 +203,13 @@
                             }"
                         />
                     </form>
+
+                    <p
+                        class="hidden text-sm text-center text-manage-dark-grayish-blue lg:block"
+                        v-text="manage.footer.copyright"
+                    />
                 </div>
-                <div class="my-10 flex justify-between text-white">
+                <div class="my-10 flex justify-between text-white lg:my-0 lg:flex-1">
                     <ul>
                         <li
                             v-for="(link, i) in manage.footer.menu"
@@ -228,9 +233,9 @@
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <div>
-                        <div class="flex items-center justify-between mb-10">
+                <div class="lg:self-stretch">
+                    <div class="lg:flex lg:flex-col-reverse lg:justify-between lg:h-full lg:pr-10 xl:pr-32">
+                        <div class="flex items-center justify-between mb-10 lg:mb-0">
                             <div
                                 v-for="(social, i) in manage.footer.social"
                                 :key="i"
@@ -241,14 +246,14 @@
                                 />
                             </div>
                         </div>
-                        <div class="mb-10">
+                        <div class="mb-10 lg:mb-0">
                             <img
                                 class="block mx-auto"
                                 :src="manage.footer.logo"
                                 alt="footer logo"
                             >
                         </div>
-                        <div>
+                        <div class="lg:hidden">
                             <p
                                 class="text-sm text-center text-manage-dark-grayish-blue"
                                 v-text="manage.footer.copyright"
@@ -295,6 +300,16 @@
                     "slidesToShow": 1,
                     "slidesToScroll": 1,
                     "touchThreshold": 5,
+                    "variableWidth": true,
+                    "arrows": false,
+                    "responsive": [
+                        {
+                            "breakpoint": 768,
+                            "settings": {
+                                "slidesToShow": 3
+                            }
+                        }
+                    ]
                 }
             };
         },

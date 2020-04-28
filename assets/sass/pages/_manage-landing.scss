@@ -36,6 +36,22 @@
     }
   }
 
+  .slick-slider .slick-list .slick-slide {
+    @media (min-width: 768px) {
+      width: 476px;
+    }
+  }
+
+  .slick-slider .slick-list .slick-slide &__slide:focus {
+    outline: none;
+  }
+
+  .slick-slider .slick-list .slick-slide:not(:last-child) {
+    @media (min-width: 768px) {
+      margin-right: 20px;
+    }
+  }
+
   &__custom-dot {
     width: 8px;
     height: 8px;

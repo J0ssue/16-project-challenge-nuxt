@@ -7,7 +7,7 @@
         >
         <h4 v-text="settings.name" />
         <p
-            class="text-manage-dark-grayish-blue"
+            class="text-manage-dark-grayish-blue text-sm"
             v-text="settings.review"
         />
     </div>
