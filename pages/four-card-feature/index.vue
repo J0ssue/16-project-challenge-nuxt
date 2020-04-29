@@ -37,6 +37,12 @@
 <script>
     import Card from "~/components/Card";
     export default {
+        head() {
+            return {
+                title: 'four-card-feature',
+            };
+        },
+
         components:
         {
             Card

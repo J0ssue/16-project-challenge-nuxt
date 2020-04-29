@@ -217,6 +217,12 @@
     import EasybankArticlesCard from "~/components/easybank/EasybankArticlesCard";
     import EasybankBenefitsCard from "~/components/easybank/EasybankBenefitsCard";
     export default {
+        head() {
+            return {
+                title: 'easybank',
+            };
+        },
+
         components: {
             EasybankBtn,
             EasybankArticlesCard,

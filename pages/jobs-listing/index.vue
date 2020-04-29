@@ -56,6 +56,12 @@
     import Pill from "~/components/Pill";
     import { mapState } from "vuex";
     export default {
+        head() {
+            return {
+                title: 'jobs-listing',
+            };
+        },
+
         components: {
             JobCard,
             Pill

@@ -87,6 +87,11 @@
     import ShortlyFooter from "~/components/ShortlyFooter";
     import ShortlyDropdown from "~/components/ShortlyDropdown";
     export default {
+        head() {
+            return {
+                title: 'shortly',
+            };
+        },
         components: {
             UrlShortener,
             StatisticsDisplay,

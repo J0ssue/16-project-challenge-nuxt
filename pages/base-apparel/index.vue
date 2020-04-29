@@ -65,6 +65,12 @@
 
 <script>
     export default {
+        head() {
+            return {
+                title: 'base-apparel',
+            };
+        },
+
         data() {
             return {
                 isEmailValid: true,

@@ -63,7 +63,11 @@ module.exports = {
         'manage-dark-grayish-blue': 'hsl(227, 12%, 61%)',
         'manage-darker-blue': 'hsl(233, 12%, 13%)',
         'manage-pale-red': 'hsl(13, 100%, 96%)',
-        'manage-gray': 'hsl(0, 0%, 98%)'
+        'manage-gray': 'hsl(0, 0%, 98%)',
+        'bookmark-soft-blue': 'hsl(231, 69%, 60%)',
+        'bookmark-soft-Red': 'hsl(0, 94%, 66%)',
+        'bookmark-grayish-blue': 'hsl(229, 8%, 60%)',
+        'bookmark-dark-blue': 'hsl(229, 31%, 21%)'
       },
       transitionTimingFunction: {
         'ease-form-input': 'cubic-bezier(0, 1.25, 0, 1.17)'

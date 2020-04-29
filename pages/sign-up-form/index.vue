@@ -80,6 +80,11 @@
 <script>
     import formMixin from "~/mixins/formMixin";
     export default {
+        head() {
+            return {
+                title: 'sign-up-form',
+            };
+        },
         mixins: [formMixin],
         data() {
             return {

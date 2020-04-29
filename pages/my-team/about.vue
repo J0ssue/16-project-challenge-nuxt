@@ -126,6 +126,11 @@
     import db from "~/helpers/my-team-db";
     import MyteamDirectorsCard from "~/components/myteam/MyteamDirectorsCard";
     export default {
+        head() {
+            return {
+                title: 'my-team-about',
+            };
+        },
         layout: 'my-team',
         components: {
             MyteamDirectorsCard

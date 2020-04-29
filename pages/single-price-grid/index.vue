@@ -31,6 +31,11 @@
 
 <script>
     export default {
+        head() {
+            return {
+                title: 'single-price-grid',
+            };
+        },
         data() {
             return {
                 title: 'Join our community',

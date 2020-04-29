@@ -35,6 +35,12 @@
 <script>
     import PriceCard from "~/components/PriceCard";
     export default {
+        head() {
+            return {
+                title: 'monthly',
+            };
+        },
+
         components: {
             PriceCard
         },

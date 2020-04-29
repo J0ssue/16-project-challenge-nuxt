@@ -127,6 +127,12 @@
     import IconChevron from "~/components/icons/IconChevron";
     import IconArrow from "~/components/icons/IconArrow";
     export default {
+        head() {
+            return {
+                title: 'countries',
+            };
+        },
+
         components: {
             SearchIcon,
             BaseDropdown,

@@ -46,6 +46,12 @@
 
 <script>
     export default {
+        head() {
+            return {
+                title: 'huddle',
+            };
+        },
+
         data() {
             return {
                 title: 'build the community your fans will love',

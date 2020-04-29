@@ -115,6 +115,11 @@
     import db from "~/helpers/my-team-db";
     import MyteamBenefitsCard from "~/components/myteam/MyteamBenefitsCard";
     export default {
+        head() {
+            return {
+                title: 'my-team-contact',
+            };
+        },
         mixins: [contactForm],
         layout: 'my-team',
         data() {

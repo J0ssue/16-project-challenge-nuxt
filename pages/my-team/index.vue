@@ -86,6 +86,12 @@
     import MyteamBenefitsCard from "~/components/myteam/MyteamBenefitsCard";
     import MyteamTestimonialsCard from "~/components/myteam/MyteamTestimonialsCard";
     export default {
+        head() {
+            return {
+                title: 'my-team',
+            };
+        },
+
         components: {
             MyteamBenefitsCard,
             MyteamTestimonialsCard
