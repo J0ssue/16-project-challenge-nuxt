@@ -1,0 +1,40 @@
+.bookmark-illustration-composition {
+    position: relative;
+    img {
+      position: relative;
+      z-index: 1;
+    }
+
+  &__wh {
+    img {
+      width: 313px;
+      height: 211px;
+    }
+  }
+
+  &::before {
+    content: '';
+    display: none;
+    width: 306px;
+    z-index: 0;
+    position: absolute;
+    background: hsl(231, 69%, 60%);
+    pointer-events: none;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+  }
+
+  &__right-bg::before {
+    display: block;
+    right: 0;
+    height: 206px;
+    top: 60px;
+  }
+
+  &__left-bg::before {
+    display: block;
+    left: 0;
+    height: 182px;
+    top: 50px;
+  }
+}
