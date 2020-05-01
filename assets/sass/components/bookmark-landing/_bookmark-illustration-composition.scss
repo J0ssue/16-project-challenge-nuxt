@@ -7,8 +7,7 @@
 
   &__wh {
     img {
-      width: 313px;
-      height: 211px;
+      width: 325px;
     }
   }
 
@@ -20,8 +19,6 @@
     position: absolute;
     background: hsl(231, 69%, 60%);
     pointer-events: none;
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
   }
 
   &__right-bg::before {
@@ -29,12 +26,20 @@
     right: 0;
     height: 206px;
     top: 60px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
   }
 
   &__left-bg::before {
     display: block;
     left: 0;
-    height: 182px;
-    top: 50px;
+    height: 221px;
+    top: 37px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+  }
+
+  &__top-offset::before {
+    top: 82px;
   }
 }

@@ -73,7 +73,8 @@ module.exports = {
         'ease-form-input': 'cubic-bezier(0, 1.25, 0, 1.17)'
       },
       letterSpacing: {
-        'xl-wide': '10px'
+        'xl-wide': '10px',
+        'lg-wide': '5px',
       },
       transitionProperty: {
         'height': 'height',
@@ -94,7 +95,8 @@ module.exports = {
         'price-card': '0px 0px 10px hsl(234, 14%, 74%)',
         'dropdown': '0px 0px 10px rgba(0, 0, 0, 0.2)',
         'manage-button-secondary': '0px 0px 10px rgba(0, 0, 0, 0.2)',
-        'bookmark-btn': '0px 2px 10px hsl(229, 8%, 60%)'
+        'bookmark-btn': '0px 2px 10px hsl(229, 8%, 60%)',
+        'bookmark-browser-card': '0px 4px 10px rgba(161, 145, 161, 0.4)' 
       },
       fontFamily: {
         'livvic': ['livvic', 'livvic-semibold', 'livvic-semibold-italic', 'livvic-thin', 'livvic-thin-italic', 'livvic-medium', 'livvic-medium-italic', 'livvic-light', 'livvic-light-italic', 'livvic-italic', 'livvic-extra-light', 'livvic-extra-light-italic', 'livvic-bold', 'livvic-bold-italic', 'livvic-black', 'livvic-black-italic']
@@ -106,6 +108,9 @@ module.exports = {
         '96': '24rem',
         '98': '26rem',
         '100': '28rem',
+      },
+      borderRadius: {
+        'xl': '18px'
       }
     },
   },

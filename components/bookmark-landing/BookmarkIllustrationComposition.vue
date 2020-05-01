@@ -2,7 +2,8 @@
   <div
     class="bookmark-illustration-composition"
     :class="{
-      'bookmark-illustration__wh': resize,
+      'bookmark-illustration-composition__top-offset': topOffset,
+      'bookmark-illustration-composition__wh': resize,
       'bookmark-illustration-composition__left-bg': position === 'left',
       'bookmark-illustration-composition__right-bg': position === 'right'
     }"
@@ -21,6 +22,10 @@ export default {
     position: {
       type: String,
       default: 'right'
+    },
+    topOffset: {
+      type: Boolean,
+      default: false
     },
     resize: {
       type: Boolean,

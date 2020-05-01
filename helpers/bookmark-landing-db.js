@@ -62,7 +62,7 @@ export default {
     ]
   },
   faqs: {
-    title: 'Frequently Asked Questions',
+    title: 'Frequently Asked <br> Questions',
     description:
       "Here are some of our FAQs. if you have any other questions you'd like answered please feel free to email us.",
     questions: [
@@ -93,7 +93,7 @@ export default {
     title: "Stay up-to-date with what we're doing"
   },
   footer: {
-    logo: '/bookmark-landing/logo-bookmark.svg',
+    logo: '/bookmark-landing/logo-bookmark-footer.svg',
     menu: ['features', 'pricing', 'contact'],
     icons: [
       '/bookmark-landing/icon-facebook.svg',

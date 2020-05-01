@@ -1,21 +1,33 @@
 <template>
-  <section>
-    <header>
+  <section class="mb-32">
+    <header class="mb-8 px-6">
       <HeaderTitle
         :title="features.title"
         :description="features.description"
+        :descriptionSm="true"
       />
     </header>
     <main>
-      <div>
-        <button v-text="tab.tab" v-for="(tab, i) in features.tabs" :key="i" />
+      <div
+        class="mb-20 px-6 flex flex-col justify-center text-bookmark-dark-blue"
+      >
+        <button
+          class="py-4 border-b border-bookmark-grayish-blue"
+          :class="{
+            'border-t lg:border-t-none': i === 0
+          }"
+          v-text="tab.tab"
+          v-for="(tab, i) in features.tabs"
+          :key="i"
+        />
       </div>
       <div>
         <FeatureCard
           :img="tab.img"
           :title="tab.title"
           :description="tab.description"
-          v-for="tab in features.tabs"
+          :topOffset="i"
+          v-for="(tab, i) in features.tabs"
           :key="tab.slug"
         />
       </div>

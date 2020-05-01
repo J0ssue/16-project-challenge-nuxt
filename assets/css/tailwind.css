@@ -57,6 +57,25 @@
   @apply px-3 py-3 rounded-md bg-bookmark-soft-blue text-white shadow-bookmark-btn text-sm;
 }
 
+.bookmark-btn-blue-sm:focus {
+  @apply outline-none;
+}
+.bookmark-btn-blue-md {
+  @apply px-6 py-3 rounded-md bg-bookmark-soft-blue text-white shadow-bookmark-btn text-sm;
+}
+
+.bookmark-btn-blue-md:focus {
+  @apply outline-none;
+}
+
+.bookmark-btn-blue-lg {
+  @apply w-full py-3 rounded-md bg-bookmark-soft-blue text-white shadow-bookmark-btn text-sm;
+}
+
+.bookmark-btn-blue-lg:focus {
+  @apply outline-none;
+}
+
 .bookmark-btn-sm {
   @apply px-3 py-3 rounded-md bg-white text-bookmark-grayish-blue shadow-bookmark-btn text-sm;
 }

@@ -1,20 +1,18 @@
 <template>
-  <section>
-    <header>
+  <section class="mb-32">
+    <header class="mb-12 px-6">
       <HeaderTitle
         :title="availability.title"
         :description="availability.description"
       />
     </header>
-    <main>
-      <div>
-        <div>
+    <main class="flex flex-col justify-center">
+      <div v-for="browser in availability.browsers" :key="browser.slug">
+        <div class="px-10 pb-10">
           <BrowserCard
             :img="browser.img"
             :title="browser.title"
             :version="browser.version"
-            v-for="browser in availability.browsers"
-            :key="browser.slug"
           />
         </div>
       </div>

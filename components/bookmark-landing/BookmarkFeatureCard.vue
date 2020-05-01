@@ -1,7 +1,21 @@
 <template>
   <div>
-    <BookmarkIllustrationComposition :img="img" />
-    <BookmarkHeaderTitle :title="title" :description="description" />
+    <BookmarkIllustrationComposition
+      class="mb-12"
+      :class="{
+        'mb-20': topOffset === 0
+      }"
+      :img="img"
+      position="left"
+      :topOffset="!!(topOffset === 1) || !!(topOffset === 2)"
+      :resize="true"
+    />
+    <BookmarkHeaderTitle
+      class="px-6"
+      :title="title"
+      :description="description"
+      :descriptionSm="true"
+    />
     <button v-text="'more info'" v-if="false" />
   </div>
 </template>
@@ -22,6 +36,9 @@ export default {
     title: {
       type: String,
       default: 'TODO'
+    },
+    topOffset: {
+      type: Number
     },
     description: {
       type: String,

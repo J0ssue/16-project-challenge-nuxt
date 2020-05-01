@@ -6,9 +6,15 @@
         'text-3xl': titleBig,
         'text-2xl': !titleBig
       }"
-      v-text="title"
+      v-html="title"
     />
-    <p class="text-bookmark-grayish-blue" v-text="description" />
+    <p
+      class="text-bookmark-grayish-blue"
+      :class="{
+        'bookmark-title-description': descriptionSm
+      }"
+      v-text="description"
+    />
   </div>
 </template>
 
@@ -25,6 +31,10 @@ export default {
     },
     description: {
       type: String
+    },
+    descriptionSm: {
+      type: Boolean,
+      default: false
     }
   }
 }
