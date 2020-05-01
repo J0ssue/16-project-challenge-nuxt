@@ -1,7 +1,14 @@
 <template>
-  <div class="bookmark-header-title__container">
-    <h2 class="bookmark-header-title__title" v-text="title" />
-    <p class="bookmark-header-title__description" v-text="description" />
+  <div class="text-center">
+    <h2
+      class="mb-6 leading-snug font-light text-black rubik capitalize"
+      :class="{
+        'text-3xl': titleBig,
+        'text-2xl': !titleBig
+      }"
+      v-text="title"
+    />
+    <p class="text-bookmark-grayish-blue" v-text="description" />
   </div>
 </template>
 
@@ -11,6 +18,10 @@ export default {
     title: {
       type: String,
       required: true
+    },
+    titleBig: {
+      type: Boolean,
+      default: false
     },
     description: {
       type: String

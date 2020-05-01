@@ -1,13 +1,23 @@
 <template>
-  <header class="bookmark-landing__header">
-    <div>
+  <header class="mb-32">
+    <div class="mb-12">
       <IllustrationComposition :img="header.hero_img" :resize="false" />
     </div>
-    <div>
-      <HeaderTitle :title="header.title" :description="header.description" />
-      <div>
-        <button v-text="'Get it on Chrome'" />
-        <button v-text="'Get it on Firefox'" />
+    <div class="px-6">
+      <HeaderTitle
+        :titleBig="true"
+        :title="header.title"
+        :description="header.description"
+      />
+      <div class="mt-8 flex justify-center">
+        <button
+          class="bookmark-btn-blue-sm mr-2 rubik-bold"
+          v-text="'Get it on Chrome'"
+        />
+        <button
+          class="bookmark-btn-sm ml-2 rubik-bold"
+          v-text="'Get it on Firefox'"
+        />
       </div>
     </div>
   </header>

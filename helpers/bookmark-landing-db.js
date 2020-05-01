@@ -2,7 +2,7 @@ export default {
   header: {
     title: 'a simple bookmark manager',
     description:
-      'a clean and simple interface to organize your favorite websites. Open a new browser tab and see your sites load instantly. Try it for free.',
+      'A clean and simple interface to organize your favorite websites. Open a new browser tab and see your sites load instantly. Try it for free.',
     hero_img: '/bookmark-landing/hero.svg'
   },
   features: {

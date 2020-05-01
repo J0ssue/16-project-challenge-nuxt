@@ -53,6 +53,14 @@
   @apply transition duration-300 ease-in-out;
 }
 
+.bookmark-btn-blue-sm {
+  @apply px-3 py-3 rounded-md bg-bookmark-soft-blue text-white shadow-bookmark-btn text-sm;
+}
+
+.bookmark-btn-sm {
+  @apply px-3 py-3 rounded-md bg-white text-bookmark-grayish-blue shadow-bookmark-btn text-sm;
+}
+
 @tailwind utilities;
 
 .center-absolute {

@@ -93,7 +93,8 @@ module.exports = {
         'spg-card': '0px 0px 20px rgba(0, 0, 0, 0.2)',
         'price-card': '0px 0px 10px hsl(234, 14%, 74%)',
         'dropdown': '0px 0px 10px rgba(0, 0, 0, 0.2)',
-        'manage-button-secondary': '0px 0px 10px rgba(0, 0, 0, 0.2)'
+        'manage-button-secondary': '0px 0px 10px rgba(0, 0, 0, 0.2)',
+        'bookmark-btn': '0px 2px 10px hsl(229, 8%, 60%)'
       },
       fontFamily: {
         'livvic': ['livvic', 'livvic-semibold', 'livvic-semibold-italic', 'livvic-thin', 'livvic-thin-italic', 'livvic-medium', 'livvic-medium-italic', 'livvic-light', 'livvic-light-italic', 'livvic-italic', 'livvic-extra-light', 'livvic-extra-light-italic', 'livvic-bold', 'livvic-bold-italic', 'livvic-black', 'livvic-black-italic']
