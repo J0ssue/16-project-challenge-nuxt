@@ -5,10 +5,13 @@
     </header>
     <main class="bkfaqs-main mx-auto">
       <Dropdown
+        :activeSlug="activeDropdown"
+        :slug="question.slug"
         :title="question.title"
         :description="question.description"
         v-for="(question, i) in faqs.questions"
         :key="i"
+        @toggleDropdown="toggleDropdown"
       />
       <button
         class="bookmark-btn-blue-md block mx-auto mt-10"
@@ -30,6 +33,17 @@ export default {
     faqs: {
       type: Object,
       required: true
+    }
+  },
+  data() {
+    return {
+      activeDropdown: ''
+    }
+  },
+  methods: {
+    toggleDropdown(slug) {
+      console.log(slug)
+      this.activeDropdown = slug
     }
   }
 }

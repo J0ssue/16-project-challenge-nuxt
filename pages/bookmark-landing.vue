@@ -2,10 +2,10 @@
   <div class="bookmark-landing rubik">
     <navbar />
     <Header :header="bookmark.header" />
-    <features :features="bookmark.features" />
-    <availability :availability="bookmark.availability" />
+    <features id="features" :features="bookmark.features" />
+    <availability id="pricing" :availability="bookmark.availability" />
     <faqs :faqs="bookmark.faqs" />
-    <cta :cta="bookmark.cta" />
+    <cta id="contact" :cta="bookmark.cta" />
     <Footer :footer="bookmark.footer" />
   </div>
 </template>

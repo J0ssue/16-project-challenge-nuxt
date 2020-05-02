@@ -67,21 +67,25 @@ export default {
       "Here are some of our FAQs. if you have any other questions you'd like answered please feel free to email us.",
     questions: [
       {
+        slug: 'what-bookmark',
         title: 'What is Bookmark?',
         description:
           'Croissant pie sweet sesame snaps sweet sugar plum jujubes. Sweet roll soufflé bear claw. Cake tiramisu cupcake soufflé topping. Jujubes marshmallow chupa chups wafer bonbon cheesecake bear claw. Bear claw chupa chups cake jelly sugar plum dragée. Chupa chups gummi bears bonbon toffee pie bear claw. Marzipan muffin carrot cake chocolate cake. Sweet cheesecake dessert pie. Sesame snaps pastry sweet gingerbread. Wafer jujubes chocolate cake pudding topping biscuit'
       },
       {
+        slug: 'how-bookmark',
         title: 'How Can I request a new browser?',
         description:
           'Croissant pie sweet sesame snaps sweet sugar plum jujubes. Sweet roll soufflé bear claw. Cake tiramisu cupcake soufflé topping. Jujubes marshmallow chupa chups wafer bonbon cheesecake bear claw. Bear claw chupa chups cake jelly sugar plum dragée. Chupa chups gummi bears bonbon toffee pie bear claw. Marzipan muffin carrot cake chocolate cake. Sweet cheesecake dessert pie. Sesame snaps pastry sweet gingerbread. Wafer jujubes chocolate cake pudding topping biscuit'
       },
       {
+        slug: 'is-bookmark',
         title: 'Is there a mobile app?',
         description:
           'Croissant pie sweet sesame snaps sweet sugar plum jujubes. Sweet roll soufflé bear claw. Cake tiramisu cupcake soufflé topping. Jujubes marshmallow chupa chups wafer bonbon cheesecake bear claw. Bear claw chupa chups cake jelly sugar plum dragée. Chupa chups gummi bears bonbon toffee pie bear claw. Marzipan muffin carrot cake chocolate cake. Sweet cheesecake dessert pie. Sesame snaps pastry sweet gingerbread. Wafer jujubes chocolate cake pudding topping biscuit'
       },
       {
+        slug: 'about-bookmark',
         title: 'What about other Chromium browsers?',
         description:
           'Croissant pie sweet sesame snaps sweet sugar plum jujubes. Sweet roll soufflé bear claw. Cake tiramisu cupcake soufflé topping. Jujubes marshmallow chupa chups wafer bonbon cheesecake bear claw. Bear claw chupa chups cake jelly sugar plum dragée. Chupa chups gummi bears bonbon toffee pie bear claw. Marzipan muffin carrot cake chocolate cake. Sweet cheesecake dessert pie. Sesame snaps pastry sweet gingerbread. Wafer jujubes chocolate cake pudding topping biscuit'

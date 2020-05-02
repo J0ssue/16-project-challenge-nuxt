@@ -7,7 +7,7 @@
       class="hidden lg:flex items-center text-bookmark-grayish-blue uppercase"
     >
       <li class="mr-10" v-for="(link, i) in menu" :key="i">
-        <nuxt-link to="#" v-text="link" />
+        <nuxt-link :to="`#${link}`" v-text="link" />
       </li>
       <li>
         <button

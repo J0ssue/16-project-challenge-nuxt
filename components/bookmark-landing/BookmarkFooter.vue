@@ -14,7 +14,7 @@
           v-for="(link, i) in footer.menu"
           :key="i"
         >
-          <nuxt-link to="#" class="uppercase" v-text="link" />
+          <nuxt-link :to="`#${link}`" class="uppercase" v-text="link" />
         </li>
       </ul>
     </div>
