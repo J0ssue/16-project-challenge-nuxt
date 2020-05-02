@@ -22,8 +22,11 @@
               @input="toggleError"
             />
             <p
-              class="absolute bottom-0 text-xs hidden"
-              :class="{ block: error }"
+              class="absolute bottom-0 text-xs"
+              :class="{
+                hidden: !error,
+                block: error
+              }"
             >
               Whoops, make sure it's an email
             </p>

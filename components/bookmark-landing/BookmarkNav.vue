@@ -20,9 +20,9 @@
         />
       </li>
     </ul>
-    <div class="lg:hidden">
+    <button class="lg:hidden" @click="toggleDrawer">
       <img src="/bookmark-landing/icon-hamburger.svg" alt="hamburger image" />
-    </div>
+    </button>
   </nav>
 </template>
 
@@ -31,6 +31,12 @@ export default {
   data() {
     return {
       menu: ['features', 'pricing', 'contact']
+    }
+  },
+  methods: {
+    toggleDrawer() {
+      console.log('here')
+      this.$emit('toggleDrawer')
     }
   }
 }

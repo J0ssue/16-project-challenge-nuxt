@@ -1,6 +1,7 @@
 <template>
-  <div class="bookmark-landing rubik">
-    <navbar />
+  <div class="bookmark-landing responsive rubik">
+    <drawer :drawerActive="drawerActive" @toggleDrawer="navigateTo" />
+    <navbar @toggleDrawer="toggleDrawer" />
     <Header :header="bookmark.header" />
     <features id="features" :features="bookmark.features" />
     <availability id="pricing" :availability="bookmark.availability" />
@@ -12,6 +13,7 @@
 
 <script>
 import bookmarkLandingData from '~/helpers/bookmark-landing-db'
+import Drawer from '~/components/bookmark-landing/BookmarkDrawer'
 import Navbar from '~/components/bookmark-landing/BookmarkNav'
 import Header from '~/components/bookmark-landing/BookmarkHeader'
 import Features from '~/components/bookmark-landing/BookmarkFeatures'
@@ -33,6 +35,7 @@ export default {
     }
   },
   components: {
+    Drawer,
     Navbar,
     Header,
     Features,
@@ -43,7 +46,23 @@ export default {
   },
   data() {
     return {
-      bookmark: bookmarkLandingData
+      bookmark: bookmarkLandingData,
+      drawerActive: false
+    }
+  },
+  methods: {
+    navigateTo(route) {
+      let el
+      if (typeof route === 'string' && route !== 'login') {
+        el = document.querySelector(`#${route}`)
+        el.scrollIntoView()
+        this.toggleDrawer()
+      } else {
+        this.toggleDrawer()
+      }
+    },
+    toggleDrawer() {
+      this.drawerActive = !this.drawerActive
     }
   }
 }
