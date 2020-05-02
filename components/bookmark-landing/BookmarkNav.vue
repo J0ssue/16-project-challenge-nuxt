@@ -1,5 +1,5 @@
 <template>
-  <nav class="py-8 px-6 mb-12 flex items-center">
+  <nav class="py-8 px-6 mb-12 flex items-center lg:px-20">
     <div class="flex-1">
       <img src="/bookmark-landing/logo-bookmark.svg" alt="brand" />
     </div>

@@ -1,6 +1,6 @@
 <template>
   <section class="mb-32">
-    <header class="mb-8 px-6">
+    <header class="mb-8 px-6 lg:mb-16">
       <HeaderTitle
         :title="features.title"
         :description="features.description"
@@ -9,12 +9,12 @@
     </header>
     <main>
       <div
-        class="mb-20 px-6 flex flex-col justify-center text-bookmark-dark-blue"
+        class="mb-20 px-6 flex flex-col justify-center text-bookmark-dark-blue lg:flex-row"
       >
         <button
-          class="py-4 border-b border-bookmark-grayish-blue"
+          class="py-4 border-b border-bookmark-grayish-blue lg:px-16 lg:py-8 "
           :class="{
-            'border-t lg:border-t-none': i === 0
+            'border-t lg:border-t-0': i === 0
           }"
           v-text="tab.tab"
           v-for="(tab, i) in features.tabs"

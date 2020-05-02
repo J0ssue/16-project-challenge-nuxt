@@ -1,13 +1,16 @@
 .bookmark-illustration-composition {
+  position: relative;
+  img {
     position: relative;
-    img {
-      position: relative;
-      z-index: 1;
-    }
+    z-index: 1;
+  }
 
   &__wh {
     img {
       width: 325px;
+      @media (min-width: 1200px) {
+        width: 100%;
+      }
     }
   }
 
@@ -28,6 +31,12 @@
     top: 60px;
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
+
+    @media (min-width: 1280px) {
+      top: 155px;
+      height: 318px;
+      width: 483px;
+    }
   }
 
   &__left-bg::before {
@@ -37,6 +46,12 @@
     top: 37px;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
+    @media (min-width: 1280px) {
+      top: 95px;
+      left: -73px;
+      width: 645px !important;
+      height: 385px;
+    }
   }
 
   &__top-offset::before {

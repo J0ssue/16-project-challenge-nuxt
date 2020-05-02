@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bookmark-illustration-composition"
+    class="bookmark-illustration-composition lg:pr-10"
     :class="{
       'bookmark-illustration-composition__top-offset': topOffset,
       'bookmark-illustration-composition__wh': resize,

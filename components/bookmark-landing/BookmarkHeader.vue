@@ -1,15 +1,17 @@
 <template>
-  <header class="mb-32">
+  <header
+    class="bookmark-landing__header mb-32 lg:flex lg:flex-row-reverse lg:justify-between"
+  >
     <div class="mb-12">
       <IllustrationComposition :img="header.hero_img" :resize="false" />
     </div>
-    <div class="px-6">
+    <div class="px-6 lg:pl-16">
       <HeaderTitle
         :titleBig="true"
         :title="header.title"
         :description="header.description"
       />
-      <div class="mt-8 flex justify-center">
+      <div class="mt-8 flex justify-center lg:justify-start">
         <button
           class="bookmark-btn-blue-sm mr-2 rubik-bold"
           v-text="'Get it on Chrome'"

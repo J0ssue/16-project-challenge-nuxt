@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="bkfeature-card lg:flex lg:justify-between">
     <BookmarkIllustrationComposition
-      class="mb-12"
+      class="mb-12 lg:flex-1 lg:pl-16"
       :class="{
         'mb-20': topOffset === 0
       }"
@@ -10,13 +10,18 @@
       :topOffset="!!(topOffset === 1) || !!(topOffset === 2)"
       :resize="true"
     />
-    <BookmarkHeaderTitle
-      class="px-6"
-      :title="title"
-      :description="description"
-      :descriptionSm="true"
-    />
-    <button v-text="'more info'" v-if="false" />
+    <div>
+      <BookmarkHeaderTitle
+        class="px-6"
+        :title="title"
+        :description="description"
+        :descriptionSm="true"
+      />
+      <button
+        class="hidden bg-bookmark-soft-blue px-3 py-3 text-white rounded-md mt-10 lg:block"
+        v-text="'more info'"
+      />
+    </div>
   </div>
 </template>
 

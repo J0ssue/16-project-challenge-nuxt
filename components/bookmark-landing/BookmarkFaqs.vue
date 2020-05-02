@@ -3,7 +3,7 @@
     <header class="mb-16">
       <HeaderTitle :title="faqs.title" :description="faqs.description" />
     </header>
-    <main>
+    <main class="bkfaqs-main mx-auto">
       <Dropdown
         :title="question.title"
         :description="question.description"

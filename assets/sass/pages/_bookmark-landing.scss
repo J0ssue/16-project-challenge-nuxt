@@ -1,7 +1,62 @@
 .bookmark-landing {
   font-size: 17px;
 
+  &__header {
+    .bookmark-header-title {
+      @media (min-width: 1024px) {
+        text-align: left !important;
+        p {
+          width: 464px;
+        }
+      }
+    }
+  }
+
+  .title-description-bk {
+    @media (min-width: 1024px) {
+      width: 468px;
+    }
+  }
+
   &__browser-card {
     width: 295px;
+  }
+  .bkfeature-card {
+    button {
+      margin-left: 120px;
+    }
+    .bookmark-header-title {
+      @media (min-width: 1024px) {
+        text-align: left !important;
+        margin-left: 100px;
+      }
+    }
+    .bookmark-illustration-composition {
+      @media (min-width: 1024px) {
+        padding-right: 0px;
+      }
+      img {
+        @media (min-width: 1024px) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .feature-card-middle {
+    transform: translateY(40px);
+  }
+  .feature-card-last {
+    transform: translateY(80px);
+  }
+
+  .bkfaqs-main {
+    @media (min-width: 1024px) {
+      width: 600px;
+    }
+  }
+
+  .cta-form-group {
+    width: 600px;
   }
 }
