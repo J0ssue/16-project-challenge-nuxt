@@ -2,18 +2,20 @@
   position: relative;
   &__header {
     width: 100%;
-    padding-top: 56.25%;
+    // padding-top: 56.25%;
+    height: 100vh;
   }
 
   &--zaask {
-    position: fixed;
+    position: absolute;
     top: 30px;
-    left: 30px;
+    right: 30px;
     z-index: 2;
   }
 
   &__header-img {
-    background-image: url('/header-img.jpg');
+    height: 100%;
+    background-image: url('/header-image.webp');
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -22,10 +24,13 @@
   }
 
   &__intro {
-    width: 300px;
+    // width: 300px;
     opacity: 0;
     transform: translateY(80px);
     animation: slideUp 0.8s ease-in-out 0.8s forwards;
+    h1 {
+    width: 300px;
+    }
   }
 }
 

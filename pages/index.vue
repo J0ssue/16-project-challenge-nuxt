@@ -13,7 +13,7 @@
         class="portfolio__header-img absolute top-0 left-0 w-full h-full"
       ></div>
       <div
-        class="portfolio__intro px-4 py-8 livvic-bold tracking-wide bg-white absolute left-0 bottom-0"
+        class="portfolio__intro p-16 livvic-bold tracking-wide bg-white absolute left-0 bottom-0"
       >
         <h1 class="mb-4 text-md md:text-2xl" v-html="portfolio.intro" />
         <button
