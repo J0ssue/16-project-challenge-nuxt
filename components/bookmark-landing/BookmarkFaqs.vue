@@ -14,7 +14,7 @@
         @toggleDropdown="toggleDropdown"
       />
       <button
-        class="bookmark-btn-blue-md block mx-auto mt-10"
+        class="bookmark-btn-blue-md block mx-auto mt-10 border-2 border-bookmark-soft-blue hover:bg-white hover:text-bookmark-soft-blue transition duration-300 ease-in-out"
         v-text="'More Info'"
       />
     </main>

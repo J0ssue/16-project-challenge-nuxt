@@ -18,7 +18,7 @@
         :descriptionSm="true"
       />
       <button
-        class="hidden bg-bookmark-soft-blue px-3 py-3 text-white rounded-md mt-10 lg:block"
+        class="hidden bg-bookmark-soft-blue px-5 py-3 text-white rounded-md mt-10 lg:block border-2 border-bookmark-soft-blue hover:bg-white hover:text-bookmark-soft-blue transition duration-300 ease-in-out"
         v-text="'more info'"
       />
     </div>

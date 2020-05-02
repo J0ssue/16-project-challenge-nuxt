@@ -12,7 +12,7 @@
         class="mb-20 px-6 flex flex-col justify-center text-bookmark-dark-blue lg:flex-row"
       >
         <button
-          class="py-4 border-b border-bookmark-grayish-blue lg:px-16 lg:py-8 focus:outline-none relative"
+          class="py-4 border-b border-bookmark-grayish-blue lg:px-16 lg:py-8 focus:outline-none relative hover:text-bookmark-soft-Red transition duration-300 ease-in-out"
           :class="{
             'border-t lg:border-t-0': i === 0
           }"

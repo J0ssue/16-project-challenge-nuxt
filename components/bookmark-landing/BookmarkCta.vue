@@ -10,13 +10,26 @@
     <main>
       <form @submit.prevent="submit">
         <div class="cta-form-group lg:flex lg:justify-center lg:mx-auto">
-          <input
-            class="mb-3 py-3 px-4 w-full block bg-white border-none rounded-lg shadow-bookmark-btn lg:mb-0 lg:flex-1"
-            type="text"
-            placeholder="Enter your email address"
-          />
+          <div class="w-full lg:flex-1 relative">
+            <input
+              :class="{
+                'bookmark-error': error
+              }"
+              class="mb-3 lg:mb-0 py-3 px-4 w-full block bg-white border-none rounded-lg text-bookmark-dark-blue focus:outline-none shadow-bookmark-btn"
+              type="text"
+              placeholder="Enter your email address"
+              v-model="newsletter"
+              @input="toggleError"
+            />
+            <p
+              class="absolute bottom-0 text-xs hidden"
+              :class="{ block: error }"
+            >
+              Whoops, make sure it's an email
+            </p>
+          </div>
           <button
-            class="py-3 bg-bookmark-soft-Red block rounded-lg text-center lg:px-3 lg:ml-3"
+            class="py-3 bg-bookmark-soft-Red block rounded-lg text-center lg:px-5 lg:ml-3 border-2 border-bookmark-soft-Red hover:bg-white hover:text-bookmark-soft-Red transition duration-300 ease-in-out focus:outline-none"
             v-text="'Contact us'"
           />
         </div>
@@ -33,9 +46,26 @@ export default {
       required: true
     }
   },
+  data() {
+    return {
+      newsletter: '',
+      error: false
+    }
+  },
   methods: {
     submit() {
-      console.log('hello world')
+      if (this.validated()) {
+        alert('your email has been received')
+      } else {
+        this.error = true
+        return
+      }
+    },
+    validated() {
+      return this.newsletter.length > 0
+    },
+    toggleError() {
+      this.error = false
     }
   }
 }

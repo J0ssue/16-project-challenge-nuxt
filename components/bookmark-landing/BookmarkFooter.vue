@@ -14,7 +14,11 @@
           v-for="(link, i) in footer.menu"
           :key="i"
         >
-          <nuxt-link :to="`#${link}`" class="uppercase" v-text="link" />
+          <nuxt-link
+            :to="`#${link}`"
+            class="uppercase hover:text-bookmark-soft-Red transition duration-300 ease-in-out"
+            v-text="link"
+          />
         </li>
       </ul>
     </div>
@@ -28,7 +32,7 @@
           v-for="(icon, i) in footer.icons"
           :key="i"
         >
-          <img :src="icon" alt="social media icon" />
+          <a href="#" v-html="icon" />
         </li>
       </ul>
     </div>

@@ -6,7 +6,7 @@
     }"
   >
     <button
-      class="w-full flex justify-between items-center py-8 focus:outline-none"
+      class="w-full flex justify-between items-center py-8 focus:outline-none hover:text-bookmark-soft-Red"
       @click="toggleDropdown"
     >
       <h4

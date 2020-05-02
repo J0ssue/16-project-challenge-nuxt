@@ -57,6 +57,25 @@
   }
 
   .cta-form-group {
-    width: 600px;
+    @media (min-width: 1024px) {
+      width: 600px;
+    }
+    button {
+      @media (max-width: 1023px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .bookmark-error {
+    position: relative;
+    background-image: url('/bookmark-landing/icon-error.svg');
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 25px 0px hsl(0, 94%, 66%);
+    outline: none;
+  }
+  .bookmark-error + p{
+    transform: translateY(10px) translateX(10px);
   }
 }

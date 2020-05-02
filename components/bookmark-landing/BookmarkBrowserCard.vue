@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bookmark-landing__browser-card pt-16 shadow-bookmark-browser-card rounded-xl text-center"
+    class="bookmark-landing__browser-card pt-16 shadow-bookmark-browser-card rounded-xl text-center mx-auto"
   >
     <header class="mb-10">
       <img class="mx-auto mb-10" :src="img" alt="browser image" />
@@ -16,7 +16,10 @@
         src="/bookmark-landing/bg-dots.svg"
         alt="dots background"
       />
-      <button class="bookmark-btn-blue-lg" v-text="'Add & Install Extension'" />
+      <button
+        class="bookmark-btn-blue-lg border-2 border-bookmark-soft-blue hover:bg-white hover:text-bookmark-soft-blue transition duration-300 ease-in-out"
+        v-text="'Add & Install Extension'"
+      />
     </main>
   </div>
 </template>

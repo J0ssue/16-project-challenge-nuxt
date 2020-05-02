@@ -13,11 +13,11 @@
       />
       <div class="mt-8 flex justify-center lg:justify-start">
         <button
-          class="bookmark-btn-blue-sm mr-2 rubik-bold"
+          class="bookmark-btn-blue-sm mr-2 rubik-bold border-2 border-bookmark-soft-blue hover:bg-white hover:text-bookmark-soft-blue transition duration-300 ease-in-out"
           v-text="'Get it on Chrome'"
         />
         <button
-          class="bookmark-btn-sm ml-2 rubik-bold"
+          class="bookmark-btn-sm ml-2 rubik-bold border-2 border-transparent hover:border-bookmark-grayish-blue"
           v-text="'Get it on Firefox'"
         />
       </div>
