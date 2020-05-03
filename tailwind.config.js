@@ -67,18 +67,23 @@ module.exports = {
         'bookmark-soft-blue': 'hsl(231, 69%, 60%)',
         'bookmark-soft-Red': 'hsl(0, 94%, 66%)',
         'bookmark-grayish-blue': 'hsl(229, 8%, 60%)',
-        'bookmark-dark-blue': 'hsl(229, 31%, 21%)'
+        'bookmark-dark-blue': 'hsl(229, 31%, 21%)',
+        'dine-beaver': '#9E7F66',
+        'dine-cod-gray': '#111111',
+        'dine-mirage': '#17192B',
+        'dine-ebony-clay': '#242B37',
+        'dine-shuttle-gray': '#5C6779'
       },
       transitionTimingFunction: {
         'ease-form-input': 'cubic-bezier(0, 1.25, 0, 1.17)'
       },
       letterSpacing: {
         'xl-wide': '10px',
-        'lg-wide': '5px',
+        'lg-wide': '5px'
       },
       transitionProperty: {
-        'height': 'height',
-        'spacing': 'margin, padding',
+        height: 'height',
+        spacing: 'margin, padding'
       },
       width: {
         'spg-card-width': '545px',
@@ -88,18 +93,35 @@ module.exports = {
         'aspect-ratio': '56.25%'
       },
       height: {
-        'bar': '4px'
+        bar: '4px'
       },
       boxShadow: {
         'spg-card': '0px 0px 20px rgba(0, 0, 0, 0.2)',
         'price-card': '0px 0px 10px hsl(234, 14%, 74%)',
-        'dropdown': '0px 0px 10px rgba(0, 0, 0, 0.2)',
+        dropdown: '0px 0px 10px rgba(0, 0, 0, 0.2)',
         'manage-button-secondary': '0px 0px 10px rgba(0, 0, 0, 0.2)',
         'bookmark-btn': '0px 2px 10px hsl(229, 8%, 60%)',
-        'bookmark-browser-card': '0px 4px 10px rgba(161, 145, 161, 0.4)' 
+        'bookmark-browser-card': '0px 4px 10px rgba(161, 145, 161, 0.4)'
       },
       fontFamily: {
-        'livvic': ['livvic', 'livvic-semibold', 'livvic-semibold-italic', 'livvic-thin', 'livvic-thin-italic', 'livvic-medium', 'livvic-medium-italic', 'livvic-light', 'livvic-light-italic', 'livvic-italic', 'livvic-extra-light', 'livvic-extra-light-italic', 'livvic-bold', 'livvic-bold-italic', 'livvic-black', 'livvic-black-italic']
+        livvic: [
+          'livvic',
+          'livvic-semibold',
+          'livvic-semibold-italic',
+          'livvic-thin',
+          'livvic-thin-italic',
+          'livvic-medium',
+          'livvic-medium-italic',
+          'livvic-light',
+          'livvic-light-italic',
+          'livvic-italic',
+          'livvic-extra-light',
+          'livvic-extra-light-italic',
+          'livvic-bold',
+          'livvic-bold-italic',
+          'livvic-black',
+          'livvic-black-italic'
+        ]
       },
       spacing: {
         'plus-icon': '56px',
@@ -107,12 +129,12 @@ module.exports = {
         '84': '21rem',
         '96': '24rem',
         '98': '26rem',
-        '100': '28rem',
+        '100': '28rem'
       },
       borderRadius: {
-        'xl': '18px'
+        xl: '18px'
       }
-    },
+    }
   },
   variants: {},
   plugins: []
