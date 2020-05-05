@@ -1,16 +1,22 @@
 <template>
   <div class="spartan">
     <nuxt />
-    <DineFooter />
+    <DineFooter :footerData="footerData" />
   </div>
 </template>
 
 <script>
+import dineData from '~/helpers/dine-db'
 import DineFooter from '~/components/dine/DineFooter'
 export default {
   components: {
     DineFooter
   },
-  name: 'dine-layout'
+  name: 'dine-layout',
+  data() {
+    return {
+      dineData
+    }
+  }
 }
 </script>

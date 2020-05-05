@@ -3,7 +3,7 @@
     <Header :header="dineData.header" />
     <Benefits :benefits="dineData.benefits" />
     <Hightlights :highlights="dineData.highlights" />
-    <Services />
+    <Services :services="dineData.services" />
     <Cta />
   </div>
 </template>

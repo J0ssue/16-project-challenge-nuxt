@@ -3,7 +3,7 @@ export default {
     logo: '/dine/logo.svg',
     title: 'Exquisite dining<br>since 1989',
     description:
-      'Experience our seasonal menu in beautiful country sorroundings. Eat the freshest produce from the confort of our farmhouse.',
+      'Experience our seasonal menu in beautiful country sorroundings. Eat the freshest produce from the confort of our farmhouse.'
   },
   benefits: [
     {
@@ -53,27 +53,27 @@ export default {
   },
   services: [
     {
-      img_mobile: '/dine/homeapge/family-gathering-mobile.jpg',
-      img_tablet: '/dine/homeapge/family-gathering-tablet.jpg',
-      img_desktop: '/dine/homeapge/family-gathering-desktop.jpg',
+      img_mobile: '/dine/homepage/family-gathering-mobile.jpg',
+      img_tablet: '/dine/homepage/family-gathering-tablet.jpg',
+      img_desktop: '/dine/homepage/family-gathering-desktop.jpg',
       title: 'family gathering',
       description:
         "we love catering for entire families. So please bring everyone along for a special meal with your loved ones. We'll provide a memorable experience for all.",
       slug: 'family-gathering'
     },
     {
-      img_mobile: '/dine/homeapge/special-events-mobile.jpg',
-      img_tablet: '/dine/homeapge/special-events-tablet.jpg',
-      img_desktop: '/dine/homeapge/special-events-desktop.jpg',
+      img_mobile: '/dine/homepage/special-events-mobile.jpg',
+      img_tablet: '/dine/homepage/special-events-tablet.jpg',
+      img_desktop: '/dine/homepage/special-events-desktop.jpg',
       title: 'special events',
       description:
         "Whether it's a romantic dinner or special date you're celebrating with others we'll look after you. We'll be sure to mark your special date with an unforgettable meal.",
       slug: 'special-events'
     },
     {
-      img_mobile: '/dine/homeapge/social-events-mobile.jpg',
-      img_tablet: '/dine/homeapge/social-events-tablet.jpg',
-      img_desktop: '/dine/homeapge/social-events-desktop.jpg',
+      img_mobile: '/dine/homepage/social-events-mobile.jpg',
+      img_tablet: '/dine/homepage/social-events-tablet.jpg',
+      img_desktop: '/dine/homepage/social-events-desktop.jpg',
       title: 'social events',
       description:
         "Are you looking to have a larger social event? No problem! We're more than happy to cater for big parties. We'll work with you to make your event a hit with everyone.",
@@ -81,15 +81,12 @@ export default {
     }
   ],
   footer: {
-  logo: '/dine/logo.svg',
-  address: {
-phone: '+00 44 123 4567',
-street:'MARTHWAITE, SEDBERGH',
-    citty: 'cumbria'
-  }
+    logo: '/dine/logo.svg',
+    address: {
+      phone: '+00 44 123 4567',
+      street: 'MARTHWAITE, SEDBERGH',
+      citty: 'cumbria'
+    }
   },
-  schedule: [
-    'MON - FRI: 09:00 AM - 10:00 PM',
-    'SAT - SUN: 09:00 AM - 11:30 PM'
-  ]
+  schedule: ['MON - FRI: 09:00 AM - 10:00 PM', 'SAT - SUN: 09:00 AM - 11:30 PM']
 }
