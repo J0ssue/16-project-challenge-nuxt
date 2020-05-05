@@ -36,6 +36,9 @@
 // // bookmark landing
 @import './components/bookmark-landing/index';
 
+// // dine
+@import './components/dine/dine-header';
+
 // pages 
 @import './pages/huddle';
 @import './pages/base-apparel';
@@ -51,3 +54,4 @@
 @import './pages/portfolio';
 @import './pages/manage-landing';
 @import './pages/bookmark-landing';
+@import'./pages/dine';

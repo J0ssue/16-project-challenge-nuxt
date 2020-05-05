@@ -1,9 +1,9 @@
 <template>
-  <div></div>
+  <section></section>
 </template>
 
 <script>
 export default {
-  layout: 'dine'
+  name: 'DineBenefits'
 }
 </script>
