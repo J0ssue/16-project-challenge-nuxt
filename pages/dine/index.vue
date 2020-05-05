@@ -1,8 +1,8 @@
 <template>
   <div>
     <Header :header="dineData.header" />
-    <Benefits />
-    <Hightlights />
+    <Benefits :benefits="dineData.benefits" />
+    <Hightlights :highlights="dineData.highlights" />
     <Services />
     <Cta />
   </div>

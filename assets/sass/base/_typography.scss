@@ -175,19 +175,23 @@
 
 .dine-h2 {
   font-family: 'spartan-bold';
+  font-size: 32px;
+  font-weight: bold;
   @media (min-width: 1024px) {
     font-size: 40px;
     line-height: 56px;
   }
 }
-.dine-h3-mobile {
-  font-family: 'spartan-semibold';
-  font-size: 14px;
+.dine-h3 {
+  font-family: 'spartan-bold';
+  font-size: 18px;
   line-height: 28px;
-  @media (min-width: 1024px) {
-    font-family: 'spartan-bold';
-    font-size: 18px;
-  }
+}
+
+.dine-fav-card-body {
+  font-family: 'spartan';
+  font-size: 15px;
+  line-height: 28px;
 }
 .dine-body {
   font-family: 'spartan';

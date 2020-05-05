@@ -23,7 +23,7 @@ export default {
         "All our ingredients come directly from our farm or local fishery. So you can be sure that you're eating the freshest, most sustainable food."
     }
   ],
-  hightlights: {
+  highlights: {
     title: 'A few highlights from our menu',
     description:
       "We ater for all dietary requirements, but here's a glimpse at some of our diner's favourites. Our menu is revamped every season.",
