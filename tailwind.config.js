@@ -5,6 +5,9 @@
  ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
  */
 module.exports = {
+  // purge: {
+  //   enable: true
+  // },
   theme: {
     extend: {
       colors: {
@@ -127,6 +130,7 @@ module.exports = {
         'plus-icon': '56px',
         '72': '18rem',
         '84': '21rem',
+        '88': '23rem',
         '96': '24rem',
         '98': '26rem',
         '100': '28rem'

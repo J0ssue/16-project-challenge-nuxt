@@ -5,6 +5,9 @@
         <source media="(min-width:1280px)" :srcset="card.img_desktop" />
         <source media="(min-width:768px)" :srcset="card.img_tablet" />
         <img
+          :class="{
+            'benefit-img-bottom': index === 1
+          }"
           class="benefit-img mb-16"
           :src="card.img_mobile"
           alt="benefit image"
@@ -23,7 +26,7 @@
 import DineTitleDescription from '~/components/dine/DineTitleDescription'
 export default {
   name: 'DineBenefitsCard',
-  props: ['card'],
+  props: ['card', 'index'],
   components: {
     DineTitleDescription
   }
@@ -34,5 +37,11 @@ export default {
 .benefit-img {
   margin-top: -67px;
   box-shadow: 0px 10px 68px rgba(0, 0, 0, 0.7);
+}
+.benefit-img-bottom {
+  @media (min-width: 1280px) {
+    margin-top: 0px;
+    margin-bottom: -67px;
+  }
 }
 </style>

@@ -81,6 +81,15 @@ export default {
     // baseURL: 'http://'
   },
   /*
+  ** tailwindcss setup
+  **
+  */ 
+ tailwindcss: {
+   configPath: '~/tailwind.config.js',
+    cssPath: '~/assets/css/tailwind.css',
+    exposeConfig: false
+ },
+  /*
    ** Build configuration
    */
   build: {

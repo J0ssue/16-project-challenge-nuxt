@@ -189,7 +189,7 @@
   font-family: 'spartan-bold';
   font-size: 32px;
   font-weight: bold;
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     font-size: 40px;
     line-height: 56px;
   }
@@ -209,7 +209,7 @@
   font-family: 'spartan';
   font-size: 15px;
   line-height: 28px;
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     font-size: 18px;
     line-height: 30px;
   }

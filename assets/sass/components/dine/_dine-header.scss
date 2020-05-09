@@ -2,4 +2,25 @@
   background-image: url('/dine/homepage/hero-bg-mobile.jpg');
   background-repeat: no-repeat;
   background-position: center top;
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: black;
+    pointer-events: none;
+    @media (min-width: 1280px) {
+      width: 40%;
+      height: 100%;
+      top: 0px;
+      left: 0px;
+    }
+  }
+  @media (min-width: 768px) {
+    background-image: url('/dine/homepage/hero-bg-tablet.jpg');
+  }
+  @media (min-width: 1280px) {
+    background-image: url('/dine/homepage/hero-bg-desktop.jpg');
+    background-position: right top;
+  }
 }

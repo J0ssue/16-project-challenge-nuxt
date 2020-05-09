@@ -15,7 +15,7 @@ export default {
   name: 'dine-layout',
   data() {
     return {
-      dineData
+      footerData: dineData.footer
     }
   }
 }

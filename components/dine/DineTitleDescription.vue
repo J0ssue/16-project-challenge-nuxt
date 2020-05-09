@@ -1,12 +1,12 @@
 <template>
-  <div class="text-center">
+  <div class="text-center xl:text-left">
     <img
-      class="mx-auto mb-8"
+      class="mx-auto mb-8 xl:ml-0"
       src="/dine/patterns/pattern-divide.svg"
       alt="divider image"
     />
     <h2
-      class="dine-h2 mb-8"
+      class="dine__title-desc-title dine-h2 mb-8 md:mx-auto"
       :class="{
         'text-white': !textBlack,
         'text-ebony-clay': textBlack
@@ -14,7 +14,7 @@
       v-html="title"
     />
     <p
-      class="dine-body"
+      class="dine__title-desc-desc dine-body md:mx-auto"
       :class="{
         'text-white': !textBlack,
         'text-ebony-clay': textBlack

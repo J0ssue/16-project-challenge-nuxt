@@ -30,7 +30,7 @@ export default {
     favourites: [
       {
         img_mobile: '/dine/homepage/salmon-mobile.jpg',
-        img_desktop_tablet: '/dine/homepage/salmon-desktop-table.jpg',
+        img_desktop_tablet: '/dine/homepage/salmon-desktop-tablet.jpg',
         title: 'seared salmon fillet',
         description:
           'Our locally sourced salmon served with a refreshing buckwheat summer salad.'
@@ -83,10 +83,13 @@ export default {
   footer: {
     logo: '/dine/logo.svg',
     address: {
-      phone: '+00 44 123 4567',
       street: 'MARTHWAITE, SEDBERGH',
-      citty: 'cumbria'
-    }
-  },
-  schedule: ['MON - FRI: 09:00 AM - 10:00 PM', 'SAT - SUN: 09:00 AM - 11:30 PM']
+      citty: 'cumbria',
+      phone: '+00 44 123 4567'
+    },
+    schedule: [
+      'MON - FRI: 09:00 AM - 10:00 PM',
+      'SAT - SUN: 09:00 AM - 11:30 PM'
+    ]
+  }
 }
