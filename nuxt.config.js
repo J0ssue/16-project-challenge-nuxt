@@ -1,14 +1,15 @@
 export default {
   mode: 'universal',
   env: {
-    baseURL: 'https://',
+    baseURL: 'https://'
   },
   /*
    ** Headers of the page
    */
   head: {
     title: process.env.npm_package_name || '',
-    meta: [{
+    meta: [
+      {
         charset: 'utf-8'
       },
       {
@@ -21,11 +22,13 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.jpg'
-    }]
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.jpg'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -36,7 +39,8 @@ export default {
   /*
    ** Global CSS
    */
-  css: [{
+  css: [
+    {
       src: '~/plugins/axios.js'
     },
     {
@@ -57,21 +61,21 @@ export default {
     },
     {
       src: '~/plugins/axios.js'
-    }
+    },
   ],
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
-    '@nuxtjs/tailwindcss',
+    '@nuxtjs/tailwindcss'
   ],
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios',
+    '@nuxtjs/axios'
   ],
   /*
    ** Axios module configuration
@@ -81,18 +85,22 @@ export default {
     // baseURL: 'http://'
   },
   /*
-  ** tailwindcss setup
-  **
-  */ 
- tailwindcss: {
-   configPath: '~/tailwind.config.js',
+   ** tailwindcss setup
+   **
+   */
+
+  tailwindcss: {
+    configPath: '~/tailwind.config.js',
     cssPath: '~/assets/css/tailwind.css',
     exposeConfig: false
- },
+  },
   /*
    ** Build configuration
    */
   build: {
+    transpile: [
+      "vee-validate/dist/rules"
+    ],
     /*
      ** You can extend webpack config here
      */

@@ -8,9 +8,10 @@
     <div class="relative z-10">
       <h1 class="dine-h1 mb-6 xl:mb-8" v-html="header.title" />
       <p class="dine-body mb-6 xl:mb-16 xl:w-98">{{ header.description }}</p>
-      <button
+      <nuxt-link
         class="py-4 px-16 bg-black border border-white uppercase text-white "
         v-text="'book a table'"
+        to="/dine/booking"
       />
     </div>
   </header>

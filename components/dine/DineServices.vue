@@ -140,6 +140,9 @@ export default {
   @media (min-width: 1280px) {
     height: 600px;
   }
+  @media (min-width: 1400px) {
+    height: 960px;
+  }
 }
 
 .button {
