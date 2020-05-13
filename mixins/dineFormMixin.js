@@ -25,7 +25,8 @@ export default {
           label: 'PM',
           value: 'pm'
         }
-      ]
+      ],
+      invalidFormFeedback: ''
     }
   }
 }

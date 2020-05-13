@@ -3,91 +3,92 @@
     <header></header>
     <main>
       <section>
-        <form @submit.prevent="">
-          <!-- name -->
-          <ValidationProvider
-            name="name"
-            tag="div"
-            rules="required"
-            v-slot="{ errors }"
-          >
-            <BaseInput label="name" v-model="form.name" :errors="errors" />
-          </ValidationProvider>
+        <ValidationObserver v-slot="{ invalid }" ref="dineFormObserver">
+          <form id="dineForm" @submit.prevent="onSubmit">
+            <!-- name -->
+            <BaseInput
+              label="name"
+              v-model="form.name"
+              name="name"
+              tag="div"
+              rules="required"
+            />
 
-          <ValidationProvider
-            name="email"
-            tag="div"
-            rules="required|email"
-            v-slot="{ errors }"
-          >
             <BaseInput
               label="email"
               type="email"
               v-model="form.email"
-              :errors="errors"
+              name="email"
+              tag="div"
+              rules="required|email"
             />
-          </ValidationProvider>
+            <BaseInput
+              label="telefone"
+              v-model="form.phone"
+              name="phone"
+              tag="div"
+              rules="required|digits:9"
+            />
 
-          <ValidationProvider
-            name="phone"
-            tag="div"
-            rules="required|digits:9"
-            v-slot="{ errors }"
-          >
-            <BaseInput label="telefone" v-model="form.phone" :errors="errors" />
-          </ValidationProvider>
-
-          <!-- date -->
-          <div>
-            <label>Pick a date</label>
+            <!-- date -->
             <div>
-              <BaseInput
-                label="no-show"
-                placeholder="DD"
-                v-model="form.date.day"
-              />
-              <BaseInput
-                label="no-show"
-                placeholder="MM"
-                v-model="form.date.month"
-              />
-              <BaseInput
-                label="no-show"
-                placeholder="YYYY"
-                v-model="form.date.year"
-              />
+              <label>Pick a date</label>
+              <div>
+                <BaseInput
+                  label="no-show"
+                  placeholder="DD"
+                  v-model="form.date.day"
+                />
+                <BaseInput
+                  label="no-show"
+                  placeholder="MM"
+                  v-model="form.date.month"
+                />
+                <BaseInput
+                  label="no-show"
+                  placeholder="YYYY"
+                  v-model="form.date.year"
+                />
+              </div>
             </div>
-          </div>
 
-          <!-- time -->
-          <div>
-            <label>Pick a tiime</label>
+            <!-- time -->
             <div>
-              <BaseInput
-                label="no-show"
-                placeholder="09"
-                v-model="form.time.hour"
-              />
-              <BaseInput
-                label="no-show"
-                placeholder="00"
-                v-model="form.time.minute"
-              />
-              <BaseSelect
-                label="no-show"
-                :options="options"
-                v-model="form.time.hypernyms"
-              />
+              <label>Pick a tiime</label>
+              <div>
+                <BaseInput
+                  label="no-show"
+                  placeholder="09"
+                  v-model="form.time.hour"
+                />
+                <BaseInput
+                  label="no-show"
+                  placeholder="00"
+                  v-model="form.time.minute"
+                />
+                <BaseSelect
+                  label="no-show"
+                  :options="options"
+                  v-model="form.time.hypernyms"
+                />
+              </div>
             </div>
-          </div>
-        </form>
+
+            <button
+              type="submit"
+              v-text="'Submit'"
+              :disabled="touched && invalid"
+            />
+            <p>{{ invalidFormFeedback }}</p>
+          </form>
+        </ValidationObserver>
       </section>
     </main>
   </div>
 </template>
 
 <script>
-import { ValidationProvider, extend } from 'vee-validate'
+import { ValidationProvider, ValidationObserver, extend } from 'vee-validate'
 import validations from '~/helpers/validationRules'
 import dineFormMixin from '~/mixins/dineFormMixin'
 import BaseInput from '~/components/BaseInput'
@@ -105,7 +106,32 @@ export default {
     BaseInput,
     BaseSelect,
     MaskedInput,
-    ValidationProvider
+    ValidationProvider,
+    ValidationObserver
+  },
+  methods: {
+    onSubmit() {
+      this.$refs.dineFormObserver.validate().then(success => {
+        if (!success) {
+          this.invalidFormFeedback = 'Please correct form.'
+          return
+        }
+
+        alert('Form has been submitted!')
+
+        // Resetting Values
+        // this.resetForm()
+
+        // Wait until the models are updated in the UI
+        this.$nextTick(() => {
+          this.$refs.dineFormObserver.reset()
+        })
+      })
+    },
+    resetForm() {
+      let form = document.getElementById('dineForm')
+      form.reset()
+    }
   }
 }
 </script>
