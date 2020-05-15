@@ -75,7 +75,8 @@ module.exports = {
         'dine-cod-gray': '#111111',
         'dine-mirage': '#17192B',
         'dine-ebony-clay': '#242B37',
-        'dine-shuttle-gray': '#5C6779'
+        'dine-shuttle-gray': '#5C6779',
+        'dine-input-gray': '#8E8E8E'
       },
       transitionTimingFunction: {
         'ease-form-input': 'cubic-bezier(0, 1.25, 0, 1.17)'
@@ -104,7 +105,8 @@ module.exports = {
         dropdown: '0px 0px 10px rgba(0, 0, 0, 0.2)',
         'manage-button-secondary': '0px 0px 10px rgba(0, 0, 0, 0.2)',
         'bookmark-btn': '0px 2px 10px hsl(229, 8%, 60%)',
-        'bookmark-browser-card': '0px 4px 10px rgba(161, 145, 161, 0.4)'
+        'bookmark-browser-card': '0px 4px 10px rgba(161, 145, 161, 0.4)',
+        'dine-select': '0px 4px 10px rgba(0, 0, 0, 0.4)'
       },
       fontFamily: {
         livvic: [

@@ -14,7 +14,8 @@ export default {
           hour: '',
           minute: '',
           hypernyms: 'am'
-        }
+        },
+        people: 1
       },
       options: [
         {
@@ -26,7 +27,8 @@ export default {
           value: 'pm'
         }
       ],
-      invalidFormFeedback: ''
+      invalidFormFeedback: '',
+      showOptions: false
     }
   }
 }

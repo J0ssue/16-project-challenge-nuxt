@@ -1,7 +1,7 @@
 <template>
   <div>
     <label v-if="label !== 'no-show'" v-text="label" />
-    <select @change="$emit('input', $event.target.value)">
+    <select class="hidden" @change="$emit('input', $event.target.value)">
       <option
         :value="opt.value"
         v-for="(opt, i) in options"
@@ -11,12 +11,18 @@
         {{ opt.label || 'No label' }}
       </option>
     </select>
+    <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
   name: 'BaseSelect',
+  data() {
+    return {
+      opened: false
+    }
+  },
   props: {
     label: {
       type: String,

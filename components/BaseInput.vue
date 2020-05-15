@@ -2,15 +2,20 @@
   <ValidationProvider
     :name="name"
     tag="div"
-    :vid="name"
+    :vid="vid"
     :rules="rules"
     v-slot="{ errors, required, ariaInput, ariaMsg }"
   >
-    <label v-if="label !== 'no-show'" @click="$refs.input.focus()">
+    <label
+      class="base-input__label"
+      v-if="label !== 'no-show'"
+      @click="$refs.input.focus()"
+    >
       {{ label }}
       <!-- <span>{{ required ? ' *' : '' }}</span> -->
     </label>
     <input
+      class="base-input__input pl-4 pb-4 w-full capitalize text-dine-cod-gray spartan dine-input-text border-b border-dine-input-gray focus:outline-none"
       :class="{
         'is-valid': errors && errors.length === 0,
         'is-invalid': errors && errors.length > 0
@@ -22,8 +27,9 @@
       :placeholder="placeholder"
       v-bind="ariaInput"
     />
-    <ul v-if="errors && errors.length > 0">
+    <ul class="base-input__error-list" v-if="errors && errors.length > 0">
       <li
+        class="base-input__error-msg"
         v-for="(error, i) in errors"
         :key="i"
         v-text="error"
@@ -43,6 +49,10 @@ export default {
     label: {
       type: String,
       required: true
+    },
+    vid: {
+      type: String,
+      required: false
     },
     name: {
       type: String,

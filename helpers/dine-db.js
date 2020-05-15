@@ -91,5 +91,10 @@ export default {
       'MON - FRI: 09:00 AM - 10:00 PM',
       'SAT - SUN: 09:00 AM - 11:30 PM'
     ]
+  },
+  booking: {
+    title: 'Reservations',
+    description:
+      'We can’t wait to host you. If you have any special requirements please feel free to call on the phone number below. We’ll be happy to accommodate you.'
   }
 }

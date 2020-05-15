@@ -1,5 +1,5 @@
 import { extend } from 'vee-validate'
-import { required, email, numeric, digits } from 'vee-validate/dist/rules'
+import { required, email, numeric, digits, length } from 'vee-validate/dist/rules'
 
 extend('email', {
   ...email,
@@ -7,7 +7,7 @@ extend('email', {
 })
 extend('required', {
   ...required,
-  message: '{_field_} field is required'
+  message: '{_field_} field is required',
 })
 extend('numeric', {
   ...numeric,
@@ -15,5 +15,15 @@ extend('numeric', {
 })
 extend('digits', {
   ...digits,
-  message: 'The {_field_} must have be exactly 9 "numbers"'
+  message: 'The {_field_} must have be exactly {size} "numbers"',
+  params: ['size'],
 })
+
+extend('hasDigits', {
+  validate(value, args) {
+    let length = value.length
+     return length <= args.number && `/^[0-9]{${2}}$/`.test(value)
+  },
+  params: ['number'],
+  message: 'The {_field_} field must be {number} digits number'
+}) 
