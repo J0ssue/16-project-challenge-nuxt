@@ -24,6 +24,7 @@ export default {
   menu: [
     'dine',
     'my-team',
+    'clipboard-landing',
     'single-price-grid',
     'four-card-feature',
     'huddle',

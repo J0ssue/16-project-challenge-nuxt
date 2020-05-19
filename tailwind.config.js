@@ -76,7 +76,11 @@ module.exports = {
         'dine-mirage': '#17192B',
         'dine-ebony-clay': '#242B37',
         'dine-shuttle-gray': '#5C6779',
-        'dine-input-gray': '#8E8E8E'
+        'dine-input-gray': '#8E8E8E',
+        'clipboard-strong-cyan': 'hsl(171, 66%, 44%)',
+        'clipboard-light-blue': 'hsl(233, 100%, 69%)',
+        'clipboard-dark-grayish-blue': 'hsl(210, 10%, 33%)',
+        'clipboard-grayish-blue': 'hsl(201, 11%, 66%)'
       },
       transitionTimingFunction: {
         'ease-form-input': 'cubic-bezier(0, 1.25, 0, 1.17)'

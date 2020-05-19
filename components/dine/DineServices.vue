@@ -61,7 +61,8 @@
           >
             <h2 class="mb-4 dine-h2 capitalize" v-text="serviceContent.title" />
             <p class="dine-body mb-8" v-text="serviceContent.description" />
-            <button
+            <nuxt-link
+              to="/dine/booking"
               class="py-4 px-16 bg-black border border-white uppercase text-white "
               v-text="'book a table'"
             />

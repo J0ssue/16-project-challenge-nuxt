@@ -27,9 +27,16 @@
       :placeholder="placeholder"
       v-bind="ariaInput"
     />
-    <ul class="base-input__error-list" v-if="errors && errors.length > 0">
+    <ul
+      class="base-input__list"
+      v-if="showMessage === true"
+      :class="{
+        'base-input__error-list': !errors && !errors.length > 0,
+        'base-input--error-list-show': errors && errors.length > 0
+      }"
+    >
       <li
-        class="base-input__error-msg"
+        class="base-input__error-msg error-msg"
         v-for="(error, i) in errors"
         :key="i"
         v-text="error"
@@ -46,6 +53,11 @@ export default {
     ValidationProvider
   },
   props: {
+    showMessage: {
+      type: Boolean,
+      required: false,
+      default: true
+    },
     label: {
       type: String,
       required: true
@@ -88,3 +100,23 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.base-input__list {
+  height: 10px;
+}
+.base-input__error-list {
+  opacity: 0;
+  pointer-events: none;
+}
+.base-input__error-list-show {
+  opacity: 1;
+}
+
+.is-invalid {
+  border-bottom: 1px solid #b54949;
+}
+.is-invalid::placeholder {
+  color: rgba(181, 73, 73, 0.4);
+}
+</style>

@@ -23,7 +23,8 @@
         class="mb-8 dine-h2 text-white xl:mb-0"
         v-text="'Ready to make a reservation'"
       />
-      <button
+      <nuxt-link
+        to="/dine/booking"
         class="py-4 px-16 bg-transparent border border-white uppercase text-white spartan"
         v-text="'Book a table'"
       />
