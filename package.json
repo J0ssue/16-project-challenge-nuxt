@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
+    "lodash.chunk": "^4.2.0",
     "nuxt": "^2.0.0",
     "v-mask": "^2.1.0",
     "vee-validate": "^3.3.0",

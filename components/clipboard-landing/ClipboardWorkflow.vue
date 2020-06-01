@@ -8,10 +8,10 @@
       <p class="text-clipboard-grayish-blue" v-text="workflow.description" />
     </header>
     <!-- cards -->
-    <div class="mb-32">
+    <div class="mb-32 lg:flex">
       <div
         :class="{
-          'mb-12': i + 1 !== workflow.workflow.length
+          'mb-12 lg:mb-0': i + 1 !== workflow.workflow.length
         }"
         v-for="(work, i) in workflow.workflow"
         :key="i"
@@ -25,12 +25,12 @@
       </div>
     </div>
     <!-- brands -->
-    <div>
+    <div class="lg:flex lg:items-center lg:justify-between">
       <div v-for="(icon, i) in workflow.brands" :key="i">
         <img
           class="mx-auto"
           :class="{
-            'mb-16': i + 1 !== workflow.brands.length
+            'mb-16 lg:mb-0': i + 1 !== workflow.brands.length
           }"
           :src="icon"
           alt="brand icon image"

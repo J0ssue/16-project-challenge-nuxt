@@ -13,4 +13,10 @@
       background-image: url('/clipboard-landing/bg-header-desktop.png');
     }
   }
+  &__snippets-monitor {
+    @media (min-width: 768px) {
+      position: absolute;
+      left: -15vw;
+    }
+  }
 }
