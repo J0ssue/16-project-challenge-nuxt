@@ -20,7 +20,9 @@
         :key="i"
       >
         <nuxt-link
-          class="mb-8 block text-clipboard-grayish-blue text-center font-fam-bai-semibold capitalize md:text-left"
+          class="mb-8 block text-clipboard-grayish-blue text-center font-fam-bai-semibold capitalize md:text-left
+        hover:text-clipboard-strong-cyan
+          "
           to="#"
           v-for="(link, i) in chunkedMenuGroup"
           :key="i"

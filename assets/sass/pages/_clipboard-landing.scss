@@ -18,5 +18,8 @@
       position: absolute;
       left: -15vw;
     }
+    @media (min-width: 1400px) {
+      left: -25vw;
+    }
   }
 }
