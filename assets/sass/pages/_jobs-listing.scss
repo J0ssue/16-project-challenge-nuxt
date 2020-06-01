@@ -1,0 +1,16 @@
+.jobs-listing {
+  &__hero {
+    position: relative;
+    padding-top: 150px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__tags {
+    transform: translateY(-37px);
+  }
+}

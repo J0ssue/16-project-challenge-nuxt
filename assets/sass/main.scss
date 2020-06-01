@@ -1,5 +1,3 @@
-// layouts
-@import './layouts/default';
 // abstract
 @import './abstracts/variables';
 @import './abstracts/mixins';
@@ -9,9 +7,53 @@
 @import './base/typography';
 @import './base/utilities';
 
+// layouts
+@import './layouts/navbar';
+@import './layouts/default';
+
 // components
 @import './components/card';
+@import './components/price-card';
+@import './components/job-card';
+@import './components/base-dropdown';
+// // shortly components
+@import './components/shortly/url-shortener';
+@import './components/shortly/url-card';
+@import './components/shortly/statistics-display';
+@import './components/shortly/statistics-card';
+@import './components/shortly/shortly-footer';
+@import './components/shortly/shortly-dropdown';
+// // myteam
+@import './components/my-team/benefits-card';
+@import './components/my-team/testimonials-card';
+@import './components/my-team/myteam-drawer';
+@import './components/my-team/myteam-directors-card';
+
+// // manage 
+@import './components/manage-landing/manage-about-us-card';
+@import './components/manage-landing/manage-testimonial-card';
+
+// // bookmark landing
+@import './components/bookmark-landing/index';
+
+// // dine
+@import './components/dine/dine-header';
+
 // pages 
 @import './pages/huddle';
 @import './pages/base-apparel';
 @import './pages/sign-up-form';
+@import './pages/monthly';
+@import './pages/shortly';
+@import './pages/jobs-listing';
+@import './pages/countries';
+@import './pages/easybank';
+@import './pages/my-team';
+@import './pages/my-team-about';
+@import './pages/myteam-contact';
+@import './pages/portfolio';
+@import './pages/manage-landing';
+@import './pages/bookmark-landing';
+@import'./pages/dine';
+@import'./pages/dine-booking';
+@import'./pages/clipboard-landing';

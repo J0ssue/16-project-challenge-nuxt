@@ -1,7 +1,7 @@
 {
-  "name": "projects-display",
+  "name": "josues-projects",
   "version": "1.0.0",
-  "description": "My glorious Nuxt.js project",
+  "description": "Portfolio projects",
   "author": "Josue Diaz",
   "private": true,
   "scripts": {
@@ -11,8 +11,12 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "lodash.chunk": "^4.2.0",
     "nuxt": "^2.0.0",
-    "@nuxtjs/axios": "^5.3.6"
+    "v-mask": "^2.1.0",
+    "vee-validate": "^3.3.0",
+    "vue-slick-carousel": "^1.0.5"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^1.0.0",
@@ -21,5 +25,10 @@
     "node-sass": "^4.13.1",
     "prettier": "^1.16.4",
     "sass-loader": "^8.0.2"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "node_modules"
+    ]
   }
 }

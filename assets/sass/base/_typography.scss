@@ -1,0 +1,231 @@
+@font-face {
+  font-family: 'livvic';
+  src: url('/fonts/livvic/Livvic-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'livvic-thin';
+  src: url('/fonts/livvic/Livvic-Thin.ttf');
+}
+
+@font-face {
+  font-family: 'livvic-thin-italic';
+  src: url('/fonts/livvic/Livvic-ThinItalic.ttf');
+}
+
+@font-face {
+  font-family: 'livvic-medium';
+  src: url('/fonts/livvic/Livvic-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'livvic-medium-italic';
+  src: url('/fonts/livvic/Livvic-MediumItalic.ttf');
+}
+
+@font-face {
+  font-family: 'livvic-semibold';
+  src: url('/fonts/livvic/Livvic-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'livvic-semibold-italic';
+  src: url('/fonts/livvic/Livvic-SemiBoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'livvic-extra-light';
+  src: url('/fonts/livvic/Livvic-ExtraLight.ttf');
+}
+
+@font-face {
+  font-family: 'livvic-extra-light-italic';
+  src: url('/fonts/livvic/Livvic-ExtraLightItalic.ttf');
+}
+
+@font-face {
+  font-family: 'livvic-bold';
+  src: url('/fonts/livvic/Livvic-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'livvic-bold-italic';
+  src: url('/fonts/livvic/Livvic-BoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'livvic-black';
+  src: url('/fonts/livvic/Livvic-Black.ttf');
+}
+
+@font-face {
+  font-family: 'livvic-black-italic';
+  src: url('/fonts/livvic/Livvic-BlackItalic.ttf');
+}
+
+@font-face {
+  font-family: 'spartan-light';
+  src: url('/fonts/spartan/Spartan-Light.ttf');
+}
+
+@font-face {
+  font-family: 'spartan';
+  src: url('/fonts/spartan/Spartan-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'spartan-semibold';
+  src: url('/fonts/spartan/Spartan-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'spartan-bold';
+  src: url('/fonts/spartan/Spartan-Bold.ttf');
+}
+
+.livvic {
+  font-family: 'livvic' !important;
+}
+
+.livvic-thin {
+  font-family: 'livvic-regular';
+}
+
+.livvic-thin-italic {
+  font-family: 'livvic-thin-italic';
+}
+
+.livvic-black {
+  font-family: 'livvic-black';
+}
+
+.livvic-black-italic {
+  font-family: 'livvic-black-italic';
+}
+
+.livvic-bold {
+  font-family: 'livvic-bold';
+}
+
+.livvic-bold-italic {
+  font-family: 'livvic-bold-italic';
+}
+
+.livvic-medium {
+  font-family: 'livvic-medium';
+}
+
+.livvic-medium-italic {
+  font-family: 'livvic-medium-italic';
+}
+
+.livvic-extra-thin {
+  font-family: 'livvic-extra-thin';
+}
+
+.livvic-extra-thin-italic {
+  font-family: 'livvic-extra-thin-italic';
+}
+
+.livvic-semibold {
+  font-family: 'livvic-semibold';
+}
+
+.livvic-semibold-italic {
+  font-family: 'livvic-semibold-italic';
+}
+
+.manage-cta-title {
+  font-size: 37px;
+  font-weight: 600;
+}
+
+// this utility font classes use a link from google for a specific page only (bookmark-landing)
+.rubik {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+}
+
+.rubik-italic {
+  font-family: 'Rubik', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+}
+.rubik-bold {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 500;
+}
+
+.rubik-italic-bold {
+  font-family: 'Rubik', sans-serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+//  dine
+
+.spartan {
+  font-family: 'spartan';
+}
+
+.spartan-semibold {
+  font-family: 'spartan-semibold';
+}
+
+.spartan-bold {
+  font-family: 'spartan-bold';
+}
+
+.dine-h1 {
+  font-family: 'spartan';
+  font-size: 32px;
+  @media (min-width: 1024px) {
+    font-size: 64px;
+    line-height: 72px;
+  }
+}
+
+.dine-h2 {
+  font-family: 'spartan-bold';
+  font-size: 32px;
+  font-weight: bold;
+  @media (min-width: 768px) {
+    font-size: 40px;
+    line-height: 56px;
+  }
+}
+.dine-h3 {
+  font-family: 'spartan-bold';
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.dine-fav-card-body {
+  font-family: 'spartan';
+  font-size: 15px;
+  line-height: 28px;
+}
+.dine-body {
+  font-family: 'spartan';
+  font-size: 15px;
+  line-height: 28px;
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+// clipboard fonts
+.font-fam-bai {
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.font-fam-bai-semibold {
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 600;
+}
+
+.font-fam-bai-bold {
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: bold;
+}

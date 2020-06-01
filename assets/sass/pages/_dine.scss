@@ -1,0 +1,16 @@
+.dine {
+  // title description component styles
+  &__title-desc-desc,
+  &__title-desc-title {
+    @media (min-width: 768px) {
+      width: 457px;
+    }
+  }
+
+  &__highlights &__title-desc-title,
+  &__highlights &__title-desc-desc {
+    @media (min-width: 1280px) {
+      margin-left: 0px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.shortly-footer {
+  &__menu:not(:last-child) {
+    margin-bottom: 50px;
+
+    @media (min-width: 1024px) {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__social-logo:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__social-logo svg path {
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__social-logo svg:hover path {
+    fill: hsl(180, 66%, 49%);
+  }
+}

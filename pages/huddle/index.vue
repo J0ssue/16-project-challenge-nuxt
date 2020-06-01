@@ -1,8 +1,5 @@
 <template>
-    <div class="huddle">
-        <header>
-            <h1 class="spg-card__title text-5xl mb-10 md:mb-32 text-blue-500 text-center">Huddle</h1>
-        </header>
+    <div class="huddle md:pt-16">
         <main class="huddle__main bg-huddle-primary px-8 py-10 flex-wrap items-center lg:px-16 lg:flex">
             <header class="w-full">
                 <div class="huddle__logo">
@@ -22,7 +19,10 @@
             <section class="huddle__content text-center text-white lg:w-2/4 lg:text-left lg:pl-12">
                 <h2 class="text-2xl font-bold capitalize mb-6">{{ title }}</h2>
                 <p class="text-sm font-light">{{ description }}</p>
-                <button class="huddle__button mt-10 mb-16 focus:outline-none bg-white text-huddle-primary text-center block w-64 mx-auto rounded-full capitalize font-light py-2 shadow-xl lg:w-40 lg:ml-0 transition-all duration-150 ease hover:bg-purple-300">register</button>
+                <nuxt-link
+                    to="/sign-up-form"
+                    class="huddle__button mt-10 mb-16 focus:outline-none bg-white text-huddle-primary text-center block w-64 mx-auto rounded-full capitalize font-light py-2 shadow-xl lg:w-40 lg:ml-0 transition-all duration-150 ease hover:bg-purple-300"
+                >register</nuxt-link>
             </section>
             <div class="huddle__social flex items-center justify-center w-full lg:justify-end">
                 <a
@@ -46,6 +46,12 @@
 
 <script>
     export default {
+        head() {
+            return {
+                title: 'huddle',
+            };
+        },
+
         data() {
             return {
                 title: 'build the community your fans will love',

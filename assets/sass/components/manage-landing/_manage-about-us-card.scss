@@ -1,0 +1,7 @@
+.manage-about-us-card {
+  &__description {
+    @media (min-width: 768px) {
+      width: 444px
+    }
+  }
+}

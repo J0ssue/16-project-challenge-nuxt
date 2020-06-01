@@ -1,8 +1,5 @@
 <template>
-    <div class="px-6 md:px-0">
-        <header>
-            <h1 class="spg-card__title text-5xl mb-10 md:mb-32 text-blue-500 text-center">Single Price Grid</h1>
-        </header>
+    <div class="px-6 md:px-0 pt-16">
         <main class="spg-card shadow-spg-card flex flex-col md:flex-row md:flex-wrap md:w-spg-card-width mx-auto rounded">
             <section class="w-full">
                 <div class="spg-card__main py-8 px-6">
@@ -15,7 +12,10 @@
                 <h4 class="spg-card__subscription-title font-bold mb-6">{{ subscription.title }}</h4>
                 <p class="flex items-center mb-2"><span class="tracking-wider text-3xl mr-2">${{ subscription.price }}</span> <span class="text-white opacity-50">per month</span></p>
                 <p class="text-sm mb-6">{{ subscription.description }}</p>
-                <button class="bg-spg-green hover:bg-gray-200 transition ease-in-out rounded text-center w-full inline-block py-4 capitalize shadow-spg-card focus:outline-none">Sign up</button>
+                <nuxt-link
+                    to="/sign-up-form"
+                    class="bg-spg-green hover:bg-gray-200 transition ease-in-out rounded text-center w-full inline-block py-4 capitalize shadow-spg-card focus:outline-none"
+                >Sign up</nuxt-link>
             </section>
             <section class="w-full md:w-2/4 rounded-br bg-spg-secondary text-white py-8 px-6">
                 <h4 class="spg-card__whyus-title text-bold text-xl capitalize mb-4">{{ why_us.title }}</h4>
@@ -31,6 +31,11 @@
 
 <script>
     export default {
+        head() {
+            return {
+                title: 'single-price-grid',
+            };
+        },
         data() {
             return {
                 title: 'Join our community',

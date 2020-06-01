@@ -1,0 +1,49 @@
+.base-dropdown {
+
+  &__tooltip {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: -30px;
+    opacity: 0;
+  }
+
+  &--tooltip-open {
+    animation: fadeDownDropdown 0.8s 0.1s cubic-bezier(1, .11, .09, .72) forwards;
+  }
+
+  &--tooltip-close {
+    opacity: 1;
+    top: 60px;
+    pointer-events: all;
+    animation: fadeUpDropdown 0.8s 0.1s cubic-bezier(1, .11, .09, .72) forwards;
+  }
+}
+
+@keyframes fadeDownDropdown {
+  0% {
+    opacity: 0;
+    top: -30px;
+    pointer-events: none;
+  }
+
+  100% {
+    opacity: 1;
+    top: 60px;
+    pointer-events: all;
+  }
+}
+
+@keyframes fadeUpDropdown {
+  0% {
+    opacity: 1;
+    top: 60px;
+    pointer-events: all;
+  }
+
+  100% {
+    opacity: 0;
+    top: -30px;
+    pointer-events: none;
+  }
+}

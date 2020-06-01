@@ -1,0 +1,60 @@
+.bookmark-illustration-composition {
+  position: relative;
+  img {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__wh {
+    img {
+      width: 325px;
+      @media (min-width: 1200px) {
+        width: 100%;
+      }
+    }
+  }
+
+  &::before {
+    content: '';
+    display: none;
+    width: 306px;
+    z-index: 0;
+    position: absolute;
+    background: hsl(231, 69%, 60%);
+    pointer-events: none;
+  }
+
+  &__right-bg::before {
+    display: block;
+    right: 0;
+    height: 206px;
+    top: 60px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+
+    @media (min-width: 1280px) {
+      top: 155px;
+      height: 318px;
+      width: 483px;
+    }
+  }
+
+  &__left-bg::before {
+    display: block;
+    left: 0;
+    height: 221px;
+    top: 37px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    @media (min-width: 1280px) {
+      top: 95px;
+      left: -73px;
+      width: 645px !important;
+      height: 385px;
+    }
+  }
+
+  &__top-offset::before {
+    top: 82px;
+  }
+}

@@ -1,6 +1,90 @@
 /* purgecss start ignore */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
+@tailwind base;
 
-/* purgecss end ignore */
-@import 'tailwindcss/utilities';
+@tailwind components;
+
+/* title */
+.main-title {
+  @apply mb-10 text-blue-500 text-center font-bold uppercase text-2xl;
+}
+
+.main-title:md {
+  @apply mb-24
+}
+
+/* burger */
+.burger-bar {
+  @apply w-8 h-bar bg-gray-500;
+}
+
+.shortly-primary-btn {
+  @apply text-white font-semibold capitalize bg-shortly-primary-cyan rounded-full px-8 py-2 block transition duration-300;
+}
+
+.shortly-primary-btn:hover {
+  @apply bg-shortly-primary-cyan-hover;
+}
+
+.shortly-primary-btn-sqr {
+  @apply block bg-shortly-primary-cyan p-4 rounded-lg text-white font-semibold transition duration-300;
+}
+
+.shortly-primary-btn-sqr:hover {
+  @apply bg-shortly-primary-cyan-hover;
+}
+
+.shortly-dropdown-link {
+  @apply text-white block font-bold text-center text-sm capitalize;
+}
+
+.jobs-card-component {
+  @apply pl-4 pr-6 py-6 bg-white shadow-xl border-l-8 border-jobs-cyan rounded-lg transition duration-300 ease-in-out;
+}
+
+.jobs-pill-tag {
+  @apply cursor-pointer transition duration-300 ease-in-out;
+}
+
+.jobs-pill-tag:hover {
+  @apply bg-jobs-cyan text-white;
+}
+
+.theme-transition {
+  @apply transition duration-300 ease-in-out;
+}
+
+.bookmark-btn-blue-sm {
+  @apply px-3 py-3 rounded-md bg-bookmark-soft-blue text-white shadow-bookmark-btn text-sm;
+}
+
+.bookmark-btn-blue-sm:focus {
+  @apply outline-none;
+}
+.bookmark-btn-blue-md {
+  @apply px-6 py-3 rounded-md bg-bookmark-soft-blue text-white shadow-bookmark-btn text-sm;
+}
+
+.bookmark-btn-blue-md:focus {
+  @apply outline-none;
+}
+
+.bookmark-btn-blue-lg {
+  @apply w-full py-3 rounded-md bg-bookmark-soft-blue text-white shadow-bookmark-btn text-sm;
+}
+
+.bookmark-btn-blue-lg:focus {
+  @apply outline-none;
+}
+
+.bookmark-btn-sm {
+  @apply px-3 py-3 rounded-md bg-white text-bookmark-grayish-blue shadow-bookmark-btn text-sm;
+}
+
+@tailwind utilities;
+
+.center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

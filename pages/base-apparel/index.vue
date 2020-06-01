@@ -1,9 +1,6 @@
 <template>
-    <div class="base-apparel">
-        <header>
-            <h1 class="spg-card__title text-5xl mb-10 md:mb-32 text-blue-500 text-center">Base Apparel</h1>
-        </header>
-        <main class="base-apparel__main grid lg:grid-cols-5 lg:grid-rows-3">
+    <div class="base-apparel w-full h-full md:pt-16">
+        <main class="base-apparel__main grid lg:grid-cols-5 lg:grid-rows-3 h-full">
             <header class="lg:row-span-1 lg:col-span-3">
                 <nuxt-link
                     to="/"
@@ -68,6 +65,12 @@
 
 <script>
     export default {
+        head() {
+            return {
+                title: 'base-apparel',
+            };
+        },
+
         data() {
             return {
                 isEmailValid: true,

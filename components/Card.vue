@@ -15,7 +15,7 @@
         props: {
             card: {
                 type: Object
-            }
+            },
         }
     }
 </script>

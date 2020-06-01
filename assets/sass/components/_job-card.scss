@@ -1,0 +1,18 @@
+.job-card {
+
+  &__img {
+    transform: translate(7px, -54px);
+
+    @media (min-width: 1024px) {
+      transform: none;
+    }
+  }
+
+  &__body {
+    margin-top: -42px;
+
+    @media (min-width: 1024px) {
+      margin-top: 0px;
+    }
+  }
+}

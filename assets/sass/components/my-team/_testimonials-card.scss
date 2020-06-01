@@ -1,0 +1,25 @@
+.testimonials-card {
+  &__quote {
+    background-image: url('/my-team/icon-quotes.svg');
+    background-repeat: no-repeat;
+    padding-top: 26px;
+    background-position: 50% 0px;
+
+    @media (min-width: 350px) {
+      width: 345px;
+    }
+
+    @media (min-width: 768px) {
+      width: 100%;
+    }
+
+    @media (min-width: 1280px) {
+      padding-top: 34px;
+    }
+  }
+
+  &__avatar {
+    width: 62px;
+    height: 62px;
+  }
+}

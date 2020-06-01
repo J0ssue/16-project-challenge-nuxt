@@ -1,5 +1,22 @@
+.js-loading *,
+.js-loading *:before,
+.js-loading *:after {
+  -webkit-animation-play-state: paused !important;
+  animation-play-state: paused !important;
+}
+
+body,
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+#__nuxt,
+#__layout {
+  height: 100%;
+}
+
 * {
-  font-family: Helvetica;
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
