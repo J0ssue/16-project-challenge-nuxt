@@ -1,1 +1,16 @@
-.clipboard-landing {}
+.clipboard-landing {
+  font-size: 15px;
+  @media (min-width: 768px) {
+    font-size: 18px;
+  }
+  &__header {
+    background-image: url('/clipboard-landing/bg-header-mobile.png');
+    background-repeat: no-repeat;
+    @media (min-width: 376px) {
+      background-size: cover;
+    }
+    @media (min-width: 768px) {
+      background-image: url('/clipboard-landing/bg-header-desktop.png');
+    }
+  }
+}

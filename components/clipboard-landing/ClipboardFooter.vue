@@ -1,12 +1,17 @@
 <template>
-  <footer>
+  <footer class="py-12 clipboard-footer-bg text-center">
     <!-- logo -->
-    <div>
-      <img :src="footer.logo" alt="footer logo image" />
+    <div class="mb-12">
+      <img
+        class="w-12 h-12 mx-auto"
+        :src="footer.logo"
+        alt="footer logo image"
+      />
     </div>
     <!-- menu -->
     <div>
       <nuxt-link
+        class="mb-8 block text-clipboard-grayish-blue text-center font-fam-bai-semibold capitalize"
         to="#"
         v-for="(link, i) in footer.menu"
         :key="i"
@@ -14,8 +19,15 @@
       />
     </div>
     <!-- social -->
-    <div>
-      <a :href="media" v-for="(icon, i) in footer.social" :key="i">
+    <div class="flex items-center justify-center">
+      <a
+        :class="{
+          'mx-8': i === 1
+        }"
+        :href="'#' + icon"
+        v-for="(icon, i) in footer.social"
+        :key="i"
+      >
         <img :src="icon" alt="social media icon image" />
       </a>
     </div>

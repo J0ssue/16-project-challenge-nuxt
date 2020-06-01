@@ -1,7 +1,10 @@
 <template>
-  <section>
-    <h2 v-text="access.title" />
-    <p v-text="access.description" />
+  <section class="mb-32 px-10 text-center">
+    <h2
+      class="mb-3 font-fam-bai-semibold text-clipboard-dark-grayish-blue text-2xl"
+      v-text="access.title"
+    />
+    <p class="mb-10 text-clipboard-grayish-blue" v-text="access.description" />
     <img :src="access.img" alt="access section image" />
   </section>
 </template>
