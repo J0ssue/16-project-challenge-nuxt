@@ -53,6 +53,10 @@ export default {
    */
   plugins: [
     {
+      src: '~/plugins/froala.js',
+      mode: 'client'
+    },
+    {
       src: '~/plugins/v-mask.js',
       mode: 'client'
     },
