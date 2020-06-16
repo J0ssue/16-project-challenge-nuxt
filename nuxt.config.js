@@ -1,3 +1,5 @@
+var webpack = require('webpack')
+var path = require('path')
 export default {
   mode: 'universal',
   env: {
@@ -28,6 +30,13 @@ export default {
         type: 'image/x-icon',
         href: '/favicon.jpg'
       }
+    ],
+    link: [
+      {
+        rel: 'stylesheet',
+        href:
+          'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'
+      }
     ]
   },
   /*
@@ -40,6 +49,8 @@ export default {
    ** Global CSS
    */
   css: [
+    '~/node_modules/froala-editor/css/froala_editor.pkgd.min.css',
+    '~/node_modules/froala-editor/css/froala_style.min.css',
     {
       src: '~/plugins/axios.js'
     },
@@ -53,8 +64,8 @@ export default {
    */
   plugins: [
     {
-      src: '~/plugins/froala.js',
-      mode: 'client'
+    src: '~/plugins/froala.js',
+    mode: 'client'
     },
     {
       src: '~/plugins/v-mask.js',
@@ -65,7 +76,7 @@ export default {
     },
     {
       src: '~/plugins/axios.js'
-    },
+    }
   ],
   /*
    ** Nuxt.js dev-modules
@@ -102,9 +113,13 @@ export default {
    ** Build configuration
    */
   build: {
-    transpile: [
-      "vee-validate/dist/rules"
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery'
+      })
     ],
+    transpile: ['vee-validate/dist/rules'],
     /*
      ** You can extend webpack config here
      */

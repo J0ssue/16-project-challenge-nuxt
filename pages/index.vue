@@ -1,13 +1,13 @@
 <template>
   <div class="portfolio container livvic">
-    <a
+    <!-- <a
       class="portfolio--zaask"
       target="_blank"
       href="https://www.zaask.pt/user/jdiaz77711"
       ><img
         src="https://www.zaask.pt/widget?user=461367&widget=pro-since"
         alt=""
-    /></a>
+    /></a> -->
     <header class="portfolio__header relative md:mb-20">
       <div
         class="portfolio__header-img absolute top-0 left-0 w-full h-full"
